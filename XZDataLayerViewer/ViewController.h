@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@protocol DataSourceProtocol;
 
+@interface ViewController : UITableViewController
+- (instancetype)initWithDataSource:(id<DataSourceProtocol>)dataSource NS_DESIGNATED_INITIALIZER;
 
 @end
 

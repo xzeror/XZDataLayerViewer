@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "TAGManager.h"
+#import "TAGDataLayer.h"
+#import "DataSourceFabric.h"
+
+static NSString *GTMContainerId = @"GTM-WJBDPX6";
 
 @interface AppDelegate ()
 
@@ -17,6 +23,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
+	
+	[self setupTagManager];
+	id rawDataLayer = [(id)[[TAGManager instance] dataLayer] model];
+	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForData:rawDataLayer];
+	
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithDataSource:dataSource]];
+	[self.window makeKeyAndVisible];
+	
+	
+	
 	return YES;
 }
 
@@ -45,6 +63,11 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)setupTagManager{
+	[[[TAGManager instance] logger] setLogLevel:kTAGLoggerLogLevelVerbose];
+	[[TAGManager instance] openContainerById:GTMContainerId callback:nil];
 }
 
 
