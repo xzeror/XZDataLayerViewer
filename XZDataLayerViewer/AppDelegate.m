@@ -13,6 +13,7 @@
 #import "DataSourceFabric.h"
 
 static NSString *GTMContainerId = @"GTM-WJBDPX6";
+static NSUInteger counter = 0;
 
 @interface AppDelegate ()
 
@@ -25,8 +26,8 @@ static NSString *GTMContainerId = @"GTM-WJBDPX6";
 	// Override point for customization after application launch.
 	
 	[self setupTagManager];
-	id rawDataLayer = [(id)[[TAGManager instance] dataLayer] model];
-	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForData:rawDataLayer];
+	
+	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForTagManager:[TAGManager instance]];
 	
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
@@ -34,7 +35,26 @@ static NSString *GTMContainerId = @"GTM-WJBDPX6";
 	[self.window makeKeyAndVisible];
 	
 	
-	
+	NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:1] interval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+		NSDictionary *ecommerce = @{@"ecommerce": @{
+											@"counter": @(counter),
+											@"currencyCode": @"RUB",
+											@"detail": @{
+													@"products": @[
+															@{@"name": @"alsdkjflkdsj fldskfj df",
+															  @"id": @(123456),
+															  @"price": @(123.23),
+															  @"category": @"asdfsdf",
+															  }
+															]
+													}
+											}
+									};
+		
+		[[TAGManager instance].dataLayer push:ecommerce];
+		counter++;
+	}];
+	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 	return YES;
 }
 

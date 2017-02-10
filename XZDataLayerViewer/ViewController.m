@@ -18,11 +18,6 @@
 @end
 
 @implementation ViewController
-
-- (instancetype)init{
-	return [self initWithDataSource:nil];
-}
-
 - (instancetype)initWithDataSource:(id<DataSourceProtocol>)dataSource{
 	self = [super init];
 	if (self != nil) {
@@ -35,22 +30,6 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
-	NSDictionary *ecommerce = @{@"ecommerce": @{
-											  @"currencyCode": @"RUB",
-											  @"detail": @{
-													  @"products": @[
-															  @{@"name": @"alsdkjflkdsj fldskfj df",
-																@"id": @(123456),
-																@"price": @(123.23),
-																@"category": @"asdfsdf",
-																}
-															  ]
-													  }
-											  }
-								};
-
-	[[TAGManager instance].dataLayer push:ecommerce];
 }
 
 

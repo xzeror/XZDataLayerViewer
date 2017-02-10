@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol DataSourceProtocol;
+@class TAGManager;
 
 @interface DataSourceFabric : NSObject
++ (id<DataSourceProtocol>)dataSourceForTagManager:(TAGManager*)instance;
 + (id<DataSourceProtocol>)dataSourceForData:(id)data;
 @end

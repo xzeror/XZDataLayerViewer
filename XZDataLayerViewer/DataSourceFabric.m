@@ -10,8 +10,15 @@
 #import "DataSourceProtocol.h"
 #import "DictionaryDataSource.h"
 #import "ArrayDataSource.h"
+#import "EventHistoryDataSource.h"
+#import "TAGManager.h"
 
 @implementation DataSourceFabric
++ (id<DataSourceProtocol>)dataSourceForTagManager:(TAGManager*)instance{
+	EventHistoryDataSource *dataSource = [[EventHistoryDataSource alloc] initWithDataLayer:instance.dataLayer];
+	return dataSource;
+}
+
 + (id<DataSourceProtocol>)dataSourceForData:(id)data{
 	id<DataSourceProtocol> dataSource = nil;
 	if([data isKindOfClass:[NSDictionary class]]){
