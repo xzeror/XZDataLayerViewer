@@ -12,6 +12,9 @@
 #import "EventHistoryElement.h"
 #import "ViewModel.h"
 
+static const NSUInteger HistoryCount = 100;
+static NSString * const DataLayerHasChangedNotification = @"com.xzonesoftware.datalayer.haschanged";
+
 static IMP __original_Push_Imp;
 
 void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
@@ -19,12 +22,12 @@ void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 	NSLog(@"%@, %@", self, NSStringFromSelector(_cmd));
 	assert([NSStringFromSelector(_cmd) isEqualToString:@"push:"]);
 	((void(*)(id,SEL,NSDictionary*))__original_Push_Imp)(self, _cmd, dict);
-	[[NSNotificationCenter defaultCenter] postNotificationName:@"DataLayerHasChanged" object:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:DataLayerHasChangedNotification object:nil];
 }
 
 @interface EventHistoryDataSource ()
 /**
- *  Contains 100 copies of TAGDataLayer objects that saved with each change
+ *  Contains HistoryCount copies of TAGDataLayer objects that saved with each change
  */
 @property(nonatomic,strong)NSMutableArray *dataLayerHistory;
 @property(nonatomic,strong)TAGDataLayer *dataLayer;
@@ -34,17 +37,20 @@ void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 - (instancetype)initWithDataLayer:(TAGDataLayer*)dataLayer{
 	self = [super init];
 	if (self != nil) {
-		_dataLayerHistory = [NSMutableArray arrayWithCapacity:100];
+		_dataLayerHistory = [NSMutableArray arrayWithCapacity:HistoryCount];
 		_dataLayer = dataLayer;
 		
-		Method m = class_getInstanceMethod([dataLayer class], @selector(push:));
+		Method m = class_getInstanceMethod([_dataLayer class], @selector(push:));
 		__original_Push_Imp = method_setImplementation(m,(IMP)__swizzle_Push);
 		
-		[[NSNotificationCenter defaultCenter] addObserverForName:@"DataLayerHasChanged" object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+		[[NSNotificationCenter defaultCenter] addObserverForName:DataLayerHasChangedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
 			NSLog(@"dataLayerHasChanged");
-			NSDictionary *dataLayerModel = (NSDictionary*)[(id)dataLayer valueForKey:@"model"];
+			NSDictionary *dataLayerModel = (NSDictionary*)[(id)_dataLayer valueForKey:@"model"];
 			EventHistoryElement *eventHistoryElement = [[EventHistoryElement alloc] initWithDataLayerModel:dataLayerModel];
 			if (eventHistoryElement) {
+				if (self.dataLayerHistory.count >= HistoryCount) {
+					[self.dataLayerHistory removeObject:self.dataLayerHistory.firstObject];
+				}
 				[_dataLayerHistory addObject:eventHistoryElement];
 			}
 		}];
@@ -53,7 +59,7 @@ void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 }
 
 - (void)dealloc{
-	
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:DataLayerHasChangedNotification object:nil];
 }
 
 - (NSInteger)count{
