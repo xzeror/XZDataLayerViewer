@@ -9,39 +9,53 @@
 /* Begin PBXBuildFile section */
 		10133A711E48F30100A33207 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A701E48F30100A33207 /* main.m */; };
 		10133A741E48F30100A33207 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A731E48F30100A33207 /* AppDelegate.m */; };
-		10133A771E48F30100A33207 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A761E48F30100A33207 /* ViewController.m */; };
 		10133A7C1E48F30100A33207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10133A7B1E48F30100A33207 /* Assets.xcassets */; };
 		10133A8A1E48F30100A33207 /* XZDataLayerViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A891E48F30100A33207 /* XZDataLayerViewerTests.m */; };
 		10133A951E48F30100A33207 /* XZDataLayerViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A941E48F30100A33207 /* XZDataLayerViewerUITests.m */; };
 		10133AB41E48F39500A33207 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAD1E48F39500A33207 /* libAdIdAccess.a */; };
 		10133AB51E48F39500A33207 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAE1E48F39500A33207 /* libGoogleAnalyticsServices.a */; };
-		101BC53A1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */; };
-		101BC53B1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */; };
-		101BC53C1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */; };
-		101BC53F1E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */; };
-		101BC5401E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */; };
-		101BC5411E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */; };
-		101BC5441E4C247200BCD03C /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5431E4C247200BCD03C /* EventHistoryElement.m */; };
-		101BC5451E4C247200BCD03C /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5431E4C247200BCD03C /* EventHistoryElement.m */; };
-		101BC5461E4C247200BCD03C /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5431E4C247200BCD03C /* EventHistoryElement.m */; };
-		101BC5491E4E04DC00BCD03C /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */; };
-		101BC54A1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */; };
-		101BC54B1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */; };
-		101BC54E1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */; };
-		101BC54F1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */; };
-		101BC5501E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */; };
-		101BC5541E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */; };
-		101BC5551E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */; };
-		101BC5561E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */; };
-		104778E11E4B9AB5003E126A /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 104778E01E4B9AB5003E126A /* DataSourceFabric.m */; };
-		104778E21E4B9AB5003E126A /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 104778E01E4B9AB5003E126A /* DataSourceFabric.m */; };
-		104778E31E4B9AB5003E126A /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 104778E01E4B9AB5003E126A /* DataSourceFabric.m */; };
-		108163191E4AD258007E91E9 /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 108163181E4AD258007E91E9 /* DictionaryDataSource.m */; };
-		1081631A1E4AD258007E91E9 /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 108163181E4AD258007E91E9 /* DictionaryDataSource.m */; };
-		1081631B1E4AD258007E91E9 /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 108163181E4AD258007E91E9 /* DictionaryDataSource.m */; };
-		1081631F1E4AD2F5007E91E9 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1081631E1E4AD2F5007E91E9 /* ViewModel.m */; };
-		108163201E4AD2F5007E91E9 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1081631E1E4AD2F5007E91E9 /* ViewModel.m */; };
-		108163211E4AD2F5007E91E9 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1081631E1E4AD2F5007E91E9 /* ViewModel.m */; };
+		109E51301E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
+		109E51311E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
+		109E51321E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
+		109E51331E4F79350044305D /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51181E4F79350044305D /* DataSourceFabric.m */; };
+		109E51341E4F79350044305D /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51181E4F79350044305D /* DataSourceFabric.m */; };
+		109E51351E4F79350044305D /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51181E4F79350044305D /* DataSourceFabric.m */; };
+		109E51361E4F79350044305D /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511B1E4F79350044305D /* DictionaryDataSource.m */; };
+		109E51371E4F79350044305D /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511B1E4F79350044305D /* DictionaryDataSource.m */; };
+		109E51381E4F79350044305D /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511B1E4F79350044305D /* DictionaryDataSource.m */; };
+		109E51391E4F79350044305D /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511D1E4F79350044305D /* HistoryDataSource.m */; };
+		109E513A1E4F79350044305D /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511D1E4F79350044305D /* HistoryDataSource.m */; };
+		109E513B1E4F79350044305D /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511D1E4F79350044305D /* HistoryDataSource.m */; };
+		109E513C1E4F79350044305D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51201E4F79350044305D /* ViewController.m */; };
+		109E513D1E4F79350044305D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51201E4F79350044305D /* ViewController.m */; };
+		109E513E1E4F79350044305D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51201E4F79350044305D /* ViewController.m */; };
+		109E513F1E4F79350044305D /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51231E4F79350044305D /* ViewModel.m */; };
+		109E51401E4F79350044305D /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51231E4F79350044305D /* ViewModel.m */; };
+		109E51411E4F79350044305D /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51231E4F79350044305D /* ViewModel.m */; };
+		109E51421E4F79350044305D /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51261E4F79350044305D /* EventHistoryElement.m */; };
+		109E51431E4F79350044305D /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51261E4F79350044305D /* EventHistoryElement.m */; };
+		109E51441E4F79350044305D /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51261E4F79350044305D /* EventHistoryElement.m */; };
+		109E51451E4F79350044305D /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51291E4F79350044305D /* DataLayerHistoryWriter.m */; };
+		109E51461E4F79350044305D /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51291E4F79350044305D /* DataLayerHistoryWriter.m */; };
+		109E51471E4F79350044305D /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51291E4F79350044305D /* DataLayerHistoryWriter.m */; };
+		109E51481E4F79350044305D /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512B1E4F79350044305D /* DataLayerObserver.m */; };
+		109E51491E4F79350044305D /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512B1E4F79350044305D /* DataLayerObserver.m */; };
+		109E514A1E4F79350044305D /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512B1E4F79350044305D /* DataLayerObserver.m */; };
+		109E514B1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
+		109E514C1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
+		109E514D1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
+		109E514E1E4F7AE00044305D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AE1E48F81200702265 /* SystemConfiguration.framework */; };
+		109E514F1E4F7AE70044305D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AC1E48F7D700702265 /* CoreData.framework */; };
+		109E51501E4F7AF00044305D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A61E48F72E00702265 /* libsqlite3.tbd */; };
+		109E51511E4F7AF50044305D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A81E48F73600702265 /* libz.tbd */; };
+		109E51521E4F7B000044305D /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAD1E48F39500A33207 /* libAdIdAccess.a */; };
+		109E51531E4F7B020044305D /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAE1E48F39500A33207 /* libGoogleAnalyticsServices.a */; };
+		109E51541E4F7B1C0044305D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A81E48F73600702265 /* libz.tbd */; };
+		109E51551E4F7B220044305D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A61E48F72E00702265 /* libsqlite3.tbd */; };
+		109E51561E4F7B270044305D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AE1E48F81200702265 /* SystemConfiguration.framework */; };
+		109E51571E4F7B2C0044305D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AC1E48F7D700702265 /* CoreData.framework */; };
+		109E51581E4F7B330044305D /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAD1E48F39500A33207 /* libAdIdAccess.a */; };
+		109E51591E4F7B360044305D /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAE1E48F39500A33207 /* libGoogleAnalyticsServices.a */; };
 		10A684AA1E48F7AC00702265 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A81E48F73600702265 /* libz.tbd */; };
 		10A684AB1E48F7B500702265 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A61E48F72E00702265 /* libsqlite3.tbd */; };
 		10A684AD1E48F7D700702265 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AC1E48F7D700702265 /* CoreData.framework */; };
@@ -70,8 +84,6 @@
 		10133A701E48F30100A33207 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10133A721E48F30100A33207 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10133A731E48F30100A33207 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		10133A751E48F30100A33207 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		10133A761E48F30100A33207 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		10133A7B1E48F30100A33207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10133A801E48F30100A33207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10133A851E48F30100A33207 /* XZDataLayerViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XZDataLayerViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,26 +109,28 @@
 		10133AB11E48F39500A33207 /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
 		10133AB21E48F39500A33207 /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
 		10133AB31E48F39500A33207 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
-		101BC5381E4B9CC300BCD03C /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
-		101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
-		101BC53D1E4C1D8F00BCD03C /* HistoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDataSource.h; sourceTree = "<group>"; };
-		101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataSource.m; sourceTree = "<group>"; };
-		101BC5421E4C247200BCD03C /* EventHistoryElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventHistoryElement.h; sourceTree = "<group>"; };
-		101BC5431E4C247200BCD03C /* EventHistoryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventHistoryElement.m; sourceTree = "<group>"; };
-		101BC5471E4E04DC00BCD03C /* DataLayerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerObserver.h; sourceTree = "<group>"; };
-		101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerObserver.m; sourceTree = "<group>"; };
-		101BC54C1E4E081C00BCD03C /* MemoryEventsHistoryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryEventsHistoryStore.h; sourceTree = "<group>"; };
-		101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryEventsHistoryStore.m; sourceTree = "<group>"; };
-		101BC5511E4E08B800BCD03C /* StoreProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreProtocol.h; sourceTree = "<group>"; };
-		101BC5521E4E102100BCD03C /* DataLayerHistoryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerHistoryWriter.h; sourceTree = "<group>"; };
-		101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerHistoryWriter.m; sourceTree = "<group>"; };
-		104778DF1E4B9AB5003E126A /* DataSourceFabric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceFabric.h; sourceTree = "<group>"; };
-		104778E01E4B9AB5003E126A /* DataSourceFabric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceFabric.m; sourceTree = "<group>"; };
-		108163171E4AD258007E91E9 /* DictionaryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryDataSource.h; sourceTree = "<group>"; };
-		108163181E4AD258007E91E9 /* DictionaryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryDataSource.m; sourceTree = "<group>"; };
-		1081631C1E4AD286007E91E9 /* DataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceProtocol.h; sourceTree = "<group>"; };
-		1081631D1E4AD2F5007E91E9 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
-		1081631E1E4AD2F5007E91E9 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		109E51151E4F79350044305D /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
+		109E51161E4F79350044305D /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
+		109E51171E4F79350044305D /* DataSourceFabric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceFabric.h; sourceTree = "<group>"; };
+		109E51181E4F79350044305D /* DataSourceFabric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceFabric.m; sourceTree = "<group>"; };
+		109E51191E4F79350044305D /* DataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceProtocol.h; sourceTree = "<group>"; };
+		109E511A1E4F79350044305D /* DictionaryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryDataSource.h; sourceTree = "<group>"; };
+		109E511B1E4F79350044305D /* DictionaryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryDataSource.m; sourceTree = "<group>"; };
+		109E511C1E4F79350044305D /* HistoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDataSource.h; sourceTree = "<group>"; };
+		109E511D1E4F79350044305D /* HistoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataSource.m; sourceTree = "<group>"; };
+		109E511F1E4F79350044305D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		109E51201E4F79350044305D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		109E51221E4F79350044305D /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		109E51231E4F79350044305D /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		109E51251E4F79350044305D /* EventHistoryElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventHistoryElement.h; sourceTree = "<group>"; };
+		109E51261E4F79350044305D /* EventHistoryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventHistoryElement.m; sourceTree = "<group>"; };
+		109E51281E4F79350044305D /* DataLayerHistoryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerHistoryWriter.h; sourceTree = "<group>"; };
+		109E51291E4F79350044305D /* DataLayerHistoryWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerHistoryWriter.m; sourceTree = "<group>"; };
+		109E512A1E4F79350044305D /* DataLayerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerObserver.h; sourceTree = "<group>"; };
+		109E512B1E4F79350044305D /* DataLayerObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerObserver.m; sourceTree = "<group>"; };
+		109E512D1E4F79350044305D /* MemoryEventsHistoryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryEventsHistoryStore.h; sourceTree = "<group>"; };
+		109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryEventsHistoryStore.m; sourceTree = "<group>"; };
+		109E512F1E4F79350044305D /* StoreProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreProtocol.h; sourceTree = "<group>"; };
 		10A684A61E48F72E00702265 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		10A684A81E48F73600702265 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		10A684AC1E48F7D700702265 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -141,6 +155,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				109E51511E4F7AF50044305D /* libz.tbd in Frameworks */,
+				109E51501E4F7AF00044305D /* libsqlite3.tbd in Frameworks */,
+				109E514F1E4F7AE70044305D /* CoreData.framework in Frameworks */,
+				109E514E1E4F7AE00044305D /* SystemConfiguration.framework in Frameworks */,
+				109E51531E4F7B020044305D /* libGoogleAnalyticsServices.a in Frameworks */,
+				109E51521E4F7B000044305D /* libAdIdAccess.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +168,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				109E51571E4F7B2C0044305D /* CoreData.framework in Frameworks */,
+				109E51561E4F7B270044305D /* SystemConfiguration.framework in Frameworks */,
+				109E51551E4F7B220044305D /* libsqlite3.tbd in Frameworks */,
+				109E51541E4F7B1C0044305D /* libz.tbd in Frameworks */,
+				109E51581E4F7B330044305D /* libAdIdAccess.a in Frameworks */,
+				109E51591E4F7B360044305D /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,34 +204,16 @@
 		10133A6E1E48F30100A33207 /* XZDataLayerViewer */ = {
 			isa = PBXGroup;
 			children = (
+				109E51131E4F79350044305D /* Viewer */,
+				109E51241E4F79350044305D /* Model */,
+				109E51271E4F79350044305D /* Logger */,
+				109E512C1E4F79350044305D /* Store */,
 				10133A721E48F30100A33207 /* AppDelegate.h */,
 				10133A731E48F30100A33207 /* AppDelegate.m */,
 				10133A7B1E48F30100A33207 /* Assets.xcassets */,
-				104778DF1E4B9AB5003E126A /* DataSourceFabric.h */,
-				104778E01E4B9AB5003E126A /* DataSourceFabric.m */,
-				1081631C1E4AD286007E91E9 /* DataSourceProtocol.h */,
-				108163171E4AD258007E91E9 /* DictionaryDataSource.h */,
-				108163181E4AD258007E91E9 /* DictionaryDataSource.m */,
-				101BC5381E4B9CC300BCD03C /* ArrayDataSource.h */,
-				101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */,
 				10133AA21E48F39500A33207 /* GASDK */,
 				10133A801E48F30100A33207 /* Info.plist */,
 				10133A6F1E48F30100A33207 /* Supporting Files */,
-				10133A751E48F30100A33207 /* ViewController.h */,
-				10133A761E48F30100A33207 /* ViewController.m */,
-				1081631D1E4AD2F5007E91E9 /* ViewModel.h */,
-				1081631E1E4AD2F5007E91E9 /* ViewModel.m */,
-				101BC53D1E4C1D8F00BCD03C /* HistoryDataSource.h */,
-				101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */,
-				101BC5421E4C247200BCD03C /* EventHistoryElement.h */,
-				101BC5431E4C247200BCD03C /* EventHistoryElement.m */,
-				101BC5471E4E04DC00BCD03C /* DataLayerObserver.h */,
-				101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */,
-				101BC5511E4E08B800BCD03C /* StoreProtocol.h */,
-				101BC54C1E4E081C00BCD03C /* MemoryEventsHistoryStore.h */,
-				101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */,
-				101BC5521E4E102100BCD03C /* DataLayerHistoryWriter.h */,
-				101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */,
 			);
 			path = XZDataLayerViewer;
 			sourceTree = "<group>";
@@ -258,6 +266,80 @@
 				10133AB31E48F39500A33207 /* TAGManager.h */,
 			);
 			path = GASDK;
+			sourceTree = "<group>";
+		};
+		109E51131E4F79350044305D /* Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				109E51141E4F79350044305D /* DataAccessLayer */,
+				109E511E1E4F79350044305D /* UI */,
+				109E51211E4F79350044305D /* ViewModels */,
+			);
+			path = Viewer;
+			sourceTree = "<group>";
+		};
+		109E51141E4F79350044305D /* DataAccessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				109E51151E4F79350044305D /* ArrayDataSource.h */,
+				109E51161E4F79350044305D /* ArrayDataSource.m */,
+				109E51171E4F79350044305D /* DataSourceFabric.h */,
+				109E51181E4F79350044305D /* DataSourceFabric.m */,
+				109E51191E4F79350044305D /* DataSourceProtocol.h */,
+				109E511A1E4F79350044305D /* DictionaryDataSource.h */,
+				109E511B1E4F79350044305D /* DictionaryDataSource.m */,
+				109E511C1E4F79350044305D /* HistoryDataSource.h */,
+				109E511D1E4F79350044305D /* HistoryDataSource.m */,
+			);
+			path = DataAccessLayer;
+			sourceTree = "<group>";
+		};
+		109E511E1E4F79350044305D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				109E511F1E4F79350044305D /* ViewController.h */,
+				109E51201E4F79350044305D /* ViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		109E51211E4F79350044305D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				109E51221E4F79350044305D /* ViewModel.h */,
+				109E51231E4F79350044305D /* ViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		109E51241E4F79350044305D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				109E51251E4F79350044305D /* EventHistoryElement.h */,
+				109E51261E4F79350044305D /* EventHistoryElement.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		109E51271E4F79350044305D /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				109E51281E4F79350044305D /* DataLayerHistoryWriter.h */,
+				109E51291E4F79350044305D /* DataLayerHistoryWriter.m */,
+				109E512A1E4F79350044305D /* DataLayerObserver.h */,
+				109E512B1E4F79350044305D /* DataLayerObserver.m */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		109E512C1E4F79350044305D /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				109E512D1E4F79350044305D /* MemoryEventsHistoryStore.h */,
+				109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */,
+				109E512F1E4F79350044305D /* StoreProtocol.h */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		10A684A51E48F72D00702265 /* Frameworks */ = {
@@ -405,18 +487,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10133A771E48F30100A33207 /* ViewController.m in Sources */,
+				109E513C1E4F79350044305D /* ViewController.m in Sources */,
+				109E51301E4F79350044305D /* ArrayDataSource.m in Sources */,
+				109E51421E4F79350044305D /* EventHistoryElement.m in Sources */,
+				109E513F1E4F79350044305D /* ViewModel.m in Sources */,
+				109E51481E4F79350044305D /* DataLayerObserver.m in Sources */,
 				10133A741E48F30100A33207 /* AppDelegate.m in Sources */,
-				101BC5441E4C247200BCD03C /* EventHistoryElement.m in Sources */,
-				101BC53F1E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */,
-				101BC53A1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */,
-				101BC5491E4E04DC00BCD03C /* DataLayerObserver.m in Sources */,
-				101BC54E1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */,
-				1081631F1E4AD2F5007E91E9 /* ViewModel.m in Sources */,
-				108163191E4AD258007E91E9 /* DictionaryDataSource.m in Sources */,
-				101BC5541E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */,
+				109E514B1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
 				10133A711E48F30100A33207 /* main.m in Sources */,
-				104778E11E4B9AB5003E126A /* DataSourceFabric.m in Sources */,
+				109E51391E4F79350044305D /* HistoryDataSource.m in Sources */,
+				109E51451E4F79350044305D /* DataLayerHistoryWriter.m in Sources */,
+				109E51331E4F79350044305D /* DataSourceFabric.m in Sources */,
+				109E51361E4F79350044305D /* DictionaryDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,16 +506,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				101BC5451E4C247200BCD03C /* EventHistoryElement.m in Sources */,
-				101BC5401E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */,
-				108163201E4AD2F5007E91E9 /* ViewModel.m in Sources */,
-				101BC54F1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */,
-				1081631A1E4AD258007E91E9 /* DictionaryDataSource.m in Sources */,
+				109E514C1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
+				109E51461E4F79350044305D /* DataLayerHistoryWriter.m in Sources */,
+				109E513D1E4F79350044305D /* ViewController.m in Sources */,
+				109E51311E4F79350044305D /* ArrayDataSource.m in Sources */,
 				10133A8A1E48F30100A33207 /* XZDataLayerViewerTests.m in Sources */,
-				101BC54A1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */,
-				101BC5551E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */,
-				101BC53B1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */,
-				104778E21E4B9AB5003E126A /* DataSourceFabric.m in Sources */,
+				109E513A1E4F79350044305D /* HistoryDataSource.m in Sources */,
+				109E51491E4F79350044305D /* DataLayerObserver.m in Sources */,
+				109E51371E4F79350044305D /* DictionaryDataSource.m in Sources */,
+				109E51341E4F79350044305D /* DataSourceFabric.m in Sources */,
+				109E51431E4F79350044305D /* EventHistoryElement.m in Sources */,
+				109E51401E4F79350044305D /* ViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,16 +524,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				101BC5461E4C247200BCD03C /* EventHistoryElement.m in Sources */,
-				101BC5411E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */,
-				108163211E4AD2F5007E91E9 /* ViewModel.m in Sources */,
-				101BC5501E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */,
-				1081631B1E4AD258007E91E9 /* DictionaryDataSource.m in Sources */,
+				109E514D1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
+				109E51471E4F79350044305D /* DataLayerHistoryWriter.m in Sources */,
+				109E513E1E4F79350044305D /* ViewController.m in Sources */,
+				109E51321E4F79350044305D /* ArrayDataSource.m in Sources */,
 				10133A951E48F30100A33207 /* XZDataLayerViewerUITests.m in Sources */,
-				101BC54B1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */,
-				101BC5561E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */,
-				101BC53C1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */,
-				104778E31E4B9AB5003E126A /* DataSourceFabric.m in Sources */,
+				109E513B1E4F79350044305D /* HistoryDataSource.m in Sources */,
+				109E514A1E4F79350044305D /* DataLayerObserver.m in Sources */,
+				109E51381E4F79350044305D /* DictionaryDataSource.m in Sources */,
+				109E51351E4F79350044305D /* DataSourceFabric.m in Sources */,
+				109E51441E4F79350044305D /* EventHistoryElement.m in Sources */,
+				109E51411E4F79350044305D /* ViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +683,10 @@
 				DEVELOPMENT_TEAM = CB4K3VJT3H;
 				INFOPLIST_FILE = XZDataLayerViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XZDataLayerViewer/GASDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XZDataLayerViewer.app/XZDataLayerViewer";
@@ -612,6 +700,10 @@
 				DEVELOPMENT_TEAM = CB4K3VJT3H;
 				INFOPLIST_FILE = XZDataLayerViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XZDataLayerViewer/GASDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XZDataLayerViewer.app/XZDataLayerViewer";
@@ -624,6 +716,10 @@
 				DEVELOPMENT_TEAM = CB4K3VJT3H;
 				INFOPLIST_FILE = XZDataLayerViewerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XZDataLayerViewer/GASDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = XZDataLayerViewer;
@@ -636,6 +732,10 @@
 				DEVELOPMENT_TEAM = CB4K3VJT3H;
 				INFOPLIST_FILE = XZDataLayerViewerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XZDataLayerViewer/GASDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = XZDataLayerViewer;
