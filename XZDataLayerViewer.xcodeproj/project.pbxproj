@@ -18,12 +18,21 @@
 		101BC53A1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */; };
 		101BC53B1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */; };
 		101BC53C1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */; };
-		101BC53F1E4C1D8F00BCD03C /* EventHistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* EventHistoryDataSource.m */; };
-		101BC5401E4C1D8F00BCD03C /* EventHistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* EventHistoryDataSource.m */; };
-		101BC5411E4C1D8F00BCD03C /* EventHistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* EventHistoryDataSource.m */; };
+		101BC53F1E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */; };
+		101BC5401E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */; };
+		101BC5411E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */; };
 		101BC5441E4C247200BCD03C /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5431E4C247200BCD03C /* EventHistoryElement.m */; };
 		101BC5451E4C247200BCD03C /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5431E4C247200BCD03C /* EventHistoryElement.m */; };
 		101BC5461E4C247200BCD03C /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5431E4C247200BCD03C /* EventHistoryElement.m */; };
+		101BC5491E4E04DC00BCD03C /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */; };
+		101BC54A1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */; };
+		101BC54B1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */; };
+		101BC54E1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */; };
+		101BC54F1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */; };
+		101BC5501E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */; };
+		101BC5541E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */; };
+		101BC5551E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */; };
+		101BC5561E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */; };
 		104778E11E4B9AB5003E126A /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 104778E01E4B9AB5003E126A /* DataSourceFabric.m */; };
 		104778E21E4B9AB5003E126A /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 104778E01E4B9AB5003E126A /* DataSourceFabric.m */; };
 		104778E31E4B9AB5003E126A /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 104778E01E4B9AB5003E126A /* DataSourceFabric.m */; };
@@ -90,10 +99,17 @@
 		10133AB31E48F39500A33207 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
 		101BC5381E4B9CC300BCD03C /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
 		101BC5391E4B9CC300BCD03C /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
-		101BC53D1E4C1D8F00BCD03C /* EventHistoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventHistoryDataSource.h; sourceTree = "<group>"; };
-		101BC53E1E4C1D8F00BCD03C /* EventHistoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventHistoryDataSource.m; sourceTree = "<group>"; };
+		101BC53D1E4C1D8F00BCD03C /* HistoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDataSource.h; sourceTree = "<group>"; };
+		101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataSource.m; sourceTree = "<group>"; };
 		101BC5421E4C247200BCD03C /* EventHistoryElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventHistoryElement.h; sourceTree = "<group>"; };
 		101BC5431E4C247200BCD03C /* EventHistoryElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventHistoryElement.m; sourceTree = "<group>"; };
+		101BC5471E4E04DC00BCD03C /* DataLayerObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerObserver.h; sourceTree = "<group>"; };
+		101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerObserver.m; sourceTree = "<group>"; };
+		101BC54C1E4E081C00BCD03C /* MemoryEventsHistoryStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryEventsHistoryStore.h; sourceTree = "<group>"; };
+		101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryEventsHistoryStore.m; sourceTree = "<group>"; };
+		101BC5511E4E08B800BCD03C /* StoreProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreProtocol.h; sourceTree = "<group>"; };
+		101BC5521E4E102100BCD03C /* DataLayerHistoryWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLayerHistoryWriter.h; sourceTree = "<group>"; };
+		101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerHistoryWriter.m; sourceTree = "<group>"; };
 		104778DF1E4B9AB5003E126A /* DataSourceFabric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceFabric.h; sourceTree = "<group>"; };
 		104778E01E4B9AB5003E126A /* DataSourceFabric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceFabric.m; sourceTree = "<group>"; };
 		108163171E4AD258007E91E9 /* DictionaryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryDataSource.h; sourceTree = "<group>"; };
@@ -179,10 +195,17 @@
 				10133A761E48F30100A33207 /* ViewController.m */,
 				1081631D1E4AD2F5007E91E9 /* ViewModel.h */,
 				1081631E1E4AD2F5007E91E9 /* ViewModel.m */,
-				101BC53D1E4C1D8F00BCD03C /* EventHistoryDataSource.h */,
-				101BC53E1E4C1D8F00BCD03C /* EventHistoryDataSource.m */,
+				101BC53D1E4C1D8F00BCD03C /* HistoryDataSource.h */,
+				101BC53E1E4C1D8F00BCD03C /* HistoryDataSource.m */,
 				101BC5421E4C247200BCD03C /* EventHistoryElement.h */,
 				101BC5431E4C247200BCD03C /* EventHistoryElement.m */,
+				101BC5471E4E04DC00BCD03C /* DataLayerObserver.h */,
+				101BC5481E4E04DC00BCD03C /* DataLayerObserver.m */,
+				101BC5511E4E08B800BCD03C /* StoreProtocol.h */,
+				101BC54C1E4E081C00BCD03C /* MemoryEventsHistoryStore.h */,
+				101BC54D1E4E081C00BCD03C /* MemoryEventsHistoryStore.m */,
+				101BC5521E4E102100BCD03C /* DataLayerHistoryWriter.h */,
+				101BC5531E4E102100BCD03C /* DataLayerHistoryWriter.m */,
 			);
 			path = XZDataLayerViewer;
 			sourceTree = "<group>";
@@ -385,10 +408,13 @@
 				10133A771E48F30100A33207 /* ViewController.m in Sources */,
 				10133A741E48F30100A33207 /* AppDelegate.m in Sources */,
 				101BC5441E4C247200BCD03C /* EventHistoryElement.m in Sources */,
-				101BC53F1E4C1D8F00BCD03C /* EventHistoryDataSource.m in Sources */,
+				101BC53F1E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */,
 				101BC53A1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */,
+				101BC5491E4E04DC00BCD03C /* DataLayerObserver.m in Sources */,
+				101BC54E1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */,
 				1081631F1E4AD2F5007E91E9 /* ViewModel.m in Sources */,
 				108163191E4AD258007E91E9 /* DictionaryDataSource.m in Sources */,
+				101BC5541E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */,
 				10133A711E48F30100A33207 /* main.m in Sources */,
 				104778E11E4B9AB5003E126A /* DataSourceFabric.m in Sources */,
 			);
@@ -399,10 +425,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				101BC5451E4C247200BCD03C /* EventHistoryElement.m in Sources */,
-				101BC5401E4C1D8F00BCD03C /* EventHistoryDataSource.m in Sources */,
+				101BC5401E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */,
 				108163201E4AD2F5007E91E9 /* ViewModel.m in Sources */,
+				101BC54F1E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */,
 				1081631A1E4AD258007E91E9 /* DictionaryDataSource.m in Sources */,
 				10133A8A1E48F30100A33207 /* XZDataLayerViewerTests.m in Sources */,
+				101BC54A1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */,
+				101BC5551E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */,
 				101BC53B1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */,
 				104778E21E4B9AB5003E126A /* DataSourceFabric.m in Sources */,
 			);
@@ -413,10 +442,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				101BC5461E4C247200BCD03C /* EventHistoryElement.m in Sources */,
-				101BC5411E4C1D8F00BCD03C /* EventHistoryDataSource.m in Sources */,
+				101BC5411E4C1D8F00BCD03C /* HistoryDataSource.m in Sources */,
 				108163211E4AD2F5007E91E9 /* ViewModel.m in Sources */,
+				101BC5501E4E081C00BCD03C /* MemoryEventsHistoryStore.m in Sources */,
 				1081631B1E4AD258007E91E9 /* DictionaryDataSource.m in Sources */,
 				10133A951E48F30100A33207 /* XZDataLayerViewerUITests.m in Sources */,
+				101BC54B1E4E04DC00BCD03C /* DataLayerObserver.m in Sources */,
+				101BC5561E4E102100BCD03C /* DataLayerHistoryWriter.m in Sources */,
 				101BC53C1E4B9CC300BCD03C /* ArrayDataSource.m in Sources */,
 				104778E31E4B9AB5003E126A /* DataSourceFabric.m in Sources */,
 			);

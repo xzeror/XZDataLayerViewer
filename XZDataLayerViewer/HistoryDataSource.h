@@ -1,5 +1,5 @@
 //
-//  EventHistoryDataSource.h
+//  HistoryDataSource.h
 //  XZDataLayerViewer
 //
 //  Created by Andrey Ostanin on 09.02.17.
@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "DataSourceProtocol.h"
-#import "TAGDataLayer.h"
 
-@interface EventHistoryDataSource : NSObject <DataSourceProtocol>
-- (instancetype)initWithDataLayer:(TAGDataLayer*)dataLayer;
+@protocol StoreProtocol;
+
+@interface HistoryDataSource : NSObject <DataSourceProtocol>
+- (instancetype)initWithStore:(id<StoreProtocol>)store;
 @end

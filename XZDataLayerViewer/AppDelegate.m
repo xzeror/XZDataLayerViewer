@@ -11,12 +11,18 @@
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
 #import "DataSourceFabric.h"
+#import "StoreProtocol.h"
+#import "DataLayerObserver.h"
+#import "MemoryEventsHistoryStore.h"
+#import "DataLayerHistoryWriter.h"
 
 static NSString *GTMContainerId = @"GTM-WJBDPX6";
 static NSUInteger counter = 0;
 
 @interface AppDelegate ()
-
+@property(nonatomic,strong)id<StoreProtocol> store;
+@property(nonatomic,strong)DataLayerObserver *dataLayerObserver;
+@property(nonatomic,strong)DataLayerHistoryWriter *dataLayerHistoryWriter;
 @end
 
 @implementation AppDelegate
@@ -27,11 +33,15 @@ static NSUInteger counter = 0;
 	
 	[self setupTagManager];
 	
-	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForTagManager:[TAGManager instance]];
+	self.dataLayerObserver = [[DataLayerObserver alloc] initWithDataLayer:[[TAGManager instance] dataLayer]];
+	self.store = [[MemoryEventsHistoryStore alloc] init];
+	self.dataLayerHistoryWriter = [[DataLayerHistoryWriter alloc] initWithStore:self.store];
 	
+	
+	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForData:self.store];
+	UIViewController *rootViewController = [[ViewController alloc] initWithDataSource:dataSource];
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithDataSource:dataSource]];
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
 	[self.window makeKeyAndVisible];
 	
 	

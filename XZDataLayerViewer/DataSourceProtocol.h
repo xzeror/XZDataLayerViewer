@@ -10,7 +10,7 @@
 
 @class ViewModel;
 
-@protocol DataSourceProtocol <NSObject>
+@protocol DataSourceProtocol
 - (NSInteger)count;
 - (ViewModel*)viewModelForIndexPath:(NSIndexPath*)indexPath;
 - (id)rawDataForIndexPath:(NSIndexPath*)indexPath;
