@@ -10,7 +10,6 @@
 		10133A711E48F30100A33207 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A701E48F30100A33207 /* main.m */; };
 		10133A741E48F30100A33207 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A731E48F30100A33207 /* AppDelegate.m */; };
 		10133A7C1E48F30100A33207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10133A7B1E48F30100A33207 /* Assets.xcassets */; };
-		10133A8A1E48F30100A33207 /* XZDataLayerViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A891E48F30100A33207 /* XZDataLayerViewerTests.m */; };
 		10133A951E48F30100A33207 /* XZDataLayerViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A941E48F30100A33207 /* XZDataLayerViewerUITests.m */; };
 		10133AB41E48F39500A33207 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAD1E48F39500A33207 /* libAdIdAccess.a */; };
 		10133AB51E48F39500A33207 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAE1E48F39500A33207 /* libGoogleAnalyticsServices.a */; };
@@ -60,6 +59,10 @@
 		10A684AB1E48F7B500702265 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A61E48F72E00702265 /* libsqlite3.tbd */; };
 		10A684AD1E48F7D700702265 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AC1E48F7D700702265 /* CoreData.framework */; };
 		10A684AF1E48F81200702265 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AE1E48F81200702265 /* SystemConfiguration.framework */; };
+		10FE113A1E4FA288008C2437 /* EventHistoryElementTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FE11391E4FA288008C2437 /* EventHistoryElementTest.m */; };
+		10FE113F1E4FAB4F008C2437 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FE113E1E4FAB4F008C2437 /* AdSupport.framework */; };
+		10FE11411E4FB06B008C2437 /* DataLayerHistoryWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */; };
+		751F3E0B301FC6C08C769A58 /* libPods-XZDataLayerViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +90,6 @@
 		10133A7B1E48F30100A33207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10133A801E48F30100A33207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10133A851E48F30100A33207 /* XZDataLayerViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XZDataLayerViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10133A891E48F30100A33207 /* XZDataLayerViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewerTests.m; sourceTree = "<group>"; };
 		10133A8B1E48F30100A33207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10133A901E48F30100A33207 /* XZDataLayerViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XZDataLayerViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10133A941E48F30100A33207 /* XZDataLayerViewerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewerUITests.m; sourceTree = "<group>"; };
@@ -135,6 +137,13 @@
 		10A684A81E48F73600702265 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		10A684AC1E48F7D700702265 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		10A684AE1E48F81200702265 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		10FE11391E4FA288008C2437 /* EventHistoryElementTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventHistoryElementTest.m; sourceTree = "<group>"; };
+		10FE113B1E4FA2C7008C2437 /* TestsPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestsPrefix.pch; sourceTree = "<group>"; };
+		10FE113E1E4FAB4F008C2437 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerHistoryWriterTest.m; sourceTree = "<group>"; };
+		4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XZDataLayerViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3FD318C749F2511A704AD4B /* Pods-XZDataLayerViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,12 +164,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FE113F1E4FAB4F008C2437 /* AdSupport.framework in Frameworks */,
 				109E51511E4F7AF50044305D /* libz.tbd in Frameworks */,
 				109E51501E4F7AF00044305D /* libsqlite3.tbd in Frameworks */,
 				109E514F1E4F7AE70044305D /* CoreData.framework in Frameworks */,
 				109E514E1E4F7AE00044305D /* SystemConfiguration.framework in Frameworks */,
 				109E51531E4F7B020044305D /* libGoogleAnalyticsServices.a in Frameworks */,
 				109E51521E4F7B000044305D /* libAdIdAccess.a in Frameworks */,
+				751F3E0B301FC6C08C769A58 /* libPods-XZDataLayerViewerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +199,7 @@
 				10133A931E48F30100A33207 /* XZDataLayerViewerUITests */,
 				10133A6D1E48F30100A33207 /* Products */,
 				10A684A51E48F72D00702265 /* Frameworks */,
+				FB575A48F118CCAA6B53EC5E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,8 +241,10 @@
 		10133A881E48F30100A33207 /* XZDataLayerViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				10133A891E48F30100A33207 /* XZDataLayerViewerTests.m */,
 				10133A8B1E48F30100A33207 /* Info.plist */,
+				10FE113B1E4FA2C7008C2437 /* TestsPrefix.pch */,
+				10FE11391E4FA288008C2437 /* EventHistoryElementTest.m */,
+				10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */,
 			);
 			path = XZDataLayerViewerTests;
 			sourceTree = "<group>";
@@ -345,12 +359,23 @@
 		10A684A51E48F72D00702265 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10FE113E1E4FAB4F008C2437 /* AdSupport.framework */,
 				10A684AE1E48F81200702265 /* SystemConfiguration.framework */,
 				10A684AC1E48F7D700702265 /* CoreData.framework */,
 				10A684A81E48F73600702265 /* libz.tbd */,
 				10A684A61E48F72E00702265 /* libsqlite3.tbd */,
+				4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB575A48F118CCAA6B53EC5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */,
+				F3FD318C749F2511A704AD4B /* Pods-XZDataLayerViewerTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,9 +402,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10133A9C1E48F30100A33207 /* Build configuration list for PBXNativeTarget "XZDataLayerViewerTests" */;
 			buildPhases = (
+				49C1367C93A7A20CE1C935B0 /* [CP] Check Pods Manifest.lock */,
 				10133A811E48F30100A33207 /* Sources */,
 				10133A821E48F30100A33207 /* Frameworks */,
 				10133A831E48F30100A33207 /* Resources */,
+				F88097EE51654E7248E1EAFE /* [CP] Embed Pods Frameworks */,
+				90BC21F44C8CB82E7E5D0059 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -482,6 +510,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49C1367C93A7A20CE1C935B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90BC21F44C8CB82E7E5D0059 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F88097EE51654E7248E1EAFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10133A681E48F30100A33207 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -507,10 +583,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				109E514C1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
+				10FE113A1E4FA288008C2437 /* EventHistoryElementTest.m in Sources */,
 				109E51461E4F79350044305D /* DataLayerHistoryWriter.m in Sources */,
 				109E513D1E4F79350044305D /* ViewController.m in Sources */,
 				109E51311E4F79350044305D /* ArrayDataSource.m in Sources */,
-				10133A8A1E48F30100A33207 /* XZDataLayerViewerTests.m in Sources */,
+				10FE11411E4FB06B008C2437 /* DataLayerHistoryWriterTest.m in Sources */,
 				109E513A1E4F79350044305D /* HistoryDataSource.m in Sources */,
 				109E51491E4F79350044305D /* DataLayerObserver.m in Sources */,
 				109E51371E4F79350044305D /* DictionaryDataSource.m in Sources */,
@@ -678,9 +755,12 @@
 		};
 		10133A9D1E48F30100A33207 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = CB4K3VJT3H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/XZDataLayerViewerTests/TestsPrefix.pch";
 				INFOPLIST_FILE = XZDataLayerViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -695,9 +775,12 @@
 		};
 		10133A9E1E48F30100A33207 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3FD318C749F2511A704AD4B /* Pods-XZDataLayerViewerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = CB4K3VJT3H;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/XZDataLayerViewerTests/TestsPrefix.pch";
 				INFOPLIST_FILE = XZDataLayerViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
