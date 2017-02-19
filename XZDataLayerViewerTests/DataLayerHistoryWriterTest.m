@@ -10,9 +10,12 @@
 
 // Collaborators
 #import <UIKit/UIKit.h>
+#import "StoreProtocol.h"
 
 @interface DataLayerHistoryWriterTest : XCTestCase
-@property(nonatomic,strong)DataLayerHistoryWriter *<#classUnderTestInstanceName#>
+@property(nonatomic,strong)DataLayerHistoryWriter *dataLayerHistoryWriter;
+@property (nonatomic, strong)id<StoreProtocol> storeMock;
+@property (nonatomic, strong) NSNotificationCenter *notificationCenterMock;
 @end
 
 
@@ -20,11 +23,14 @@
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method
-	self.<#classUnderTestInstanceName#> = [[DataLayerHistoryWriter alloc] init];
+	self.storeMock = OCMProtocolMock(@protocol(StoreProtocol));
+	self.notificationCenterMock = OCMClassMock([NSNotificationCenter class]);
+	self.dataLayerHistoryWriter = [[DataLayerHistoryWriter alloc] initWithStore:self.storeMock notificationCenter:self.notificationCenterMock];
 }
 
 - (void)tearDown {
-	self.<#classUnderTestInstanceName#> = nil;
+	self.dataLayerHistoryWriter = nil;
+	self.storeMock = nil;
 	[super tearDown]; // must be the last line in method
 }
 
@@ -32,13 +38,12 @@
 
 
 #pragma mark - Tests
-- (void)test<#Test Name#>{
+- (void)testInitWithStoreSavesStorePointerInside{
 	// given
-
-	// when
+	// objects were initialized in setUp
 
 	// then
-    expect(@"Unit tests are not implemented yet in DataLayerHistoryWriterTest").beNil();
+//	expect(self.dataLayerHistoryWriter valueForKey:[@""]);
 }
 
 @end

@@ -35,7 +35,8 @@ static NSUInteger counter = 0;
 	
 	self.dataLayerObserver = [[DataLayerObserver alloc] initWithDataLayer:[[TAGManager instance] dataLayer]];
 	self.store = [[MemoryEventsHistoryStore alloc] init];
-	self.dataLayerHistoryWriter = [[DataLayerHistoryWriter alloc] initWithStore:self.store];
+	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+	self.dataLayerHistoryWriter = [[DataLayerHistoryWriter alloc] initWithStore:self.store notificationCenter:notificationCenter];
 	
 	
 	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForData:self.store];

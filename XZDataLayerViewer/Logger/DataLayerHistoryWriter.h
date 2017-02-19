@@ -11,5 +11,5 @@
 @protocol StoreProtocol;
 
 @interface DataLayerHistoryWriter : NSObject
-- (instancetype)initWithStore:(id<StoreProtocol>)store;
+- (instancetype)initWithStore:(id<StoreProtocol>)store notificationCenter:(NSNotificationCenter*)notificationCenter;
 @end

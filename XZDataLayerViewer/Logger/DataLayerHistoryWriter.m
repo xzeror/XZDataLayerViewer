@@ -15,12 +15,14 @@
 
 @interface DataLayerHistoryWriter ()
 @property(nonatomic,strong)id<StoreProtocol> store;
+@property (nonatomic, strong)NSNotificationCenter *notificationCenter;
 @end
 
 @implementation DataLayerHistoryWriter
-- (instancetype)initWithStore:(id<StoreProtocol>)store{
+- (instancetype)initWithStore:(id<StoreProtocol>)store notificationCenter:(NSNotificationCenter*)notificationCenter{
 	if((self = [super init])){
 		_store = store;
+		_notificationCenter = notificationCenter;
 		
 		[self setupDataLayerObservation];
 	}
