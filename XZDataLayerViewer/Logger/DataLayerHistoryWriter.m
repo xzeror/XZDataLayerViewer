@@ -11,8 +11,7 @@
 #import "DataLayerObserver.h"
 #import "StoreProtocol.h"
 #import "EventHistoryElement.h"
-
-#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#import "UIDevice+SystemVersion.h"
 
 @interface DataLayerHistoryWriter ()
 @property(nonatomic,strong)id<StoreProtocol> store;
@@ -29,7 +28,7 @@
 }
 
 -(void)dealloc{
-	if (SYSTEM_VERSION_LESS_THAN(@"9.0")) {
+	if ([[UIDevice currentDevice] isSystemVersionLessThan:@"9.0"]) {
 		[self tearDownDataLayerObservation];
 	}
 }

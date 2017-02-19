@@ -13,6 +13,9 @@
 		10133A951E48F30100A33207 /* XZDataLayerViewerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10133A941E48F30100A33207 /* XZDataLayerViewerUITests.m */; };
 		10133AB41E48F39500A33207 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAD1E48F39500A33207 /* libAdIdAccess.a */; };
 		10133AB51E48F39500A33207 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAE1E48F39500A33207 /* libGoogleAnalyticsServices.a */; };
+		1024C2BB1E593FEC00B801FF /* UIDevice+SystemVersionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2BA1E593FEC00B801FF /* UIDevice+SystemVersionTest.m */; };
+		1024C2BC1E593FEC00B801FF /* UIDevice+SystemVersionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2BA1E593FEC00B801FF /* UIDevice+SystemVersionTest.m */; };
+		1024C2C51E59407D00B801FF /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */; };
 		109E51301E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
 		109E51311E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
 		109E51321E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
@@ -111,6 +114,9 @@
 		10133AB11E48F39500A33207 /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
 		10133AB21E48F39500A33207 /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
 		10133AB31E48F39500A33207 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		1024C2BA1E593FEC00B801FF /* UIDevice+SystemVersionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SystemVersionTest.m"; sourceTree = "<group>"; };
+		1024C2C31E59407D00B801FF /* UIDevice+SystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SystemVersion.h"; sourceTree = "<group>"; };
+		1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SystemVersion.m"; sourceTree = "<group>"; };
 		109E51151E4F79350044305D /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
 		109E51161E4F79350044305D /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
 		109E51171E4F79350044305D /* DataSourceFabric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceFabric.h; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 				109E51241E4F79350044305D /* Model */,
 				109E51271E4F79350044305D /* Logger */,
 				109E512C1E4F79350044305D /* Store */,
+				1024C2C21E59407D00B801FF /* Categories */,
 				10133A721E48F30100A33207 /* AppDelegate.h */,
 				10133A731E48F30100A33207 /* AppDelegate.m */,
 				10133A7B1E48F30100A33207 /* Assets.xcassets */,
@@ -245,6 +252,7 @@
 				10FE113B1E4FA2C7008C2437 /* TestsPrefix.pch */,
 				10FE11391E4FA288008C2437 /* EventHistoryElementTest.m */,
 				10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */,
+				1024C2BA1E593FEC00B801FF /* UIDevice+SystemVersionTest.m */,
 			);
 			path = XZDataLayerViewerTests;
 			sourceTree = "<group>";
@@ -280,6 +288,15 @@
 				10133AB31E48F39500A33207 /* TAGManager.h */,
 			);
 			path = GASDK;
+			sourceTree = "<group>";
+		};
+		1024C2C21E59407D00B801FF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1024C2C31E59407D00B801FF /* UIDevice+SystemVersion.h */,
+				1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		109E51131E4F79350044305D /* Viewer */ = {
@@ -572,6 +589,7 @@
 				109E514B1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
 				10133A711E48F30100A33207 /* main.m in Sources */,
 				109E51391E4F79350044305D /* HistoryDataSource.m in Sources */,
+				1024C2C51E59407D00B801FF /* UIDevice+SystemVersion.m in Sources */,
 				109E51451E4F79350044305D /* DataLayerHistoryWriter.m in Sources */,
 				109E51331E4F79350044305D /* DataSourceFabric.m in Sources */,
 				109E51361E4F79350044305D /* DictionaryDataSource.m in Sources */,
@@ -594,6 +612,7 @@
 				109E51341E4F79350044305D /* DataSourceFabric.m in Sources */,
 				109E51431E4F79350044305D /* EventHistoryElement.m in Sources */,
 				109E51401E4F79350044305D /* ViewModel.m in Sources */,
+				1024C2BB1E593FEC00B801FF /* UIDevice+SystemVersionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +627,7 @@
 				10133A951E48F30100A33207 /* XZDataLayerViewerUITests.m in Sources */,
 				109E513B1E4F79350044305D /* HistoryDataSource.m in Sources */,
 				109E514A1E4F79350044305D /* DataLayerObserver.m in Sources */,
+				1024C2BC1E593FEC00B801FF /* UIDevice+SystemVersionTest.m in Sources */,
 				109E51381E4F79350044305D /* DictionaryDataSource.m in Sources */,
 				109E51351E4F79350044305D /* DataSourceFabric.m in Sources */,
 				109E51441E4F79350044305D /* EventHistoryElement.m in Sources */,
