@@ -46,29 +46,30 @@ static NSUInteger counter = 0;
 	[self.window makeKeyAndVisible];
 	
 	
-	NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:1] interval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-		NSDictionary *ecommerce = @{@"ecommerce": @{
-											@"counter": @(counter),
-											@"currencyCode": @"RUB",
-											@"detail": @{
-													@"products": @[
-															@{@"name": @"alsdkjflkdsj fldskfj df",
-															  @"id": @(123456),
-															  @"price": @(123.23),
-															  @"category": @"asdfsdf",
-															  }
-															]
-													}
-											}
-									};
-		
-		[[TAGManager instance].dataLayer push:ecommerce];
-		counter++;
-	}];
+	NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:1] interval:1 target:self selector:@selector(pushData) userInfo:nil repeats:YES];
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 	return YES;
 }
 
+- (void)pushData{
+	NSDictionary *ecommerce = @{@"ecommerce": @{
+										@"counter": @(counter),
+										@"currencyCode": @"RUB",
+										@"detail": @{
+												@"products": @[
+														@{@"name": @"alsdkjflkdsj fldskfj df",
+														  @"id": @(123456),
+														  @"price": @(123.23),
+														  @"category": @"asdfsdf",
+														  }
+														]
+												}
+										}
+								};
+	
+	[[TAGManager instance].dataLayer push:ecommerce];
+	counter++;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
