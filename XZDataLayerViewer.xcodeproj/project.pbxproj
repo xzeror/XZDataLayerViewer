@@ -15,35 +15,15 @@
 		10133AB51E48F39500A33207 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10133AAE1E48F39500A33207 /* libGoogleAnalyticsServices.a */; };
 		1024C2C51E59407D00B801FF /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */; };
 		109E51301E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
-		109E51311E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
-		109E51321E4F79350044305D /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
 		109E51331E4F79350044305D /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51181E4F79350044305D /* DataSourceFabric.m */; };
-		109E51341E4F79350044305D /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51181E4F79350044305D /* DataSourceFabric.m */; };
-		109E51351E4F79350044305D /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51181E4F79350044305D /* DataSourceFabric.m */; };
 		109E51361E4F79350044305D /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511B1E4F79350044305D /* DictionaryDataSource.m */; };
-		109E51371E4F79350044305D /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511B1E4F79350044305D /* DictionaryDataSource.m */; };
-		109E51381E4F79350044305D /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511B1E4F79350044305D /* DictionaryDataSource.m */; };
 		109E51391E4F79350044305D /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511D1E4F79350044305D /* HistoryDataSource.m */; };
-		109E513A1E4F79350044305D /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511D1E4F79350044305D /* HistoryDataSource.m */; };
-		109E513B1E4F79350044305D /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511D1E4F79350044305D /* HistoryDataSource.m */; };
 		109E513C1E4F79350044305D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51201E4F79350044305D /* ViewController.m */; };
-		109E513D1E4F79350044305D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51201E4F79350044305D /* ViewController.m */; };
-		109E513E1E4F79350044305D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51201E4F79350044305D /* ViewController.m */; };
 		109E513F1E4F79350044305D /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51231E4F79350044305D /* ViewModel.m */; };
-		109E51401E4F79350044305D /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51231E4F79350044305D /* ViewModel.m */; };
-		109E51411E4F79350044305D /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51231E4F79350044305D /* ViewModel.m */; };
 		109E51421E4F79350044305D /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51261E4F79350044305D /* EventHistoryElement.m */; };
-		109E51431E4F79350044305D /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51261E4F79350044305D /* EventHistoryElement.m */; };
-		109E51441E4F79350044305D /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51261E4F79350044305D /* EventHistoryElement.m */; };
 		109E51451E4F79350044305D /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51291E4F79350044305D /* DataLayerHistoryWriter.m */; };
-		109E51461E4F79350044305D /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51291E4F79350044305D /* DataLayerHistoryWriter.m */; };
-		109E51471E4F79350044305D /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51291E4F79350044305D /* DataLayerHistoryWriter.m */; };
 		109E51481E4F79350044305D /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512B1E4F79350044305D /* DataLayerObserver.m */; };
-		109E51491E4F79350044305D /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512B1E4F79350044305D /* DataLayerObserver.m */; };
-		109E514A1E4F79350044305D /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512B1E4F79350044305D /* DataLayerObserver.m */; };
 		109E514B1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
-		109E514C1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
-		109E514D1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
 		109E514E1E4F7AE00044305D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AE1E48F81200702265 /* SystemConfiguration.framework */; };
 		109E514F1E4F7AE70044305D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AC1E48F7D700702265 /* CoreData.framework */; };
 		109E51501E4F7AF00044305D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A61E48F72E00702265 /* libsqlite3.tbd */; };
@@ -63,19 +43,27 @@
 		10FE113A1E4FA288008C2437 /* EventHistoryElementTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FE11391E4FA288008C2437 /* EventHistoryElementTest.m */; };
 		10FE113F1E4FAB4F008C2437 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FE113E1E4FAB4F008C2437 /* AdSupport.framework */; };
 		10FE11411E4FB06B008C2437 /* DataLayerHistoryWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */; };
+		7034623B1E660FEB00FFEEAF /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51161E4F79350044305D /* ArrayDataSource.m */; };
+		7034623C1E660FEB00FFEEAF /* DataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51181E4F79350044305D /* DataSourceFabric.m */; };
+		7034623D1E660FEB00FFEEAF /* DictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511B1E4F79350044305D /* DictionaryDataSource.m */; };
+		7034623E1E660FEB00FFEEAF /* HistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E511D1E4F79350044305D /* HistoryDataSource.m */; };
+		7034623F1E660FEB00FFEEAF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51201E4F79350044305D /* ViewController.m */; };
+		703462401E660FEB00FFEEAF /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51231E4F79350044305D /* ViewModel.m */; };
+		703462411E660FEB00FFEEAF /* EventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51261E4F79350044305D /* EventHistoryElement.m */; };
+		703462421E660FEB00FFEEAF /* DataLayerHistoryWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E51291E4F79350044305D /* DataLayerHistoryWriter.m */; };
+		703462431E660FEB00FFEEAF /* DataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512B1E4F79350044305D /* DataLayerObserver.m */; };
+		703462441E660FEB00FFEEAF /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
+		703462451E660FEB00FFEEAF /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */; };
+		703462461E660FEB00FFEEAF /* TAGDataLayer+CustomProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */; };
 		7080A83E1E5E367D0046189A /* UIDevice+SystemVersionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2BA1E593FEC00B801FF /* UIDevice+SystemVersionTest.m */; };
+		708F18981E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 708F18971E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m */; };
 		709AC4941E652A0E00B8F34B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FE113E1E4FAB4F008C2437 /* AdSupport.framework */; };
+		709AC4961E652E7F00B8F34B /* DataLayerObserverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 709AC4951E652E7F00B8F34B /* DataLayerObserverTest.m */; };
+		70A98DF11E65F0600088DC38 /* TAGDataLayer+CustomProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */; };
 		751F3E0B301FC6C08C769A58 /* libPods-XZDataLayerViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10133A861E48F30100A33207 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10133A641E48F30100A33207 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10133A6B1E48F30100A33207;
-			remoteInfo = XZDataLayerViewer;
-		};
 		10133A911E48F30100A33207 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 10133A641E48F30100A33207 /* Project object */;
@@ -92,7 +80,7 @@
 		10133A731E48F30100A33207 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		10133A7B1E48F30100A33207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10133A801E48F30100A33207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10133A851E48F30100A33207 /* XZDataLayerViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XZDataLayerViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		10133A851E48F30100A33207 /* XZDataLayerViewerUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XZDataLayerViewerUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10133A8B1E48F30100A33207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10133A901E48F30100A33207 /* XZDataLayerViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XZDataLayerViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10133A941E48F30100A33207 /* XZDataLayerViewerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewerUITests.m; sourceTree = "<group>"; };
@@ -149,6 +137,10 @@
 		10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerHistoryWriterTest.m; sourceTree = "<group>"; };
 		4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XZDataLayerViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		708F18971E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomPropertiesTest.m"; sourceTree = "<group>"; };
+		709AC4951E652E7F00B8F34B /* DataLayerObserverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerObserverTest.m; sourceTree = "<group>"; };
+		70A98DEF1E65F0600088DC38 /* TAGDataLayer+CustomProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TAGDataLayer+CustomProperties.h"; sourceTree = "<group>"; };
+		70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomProperties.m"; sourceTree = "<group>"; };
 		F3FD318C749F2511A704AD4B /* Pods-XZDataLayerViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				10133A6C1E48F30100A33207 /* XZDataLayerViewer.app */,
-				10133A851E48F30100A33207 /* XZDataLayerViewerTests.xctest */,
+				10133A851E48F30100A33207 /* XZDataLayerViewerUnitTests.xctest */,
 				10133A901E48F30100A33207 /* XZDataLayerViewerUITests.xctest */,
 			);
 			name = Products;
@@ -249,11 +241,13 @@
 		10133A881E48F30100A33207 /* XZDataLayerViewerTests */ = {
 			isa = PBXGroup;
 			children = (
+				10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */,
+				709AC4951E652E7F00B8F34B /* DataLayerObserverTest.m */,
+				10FE11391E4FA288008C2437 /* EventHistoryElementTest.m */,
 				10133A8B1E48F30100A33207 /* Info.plist */,
 				10FE113B1E4FA2C7008C2437 /* TestsPrefix.pch */,
-				10FE11391E4FA288008C2437 /* EventHistoryElementTest.m */,
-				10FE11401E4FB06B008C2437 /* DataLayerHistoryWriterTest.m */,
 				1024C2BA1E593FEC00B801FF /* UIDevice+SystemVersionTest.m */,
+				708F18971E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m */,
 			);
 			path = XZDataLayerViewerTests;
 			sourceTree = "<group>";
@@ -296,6 +290,8 @@
 			children = (
 				1024C2C31E59407D00B801FF /* UIDevice+SystemVersion.h */,
 				1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */,
+				70A98DEF1E65F0600088DC38 /* TAGDataLayer+CustomProperties.h */,
+				70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -416,9 +412,9 @@
 			productReference = 10133A6C1E48F30100A33207 /* XZDataLayerViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		10133A841E48F30100A33207 /* XZDataLayerViewerTests */ = {
+		10133A841E48F30100A33207 /* XZDataLayerViewerUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10133A9C1E48F30100A33207 /* Build configuration list for PBXNativeTarget "XZDataLayerViewerTests" */;
+			buildConfigurationList = 10133A9C1E48F30100A33207 /* Build configuration list for PBXNativeTarget "XZDataLayerViewerUnitTests" */;
 			buildPhases = (
 				49C1367C93A7A20CE1C935B0 /* [CP] Check Pods Manifest.lock */,
 				10133A811E48F30100A33207 /* Sources */,
@@ -430,11 +426,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				10133A871E48F30100A33207 /* PBXTargetDependency */,
 			);
-			name = XZDataLayerViewerTests;
+			name = XZDataLayerViewerUnitTests;
 			productName = XZDataLayerViewerTests;
-			productReference = 10133A851E48F30100A33207 /* XZDataLayerViewerTests.xctest */;
+			productReference = 10133A851E48F30100A33207 /* XZDataLayerViewerUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		10133A8F1E48F30100A33207 /* XZDataLayerViewerUITests */ = {
@@ -471,7 +466,6 @@
 					10133A841E48F30100A33207 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 10133A6B1E48F30100A33207;
 					};
 					10133A8F1E48F30100A33207 = {
 						CreatedOnToolsVersion = 8.1;
@@ -494,7 +488,7 @@
 			projectRoot = "";
 			targets = (
 				10133A6B1E48F30100A33207 /* XZDataLayerViewer */,
-				10133A841E48F30100A33207 /* XZDataLayerViewerTests */,
+				10133A841E48F30100A33207 /* XZDataLayerViewerUnitTests */,
 				10133A8F1E48F30100A33207 /* XZDataLayerViewerUITests */,
 			);
 		};
@@ -583,6 +577,7 @@
 				109E51421E4F79350044305D /* EventHistoryElement.m in Sources */,
 				109E513F1E4F79350044305D /* ViewModel.m in Sources */,
 				109E51481E4F79350044305D /* DataLayerObserver.m in Sources */,
+				70A98DF11E65F0600088DC38 /* TAGDataLayer+CustomProperties.m in Sources */,
 				10133A741E48F30100A33207 /* AppDelegate.m in Sources */,
 				109E514B1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
 				10133A711E48F30100A33207 /* main.m in Sources */,
@@ -598,19 +593,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				109E514C1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
+				7034623B1E660FEB00FFEEAF /* ArrayDataSource.m in Sources */,
+				7034623C1E660FEB00FFEEAF /* DataSourceFabric.m in Sources */,
+				7034623D1E660FEB00FFEEAF /* DictionaryDataSource.m in Sources */,
+				7034623E1E660FEB00FFEEAF /* HistoryDataSource.m in Sources */,
+				7034623F1E660FEB00FFEEAF /* ViewController.m in Sources */,
+				703462401E660FEB00FFEEAF /* ViewModel.m in Sources */,
+				703462411E660FEB00FFEEAF /* EventHistoryElement.m in Sources */,
+				703462421E660FEB00FFEEAF /* DataLayerHistoryWriter.m in Sources */,
+				703462431E660FEB00FFEEAF /* DataLayerObserver.m in Sources */,
+				703462441E660FEB00FFEEAF /* MemoryEventsHistoryStore.m in Sources */,
+				703462451E660FEB00FFEEAF /* UIDevice+SystemVersion.m in Sources */,
+				703462461E660FEB00FFEEAF /* TAGDataLayer+CustomProperties.m in Sources */,
+				708F18981E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m in Sources */,
 				10FE113A1E4FA288008C2437 /* EventHistoryElementTest.m in Sources */,
-				109E51461E4F79350044305D /* DataLayerHistoryWriter.m in Sources */,
-				109E513D1E4F79350044305D /* ViewController.m in Sources */,
 				7080A83E1E5E367D0046189A /* UIDevice+SystemVersionTest.m in Sources */,
-				109E51311E4F79350044305D /* ArrayDataSource.m in Sources */,
 				10FE11411E4FB06B008C2437 /* DataLayerHistoryWriterTest.m in Sources */,
-				109E513A1E4F79350044305D /* HistoryDataSource.m in Sources */,
-				109E51491E4F79350044305D /* DataLayerObserver.m in Sources */,
-				109E51371E4F79350044305D /* DictionaryDataSource.m in Sources */,
-				109E51341E4F79350044305D /* DataSourceFabric.m in Sources */,
-				109E51431E4F79350044305D /* EventHistoryElement.m in Sources */,
-				109E51401E4F79350044305D /* ViewModel.m in Sources */,
+				709AC4961E652E7F00B8F34B /* DataLayerObserverTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,28 +617,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				109E514D1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
-				109E51471E4F79350044305D /* DataLayerHistoryWriter.m in Sources */,
-				109E513E1E4F79350044305D /* ViewController.m in Sources */,
-				109E51321E4F79350044305D /* ArrayDataSource.m in Sources */,
 				10133A951E48F30100A33207 /* XZDataLayerViewerUITests.m in Sources */,
-				109E513B1E4F79350044305D /* HistoryDataSource.m in Sources */,
-				109E514A1E4F79350044305D /* DataLayerObserver.m in Sources */,
-				109E51381E4F79350044305D /* DictionaryDataSource.m in Sources */,
-				109E51351E4F79350044305D /* DataSourceFabric.m in Sources */,
-				109E51441E4F79350044305D /* EventHistoryElement.m in Sources */,
-				109E51411E4F79350044305D /* ViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		10133A871E48F30100A33207 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 10133A6B1E48F30100A33207 /* XZDataLayerViewer */;
-			targetProxy = 10133A861E48F30100A33207 /* PBXContainerItemProxy */;
-		};
 		10133A921E48F30100A33207 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 10133A6B1E48F30100A33207 /* XZDataLayerViewer */;
@@ -780,7 +764,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/XZDataLayerViewerTests/TestsPrefix.pch";
@@ -793,7 +776,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XZDataLayerViewer.app/XZDataLayerViewer";
 			};
 			name = Debug;
 		};
@@ -801,7 +783,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3FD318C749F2511A704AD4B /* Pods-XZDataLayerViewerTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/XZDataLayerViewerTests/TestsPrefix.pch";
@@ -814,7 +795,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XZDataLayerViewer.app/XZDataLayerViewer";
 			};
 			name = Release;
 		};
@@ -873,7 +853,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		10133A9C1E48F30100A33207 /* Build configuration list for PBXNativeTarget "XZDataLayerViewerTests" */ = {
+		10133A9C1E48F30100A33207 /* Build configuration list for PBXNativeTarget "XZDataLayerViewerUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10133A9D1E48F30100A33207 /* Debug */,
