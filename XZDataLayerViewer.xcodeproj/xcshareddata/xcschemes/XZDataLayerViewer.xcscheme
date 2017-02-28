@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "10133A841E48F30100A33207"
-               BuildableName = "XZDataLayerViewerTests.xctest"
-               BlueprintName = "XZDataLayerViewerTests"
+               BuildableName = "XZDataLayerViewerUnitTests.xctest"
+               BlueprintName = "XZDataLayerViewerUnitTests"
                ReferencedContainer = "container:XZDataLayerViewer.xcodeproj">
             </BuildableReference>
          </TestableReference>
