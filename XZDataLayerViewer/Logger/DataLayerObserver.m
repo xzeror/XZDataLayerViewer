@@ -10,22 +10,21 @@
 #import "DataLayerObserver.h"
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
+#import "TAGDataLayer+CustomProperties.h"
 
 NSString * const DataLayerHasChangedNotification = @"com.xzonesoftware.datalayer.haschanged";
 NSString * const kDataLayerPayload = @"com.xzonesoftware.datalayer.haschanged.datalayer_payload";
 
-static NSString * const DataLayerModelPropertyName = @"model";
+static IMP __original_Push_Implementation;
 
-static IMP __original_Push_Imp;
-
-void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
+static void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 {
 	NSLog(@"%@, %@", self, NSStringFromSelector(_cmd));
 	assert([NSStringFromSelector(_cmd) isEqualToString:@"push:"]);
-	((void(*)(id,SEL,NSDictionary*))__original_Push_Imp)(self, _cmd, dict);
-	NSDictionary *dataLayerModel = (NSDictionary*)[self valueForKey:DataLayerModelPropertyName];
-	NSDictionary *dataLayerCopy = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:dataLayerModel]];
-	[[NSNotificationCenter defaultCenter] postNotificationName:DataLayerHasChangedNotification object:self userInfo:@{kDataLayerPayload:dataLayerCopy}];
+	((void(*)(id,SEL,NSDictionary*))__original_Push_Implementation)(self, _cmd, dict);
+	NSDictionary *dataLayerModel = (NSDictionary*)[self valueForKey:@"model"];
+	NSDictionary *dataLayerModelDeepCopy = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:dataLayerModel]];
+	[[NSNotificationCenter defaultCenter] postNotificationName:DataLayerHasChangedNotification object:self userInfo:@{kDataLayerPayload:dataLayerModelDeepCopy}];
 }
 
 @interface DataLayerObserver ()
@@ -33,27 +32,37 @@ void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 @end
 
 @implementation DataLayerObserver
-- (instancetype)init{
-	return [self initWithDataLayer:nil];
-}
-
 - (instancetype)initWithDataLayer:(TAGDataLayer*)dataLayer{
 	NSParameterAssert(dataLayer);
 	
 	if((self = [super init])){
 		_dataLayer = dataLayer;
-		Method m = class_getInstanceMethod([_dataLayer class], @selector(push:));
-		__original_Push_Imp = method_setImplementation(m,(IMP)__swizzle_Push);
+		[self setupSwizzling];
 	}
 	return self;
 }
 
 - (void)dealloc{
-	if (_dataLayer == nil) {
-		return;
+	[self teardownSwizzling];
+}
+
+- (void)setupSwizzling{
+	@synchronized (self) {
+		if (__original_Push_Implementation) {
+			// already swizzled, nothing to do
+			return;
+		}
+		Method m = class_getInstanceMethod([_dataLayer class], @selector(push:));
+		__original_Push_Implementation = method_setImplementation(m,(IMP)__swizzle_Push);
 	}
-	Method m = class_getInstanceMethod([_dataLayer class], @selector(push:));
-	method_setImplementation(m,(IMP)__original_Push_Imp);
+}
+
+- (void)teardownSwizzling{
+	@synchronized (self) {
+		Method m = class_getInstanceMethod([_dataLayer class], @selector(push:));
+		method_setImplementation(m,(IMP)__original_Push_Implementation);
+		__original_Push_Implementation = nil;
+	}
 }
 
 @end
