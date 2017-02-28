@@ -15,10 +15,13 @@
 
 @interface DataLayerHistoryWriter ()
 @property(nonatomic,strong)id<StoreProtocol> store;
-@property (nonatomic, strong)NSNotificationCenter *notificationCenter;
+@property(nonatomic,strong)NSNotificationCenter *notificationCenter;
+@property(nonatomic,strong)id notificationObserver;
 @end
 
 @implementation DataLayerHistoryWriter
+
+
 - (instancetype)initWithStore:(id<StoreProtocol>)store notificationCenter:(NSNotificationCenter*)notificationCenter{
 	if((self = [super init])){
 		_store = store;
@@ -30,18 +33,20 @@
 }
 
 -(void)dealloc{
-	if ([[UIDevice currentDevice] isSystemVersionLessThan:@"9.0"]) {
-		[self tearDownDataLayerObservation];
-	}
+	[self tearDownDataLayerObservation];
 }
 
 #pragma mark - Auxiliary methods
 - (void)setupDataLayerObservation{
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(writeDataLayerCopyToStore:) name:DataLayerHasChangedNotification object:nil];
+	__weak typeof(self) weakSelf = self;
+	self.notificationObserver = [self.notificationCenter addObserverForName:DataLayerHasChangedNotification object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification * _Nonnull note) {
+		typeof(weakSelf) strongSelf = weakSelf;
+		[strongSelf writeDataLayerCopyToStore:note];
+	}];
 }
 
 - (void)tearDownDataLayerObservation{
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:DataLayerHasChangedNotification object:nil];
+	[self.notificationCenter removeObserver:_notificationObserver];
 }
 
 - (void)writeDataLayerCopyToStore:(NSNotification*)notification{

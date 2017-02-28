@@ -12,7 +12,6 @@
 
 
 @interface EventHistoryElementTest : XCTestCase
-//@property(nonatomic,strong)EventHistoryElement *element;
 @end
 
 
@@ -20,7 +19,6 @@
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method
-//	self.element = [[EventHistoryElement alloc] init];
 }
 
 - (void)tearDown {
@@ -35,6 +33,7 @@
 - (void)testElementInitCreatesDataLayerDeepCopy{
 	// given
 	NSDictionary *dataLayer = @{@"test":@"test"};
+	
 	// when
 	EventHistoryElement *element = [[EventHistoryElement alloc] initWithDataLayerModel:dataLayer];
 	

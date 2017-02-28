@@ -34,10 +34,12 @@ void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 
 @implementation DataLayerObserver
 - (instancetype)init{
-	return [self initWithDataLayer:[[TAGManager instance] dataLayer]];
+	return [self initWithDataLayer:nil];
 }
 
 - (instancetype)initWithDataLayer:(TAGDataLayer*)dataLayer{
+	NSParameterAssert(dataLayer);
+	
 	if((self = [super init])){
 		_dataLayer = dataLayer;
 		Method m = class_getInstanceMethod([_dataLayer class], @selector(push:));
