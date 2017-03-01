@@ -9,7 +9,7 @@
 @protocol StoreProtocol
 @property(nonatomic,assign)NSUInteger historyLimit;
 - (instancetype)initWithHistoryLimit:(NSUInteger)historyLimit;
-- (void)addObject:(id)object;
+- (id)addObject:(id)object;
 - (id)objectWithId:(id)identifier;
 - (NSUInteger)objectsCount;
 - (NSArray*)objects;

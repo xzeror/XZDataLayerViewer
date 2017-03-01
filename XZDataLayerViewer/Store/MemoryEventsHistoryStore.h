@@ -10,5 +10,4 @@
 #import "StoreProtocol.h"
 
 @interface MemoryEventsHistoryStore : NSObject <StoreProtocol>
-
 @end

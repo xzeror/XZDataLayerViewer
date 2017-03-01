@@ -29,18 +29,23 @@ static const NSUInteger DefaultHistoryLimit = 100;
 	return self;
 }
 
-- (void)addObject:(id)object{
+- (id)addObject:(id)object{
 	[self.store addObject:object];
-	if (self.store.count >= self.historyLimit) {
+	if (self.store.count > self.historyLimit) {
 		[self.store removeObject:self.store.firstObject];
 	}
+	return [NSNumber numberWithInteger:[self.store indexOfObject:object]];
 }
 
 - (id)objectWithId:(id)identifier{
 	if ([identifier isKindOfClass:[NSNumber class]] == NO) {
 		return nil;
 	}
-	return [self.store objectAtIndex:[identifier unsignedIntegerValue]];
+	NSUInteger index = [identifier unsignedIntegerValue];
+	if (index >= self.store.count) {
+		return nil;
+	}
+	return [self.store objectAtIndex:index];
 }
 
 - (NSUInteger)objectsCount{
@@ -48,7 +53,7 @@ static const NSUInteger DefaultHistoryLimit = 100;
 }
 
 - (NSArray*)objects{
-	return self.store;
+	return [self.store copy];
 }
 
 - (void)setHistoryLimit:(NSUInteger)historyLimit{
@@ -57,7 +62,7 @@ static const NSUInteger DefaultHistoryLimit = 100;
 	}
 	
 	if (historyLimit < _historyLimit) {
-		self.store = [[self.store subarrayWithRange:NSMakeRange(0, historyLimit - _historyLimit - 1)] mutableCopy];
+		self.store = [[self.store subarrayWithRange:NSMakeRange(_historyLimit - historyLimit, historyLimit)] mutableCopy];
 	}
 	_historyLimit = historyLimit;
 }
