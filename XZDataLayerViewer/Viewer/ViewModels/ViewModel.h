@@ -12,5 +12,6 @@
 @property(nonatomic,strong,readonly)NSString *key;
 @property(nonatomic,strong,readonly)NSString *value;
 @property(nonatomic,assign,readonly)BOOL shouldShowDisclosureIndicator;
+- (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithKey:(NSString*)key value:(NSString*)value shouldShowDisclosureIndicator:(BOOL)shouldShowDisclosureIndicator NS_DESIGNATED_INITIALIZER;
 @end

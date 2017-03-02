@@ -15,10 +15,6 @@
 @end
 
 @implementation ViewModel
-- (instancetype)init{
-	return [self initWithKey:nil value:nil shouldShowDisclosureIndicator:NO];
-}
-
 - (instancetype)initWithKey:(NSString*)key value:(NSString*)value shouldShowDisclosureIndicator:(BOOL)shouldShowDisclosureIndicator{
 	self = [super init];
 	if(self != nil){
