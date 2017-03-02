@@ -29,8 +29,11 @@
 }
 
 - (ViewModel*)viewModelForIndexPath:(NSIndexPath *)indexPath{
-	ViewModel *viewModel = nil;
+	if (indexPath.row >= self.data.count) {
+		return nil;
+	}
 	
+	ViewModel *viewModel = nil;
 	id value = [self.data objectAtIndex:indexPath.row];
 	BOOL shouldShowDisclosuerIndicator = ([value isKindOfClass:[NSDictionary class]] || [value isKindOfClass:[NSArray class]]) ? YES : NO;
 	
@@ -38,7 +41,8 @@
 		viewModel = [[ViewModel alloc] initWithKey:@(indexPath.row).stringValue value:nil shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
 	}
 	else{
-		viewModel = [[ViewModel alloc] initWithKey:@(indexPath.row).stringValue value:[value description] shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
+		NSString *valueString = [value description];
+		viewModel = [[ViewModel alloc] initWithKey:@(indexPath.row).stringValue value:valueString shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
 	}
 	return viewModel;
 }
