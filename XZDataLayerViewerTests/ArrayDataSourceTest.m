@@ -32,9 +32,6 @@
 	[super tearDown]; // must be the last line in method
 }
 
-#pragma mark - Helper methods
-
-
 #pragma mark - Tests
 - (void)testDataSourceShouldConformToDataSourceProtocol{
 	// given
