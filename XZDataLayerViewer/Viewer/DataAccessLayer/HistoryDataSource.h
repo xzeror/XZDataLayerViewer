@@ -12,5 +12,6 @@
 @protocol StoreProtocol;
 
 @interface HistoryDataSource : NSObject <DataSourceProtocol>
-- (instancetype)initWithStore:(id<StoreProtocol>)store;
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithStore:(id<StoreProtocol>)store NS_DESIGNATED_INITIALIZER;
 @end
