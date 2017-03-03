@@ -73,19 +73,33 @@
 	OCMVerify([self.notificationCenterMock removeObserver:observerId]);
 }
 
-- (void)testWriterShouldAddObjectWhenNotificationArrives{
+- (void)testWriterShouldIgnoreNilDataLayerObject{
 	// given
-	NSDictionary *dataLayerModel = @{};
-	NSNotification *dataLayerChangedNotification = [NSNotification notificationWithName:DataLayerHasChangedNotification object:nil userInfo:@{kDataLayerPayload: dataLayerModel}];
-	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-	EventHistoryElement *historyElement = [[EventHistoryElement alloc] initWithDataLayerModel:dataLayerModel];
+	NSDictionary *dataLayerModel = nil;
 	
 	// when
-	DataLayerHistoryWriter *dataLayerHistoryWriter __attribute((unused)) = [[DataLayerHistoryWriter alloc] initWithStore:self.storeMock notificationCenter:notificationCenter];
-	[notificationCenter postNotification:dataLayerChangedNotification];
+	[self.dataLayerHistoryWriter writeDataLayerCopyToStore:dataLayerModel];
 	
 	//then
-	OCMVerify([self.storeMock addObject:OCMOCK_ANY]);
+	OCMVerify([self.storeMock addObject:[OCMArg checkWithBlock:^BOOL(EventHistoryElement *element) {
+		expect(element).to.beAnInstanceOf([EventHistoryElement class]);
+		expect(element.dataLayerModel).to.beIdenticalTo(dataLayerModel);
+		return YES;
+	}]]);
+}
+
+- (void)testWriterShouldNotCallStoreAddObjectIfEventHistoryWasntCreatedWithDataLayer{
+	// given
+	NSDictionary *dataLayerModel = @{};
+	EventHistoryElement *eventHistoryMock = OCMClassMock([EventHistoryElement class]);
+	OCMStub(ClassMethod([(id)eventHistoryMock alloc])).andReturn(nil);
+	OCMReject([self.storeMock addObject:OCMOCK_ANY]);
+	
+	// when
+	[self.dataLayerHistoryWriter writeDataLayerCopyToStore:dataLayerModel];
+	
+	//then
+	OCMVerifyAll((id)self.storeMock);
 }
 
 @end

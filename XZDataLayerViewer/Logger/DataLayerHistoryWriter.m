@@ -39,9 +39,10 @@
 #pragma mark - Auxiliary methods
 - (void)setupDataLayerObservation{
 	__weak typeof(self) weakSelf = self;
-	self.notificationObserver = [self.notificationCenter addObserverForName:DataLayerHasChangedNotification object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification * _Nonnull note) {
+	self.notificationObserver = [self.notificationCenter addObserverForName:DataLayerHasChangedNotification object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification * _Nonnull notification) {
 		typeof(weakSelf) strongSelf = weakSelf;
-		[strongSelf writeDataLayerCopyToStore:note];
+		NSDictionary *dataLayerModel = notification.userInfo[kDataLayerPayload];
+		[strongSelf writeDataLayerCopyToStore:dataLayerModel];
 	}];
 }
 
@@ -49,8 +50,7 @@
 	[self.notificationCenter removeObserver:_notificationObserver];
 }
 
-- (void)writeDataLayerCopyToStore:(NSNotification*)notification{
-	NSDictionary *dataLayerModel = notification.userInfo[kDataLayerPayload];
+- (void)writeDataLayerCopyToStore:(NSDictionary*)dataLayerModel{
 	EventHistoryElement *eventHistoryElement = [[EventHistoryElement alloc] initWithDataLayerModel:dataLayerModel];
 	if (eventHistoryElement == nil) {
 		return;

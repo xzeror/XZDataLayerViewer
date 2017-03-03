@@ -14,4 +14,5 @@
 @property(nonatomic,strong,readonly)id<StoreProtocol> store;
 @property(nonatomic,strong,readonly)NSNotificationCenter *notificationCenter;
 - (instancetype)initWithStore:(id<StoreProtocol>)store notificationCenter:(NSNotificationCenter*)notificationCenter;
+- (void)writeDataLayerCopyToStore:(NSDictionary*)dataLayerModel;
 @end
