@@ -29,8 +29,13 @@
 
 - (ViewModel*)viewModelForIndexPath:(NSIndexPath *)indexPath{
 	ViewModel *viewModel = nil;
+	NSArray *sortedDataKeys = [self sortedDataKeys];
 	
-	NSString *key = [[self sortedDataKeys] objectAtIndex:indexPath.row];
+	if (indexPath.row >= sortedDataKeys.count) {
+		return nil;
+	}
+	
+	NSString *key = [sortedDataKeys objectAtIndex:indexPath.row];
 	id value = [self.data objectForKey:key];
 	BOOL shouldShowDisclosuerIndicator = ([value isKindOfClass:[NSDictionary class]] || [value isKindOfClass:[NSArray class]]) ? YES : NO;
 	
@@ -44,7 +49,11 @@
 }
 
 - (id)rawDataForIndexPath:(NSIndexPath*)indexPath{
-	NSString *key = [[self sortedDataKeys] objectAtIndex:indexPath.row];
+	NSArray *sortedDataKeys = [self sortedDataKeys];
+	if (indexPath.row >= sortedDataKeys.count) {
+		return nil;
+	}
+	NSString *key = [sortedDataKeys objectAtIndex:indexPath.row];
 	id value = [self.data objectForKey:key];
 	return value;
 }

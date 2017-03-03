@@ -10,5 +10,6 @@
 #import "DataSourceProtocol.h"
 
 @interface DictionaryDataSource : NSObject <DataSourceProtocol>
-- (instancetype)initWithDictionary:(NSDictionary*)dictionary;
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithDictionary:(NSDictionary*)dictionary NS_DESIGNATED_INITIALIZER;
 @end
