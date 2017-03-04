@@ -64,6 +64,7 @@
 		709AC4961E652E7F00B8F34B /* DataLayerObserverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 709AC4951E652E7F00B8F34B /* DataLayerObserverTest.m */; };
 		70A98DF11E65F0600088DC38 /* TAGDataLayer+CustomProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */; };
 		70B279E71E6A006B00095DA6 /* ViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B279E61E6A006B00095DA6 /* ViewModelTest.m */; };
+		70B279EB1E6A027200095DA6 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B279EA1E6A027200095DA6 /* ViewControllerTest.m */; };
 		70FA92531E67CD1B0019680F /* DataSourceFabricTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FA92521E67CD1B0019680F /* DataSourceFabricTest.m */; };
 		70FA92551E67D2180019680F /* ArrayDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FA92541E67D2180019680F /* ArrayDataSourceTest.m */; };
 		751F3E0B301FC6C08C769A58 /* libPods-XZDataLayerViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */; };
@@ -151,6 +152,7 @@
 		70A98DEF1E65F0600088DC38 /* TAGDataLayer+CustomProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TAGDataLayer+CustomProperties.h"; sourceTree = "<group>"; };
 		70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomProperties.m"; sourceTree = "<group>"; };
 		70B279E61E6A006B00095DA6 /* ViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelTest.m; sourceTree = "<group>"; };
+		70B279EA1E6A027200095DA6 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 		70FA92521E67CD1B0019680F /* DataSourceFabricTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceFabricTest.m; sourceTree = "<group>"; };
 		70FA92541E67D2180019680F /* ArrayDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSourceTest.m; sourceTree = "<group>"; };
 		F3FD318C749F2511A704AD4B /* Pods-XZDataLayerViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				701921AE1E68AD3C00BE6DB9 /* DictionaryDataSourceTest.m */,
 				701921B01E69213800BE6DB9 /* HistoryDataSourceTest.m */,
 				70B279E61E6A006B00095DA6 /* ViewModelTest.m */,
+				70B279EA1E6A027200095DA6 /* ViewControllerTest.m */,
 			);
 			path = XZDataLayerViewerTests;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				703462431E660FEB00FFEEAF /* DataLayerObserver.m in Sources */,
 				703462441E660FEB00FFEEAF /* MemoryEventsHistoryStore.m in Sources */,
 				703462451E660FEB00FFEEAF /* UIDevice+SystemVersion.m in Sources */,
+				70B279EB1E6A027200095DA6 /* ViewControllerTest.m in Sources */,
 				703462461E660FEB00FFEEAF /* TAGDataLayer+CustomProperties.m in Sources */,
 				7010CD241E667BFB00845CF2 /* MemoryEventsHistoryStoreTest.m in Sources */,
 				70FA92531E67CD1B0019680F /* DataSourceFabricTest.m in Sources */,

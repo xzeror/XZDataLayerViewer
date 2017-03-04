@@ -11,7 +11,9 @@
 @protocol DataSourceProtocol;
 
 @interface ViewController : UITableViewController
-- (instancetype)initWithDataSource:(id<DataSourceProtocol>)dataSource;
-
+@property(nonatomic,strong,readonly)id<DataSourceProtocol> dataSource;
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)initWithDataSource:(id<DataSourceProtocol>)dataSource NS_DESIGNATED_INITIALIZER;
+- (void)refresh;
 @end
 

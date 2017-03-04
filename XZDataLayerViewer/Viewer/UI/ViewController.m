@@ -27,18 +27,6 @@
 	return self;
 }
 
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
-}
-
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 	return 1;
 }
@@ -54,12 +42,13 @@
 	}
 	
 	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:indexPath];
-	if (viewModel.shouldShowDisclosureIndicator) {
+	if (viewModel == nil) {
+		cell.textLabel.text = @"empty";
+	} else if (viewModel.shouldShowDisclosureIndicator == YES) {
 		[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 		cell.textLabel.text = viewModel.key;
 		cell.detailTextLabel.text = nil;
-	}
-	else{
+	} else if(viewModel.shouldShowDisclosureIndicator == NO){
 		[cell setAccessoryType:UITableViewCellAccessoryNone];
 		cell.textLabel.text = viewModel.key;
 		cell.detailTextLabel.text = viewModel.value;
@@ -69,25 +58,23 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	if (indexPath.row >= [self.dataSource count]) {
+		return;
+	}
 	id rawData = [self.dataSource rawDataForIndexPath:indexPath];
+	if (rawData == nil) {
+		return;
+	}
+//	//TODO: DataSourceFabric is impilicit dependency
 	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForData:rawData];
+	if (dataSource == nil) {
+		return;
+	}
 	[self.navigationController pushViewController:[[ViewController alloc] initWithDataSource:dataSource] animated:YES];
 }
 
 - (void)refresh{
 	[self.tableView reloadData];
 }
-
-
-
-//- (NSString*)valueToString:(id)value{
-//	if ([value respondsToSelector:@selector(stringValue)]) {
-//		return [value stringValue];
-//	}
-//	if([value isKindOfClass:[NSString class]]){
-//		return value;
-//	}
-//	
-//}
 
 @end
