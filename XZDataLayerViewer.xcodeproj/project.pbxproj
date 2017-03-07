@@ -58,6 +58,12 @@
 		703462441E660FEB00FFEEAF /* MemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 109E512E1E4F79350044305D /* MemoryEventsHistoryStore.m */; };
 		703462451E660FEB00FFEEAF /* UIDevice+SystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */; };
 		703462461E660FEB00FFEEAF /* TAGDataLayer+CustomProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */; };
+		705382871E6D13F00058835B /* XZDataLayerViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 705382861E6D13F00058835B /* XZDataLayerViewer.m */; };
+		705382891E6D15D30058835B /* XZDataLayerViewerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 705382881E6D15D30058835B /* XZDataLayerViewerTest.m */; };
+		7053828B1E6D19120058835B /* XZDataLayerViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 705382861E6D13F00058835B /* XZDataLayerViewer.m */; };
+		706280361E6DAB69002CA6D2 /* UIWindow+TopmostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706280351E6DAB69002CA6D2 /* UIWindow+TopmostViewController.m */; };
+		706280381E6DABED002CA6D2 /* UIWindow+TopmostViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 706280371E6DABED002CA6D2 /* UIWindow+TopmostViewControllerTest.m */; };
+		706280391E6DAE84002CA6D2 /* UIWindow+TopmostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706280351E6DAB69002CA6D2 /* UIWindow+TopmostViewController.m */; };
 		7080A83E1E5E367D0046189A /* UIDevice+SystemVersionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2BA1E593FEC00B801FF /* UIDevice+SystemVersionTest.m */; };
 		708F18981E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 708F18971E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m */; };
 		709AC4941E652A0E00B8F34B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FE113E1E4FAB4F008C2437 /* AdSupport.framework */; };
@@ -147,6 +153,13 @@
 		7010CD231E667BFB00845CF2 /* MemoryEventsHistoryStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryEventsHistoryStoreTest.m; sourceTree = "<group>"; };
 		701921AE1E68AD3C00BE6DB9 /* DictionaryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryDataSourceTest.m; sourceTree = "<group>"; };
 		701921B01E69213800BE6DB9 /* HistoryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataSourceTest.m; sourceTree = "<group>"; };
+		705382851E6D13F00058835B /* XZDataLayerViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZDataLayerViewer.h; sourceTree = "<group>"; };
+		705382861E6D13F00058835B /* XZDataLayerViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewer.m; sourceTree = "<group>"; };
+		705382881E6D15D30058835B /* XZDataLayerViewerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewerTest.m; sourceTree = "<group>"; };
+		7053828A1E6D170D0058835B /* XZDataLayerViewer+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XZDataLayerViewer+Extension.h"; sourceTree = "<group>"; };
+		706280341E6DAB69002CA6D2 /* UIWindow+TopmostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TopmostViewController.h"; sourceTree = "<group>"; };
+		706280351E6DAB69002CA6D2 /* UIWindow+TopmostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TopmostViewController.m"; sourceTree = "<group>"; };
+		706280371E6DABED002CA6D2 /* UIWindow+TopmostViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TopmostViewControllerTest.m"; sourceTree = "<group>"; };
 		708F18971E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomPropertiesTest.m"; sourceTree = "<group>"; };
 		709AC4951E652E7F00B8F34B /* DataLayerObserverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLayerObserverTest.m; sourceTree = "<group>"; };
 		70A98DEF1E65F0600088DC38 /* TAGDataLayer+CustomProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TAGDataLayer+CustomProperties.h"; sourceTree = "<group>"; };
@@ -269,6 +282,8 @@
 				701921B01E69213800BE6DB9 /* HistoryDataSourceTest.m */,
 				70B279E61E6A006B00095DA6 /* ViewModelTest.m */,
 				70B279EA1E6A027200095DA6 /* ViewControllerTest.m */,
+				705382881E6D15D30058835B /* XZDataLayerViewerTest.m */,
+				706280371E6DABED002CA6D2 /* UIWindow+TopmostViewControllerTest.m */,
 			);
 			path = XZDataLayerViewerTests;
 			sourceTree = "<group>";
@@ -313,6 +328,8 @@
 				1024C2C41E59407D00B801FF /* UIDevice+SystemVersion.m */,
 				70A98DEF1E65F0600088DC38 /* TAGDataLayer+CustomProperties.h */,
 				70A98DF01E65F0600088DC38 /* TAGDataLayer+CustomProperties.m */,
+				706280341E6DAB69002CA6D2 /* UIWindow+TopmostViewController.h */,
+				706280351E6DAB69002CA6D2 /* UIWindow+TopmostViewController.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -320,6 +337,9 @@
 		109E51131E4F79350044305D /* Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				705382851E6D13F00058835B /* XZDataLayerViewer.h */,
+				7053828A1E6D170D0058835B /* XZDataLayerViewer+Extension.h */,
+				705382861E6D13F00058835B /* XZDataLayerViewer.m */,
 				109E51141E4F79350044305D /* DataAccessLayer */,
 				109E511E1E4F79350044305D /* UI */,
 				109E51211E4F79350044305D /* ViewModels */,
@@ -598,8 +618,10 @@
 				109E51421E4F79350044305D /* EventHistoryElement.m in Sources */,
 				109E513F1E4F79350044305D /* ViewModel.m in Sources */,
 				109E51481E4F79350044305D /* DataLayerObserver.m in Sources */,
+				706280361E6DAB69002CA6D2 /* UIWindow+TopmostViewController.m in Sources */,
 				70A98DF11E65F0600088DC38 /* TAGDataLayer+CustomProperties.m in Sources */,
 				10133A741E48F30100A33207 /* AppDelegate.m in Sources */,
+				705382871E6D13F00058835B /* XZDataLayerViewer.m in Sources */,
 				109E514B1E4F79350044305D /* MemoryEventsHistoryStore.m in Sources */,
 				10133A711E48F30100A33207 /* main.m in Sources */,
 				109E51391E4F79350044305D /* HistoryDataSource.m in Sources */,
@@ -625,11 +647,13 @@
 				701921AF1E68AD3C00BE6DB9 /* DictionaryDataSourceTest.m in Sources */,
 				703462411E660FEB00FFEEAF /* EventHistoryElement.m in Sources */,
 				703462421E660FEB00FFEEAF /* DataLayerHistoryWriter.m in Sources */,
+				7053828B1E6D19120058835B /* XZDataLayerViewer.m in Sources */,
 				703462431E660FEB00FFEEAF /* DataLayerObserver.m in Sources */,
 				703462441E660FEB00FFEEAF /* MemoryEventsHistoryStore.m in Sources */,
 				703462451E660FEB00FFEEAF /* UIDevice+SystemVersion.m in Sources */,
 				70B279EB1E6A027200095DA6 /* ViewControllerTest.m in Sources */,
 				703462461E660FEB00FFEEAF /* TAGDataLayer+CustomProperties.m in Sources */,
+				705382891E6D15D30058835B /* XZDataLayerViewerTest.m in Sources */,
 				7010CD241E667BFB00845CF2 /* MemoryEventsHistoryStoreTest.m in Sources */,
 				70FA92531E67CD1B0019680F /* DataSourceFabricTest.m in Sources */,
 				708F18981E65F3F9008661C2 /* TAGDataLayer+CustomPropertiesTest.m in Sources */,
@@ -637,7 +661,9 @@
 				10FE113A1E4FA288008C2437 /* EventHistoryElementTest.m in Sources */,
 				7080A83E1E5E367D0046189A /* UIDevice+SystemVersionTest.m in Sources */,
 				10FE11411E4FB06B008C2437 /* DataLayerHistoryWriterTest.m in Sources */,
+				706280381E6DABED002CA6D2 /* UIWindow+TopmostViewControllerTest.m in Sources */,
 				709AC4961E652E7F00B8F34B /* DataLayerObserverTest.m in Sources */,
+				706280391E6DAE84002CA6D2 /* UIWindow+TopmostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
