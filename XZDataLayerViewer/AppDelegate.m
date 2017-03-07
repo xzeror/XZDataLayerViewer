@@ -7,22 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
-#import "DataSourceFabric.h"
-#import "StoreProtocol.h"
-#import "DataLayerObserver.h"
-#import "MemoryEventsHistoryStore.h"
-#import "DataLayerHistoryWriter.h"
+#import "XZDataLayerViewer.h"
+
 
 static NSString *GTMContainerId = @"GTM-WJBDPX6";
 static NSUInteger counter = 0;
 
 @interface AppDelegate ()
-@property(nonatomic,strong)id<StoreProtocol> store;
-@property(nonatomic,strong)DataLayerObserver *dataLayerObserver;
-@property(nonatomic,strong)DataLayerHistoryWriter *dataLayerHistoryWriter;
 @end
 
 @implementation AppDelegate
@@ -32,18 +25,15 @@ static NSUInteger counter = 0;
 	// Override point for customization after application launch.
 	
 	[self setupTagManager];
+	[self setupDataLayerViewer];
 	
-	self.dataLayerObserver = [[DataLayerObserver alloc] initWithDataLayer:[[TAGManager instance] dataLayer]];
-	self.store = [[MemoryEventsHistoryStore alloc] init];
-	NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-	self.dataLayerHistoryWriter = [[DataLayerHistoryWriter alloc] initWithStore:self.store notificationCenter:notificationCenter];
-	
-	
-	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForData:self.store];
-	UIViewController *rootViewController = [[ViewController alloc] initWithDataSource:dataSource];
+	UIViewController *rootViewController = [[UIViewController alloc] init];
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+	self.window.rootViewController = rootViewController;
 	[self.window makeKeyAndVisible];
+	
+	UIViewController *dataLayerViewerInterface = [[XZDataLayerViewer sharedInstance] viewerInterface];
+	[rootViewController presentViewController:dataLayerViewerInterface animated:YES completion:nil];
 	
 	
 	NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:1] interval:1 target:self selector:@selector(pushData) userInfo:nil repeats:YES];
@@ -100,6 +90,10 @@ static NSUInteger counter = 0;
 - (void)setupTagManager{
 	[[[TAGManager instance] logger] setLogLevel:kTAGLoggerLogLevelVerbose];
 	[[TAGManager instance] openContainerById:GTMContainerId callback:nil];
+}
+
+- (void)setupDataLayerViewer{
+	[XZDataLayerViewer configureWithTagManger:[TAGManager instance] applicationDelegate:self maxHistoryItems:100];
 }
 
 
