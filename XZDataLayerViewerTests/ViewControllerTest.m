@@ -6,45 +6,45 @@
 //
 
 // Class under test
-#import "ViewController.h"
+#import "XZViewerInterface.h"
 
 // Collaborators
-#import "DataSourceFabric.h"
-#import "DataSourceProtocol.h"
-#import "ViewModel.h"
+#import "XZDataSourceFabric.h"
+#import "XZDataSourceProtocol.h"
+#import "XZViewModel.h"
 
 // see comments in testDidSelectRowAtIndexPathShouldCreateAndPushDetailViewController
-#import "DictionaryDataSource.h"
+#import "XZDictionaryDataSource.h"
 
-@interface ViewControllerTest : XCTestCase
-@property(nonatomic,strong)ViewController *viewController;
-@property(nonatomic,strong)ViewController *viewControllerPartialMock;
-@property(nonatomic,strong)id<DataSourceProtocol> dataSourceMock;
+@interface XZViewerInterfaceTest : XCTestCase
+@property(nonatomic,strong)XZViewerInterface *viewController;
+@property(nonatomic,strong)XZViewerInterface *viewControllerPartialMock;
+@property(nonatomic,strong)id<XZDataSourceProtocol> dataSourceMock;
 @property(nonatomic,strong)NSIndexPath *validIndexPath;
 @property(nonatomic,assign)NSUInteger validCount;
 @property(nonatomic,strong)UINavigationController *navigationControllerMock;
-@property(nonatomic,strong)DataSourceFabric *dataSourceFabricMock;
+@property(nonatomic,strong)XZDataSourceFabric *dataSourceFabricMock;
 @property(nonatomic,strong)UITableView *tableViewMock;
 @end
 
 
-@implementation ViewControllerTest
+@implementation XZViewerInterfaceTest
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method
 	self.validIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 	self.validCount = self.validIndexPath.row + 1;
 	
-	self.dataSourceMock = OCMProtocolMock(@protocol(DataSourceProtocol));
+	self.dataSourceMock = OCMProtocolMock(@protocol(XZDataSourceProtocol));
 	OCMStub([self.dataSourceMock count]).andReturn(self.validCount);
 	
-	self.dataSourceFabricMock = OCMClassMock([DataSourceFabric class]);
+	self.dataSourceFabricMock = OCMClassMock([XZDataSourceFabric class]);
 	
 	self.navigationControllerMock = OCMClassMock([UINavigationController class]);
 	
 	self.tableViewMock = OCMClassMock([UITableView class]);
 	
-	self.viewController = [[ViewController alloc] initWithDataSource:self.dataSourceMock];
+	self.viewController = [[XZViewerInterface alloc] initWithDataSource:self.dataSourceMock];
 	self.viewControllerPartialMock = OCMPartialMock(self.viewController);
 	OCMStub([self.viewControllerPartialMock navigationController]).andReturn(self.navigationControllerMock);
 	OCMStub([self.viewControllerPartialMock tableView]).andReturn(self.tableViewMock);
@@ -54,14 +54,14 @@
 	self.validIndexPath = nil;
 	self.validCount = 0;
 	
-	self.dataSourceMock = OCMProtocolMock(@protocol(DataSourceProtocol));
+	self.dataSourceMock = OCMProtocolMock(@protocol(XZDataSourceProtocol));
 	OCMStub([self.dataSourceMock count]).andReturn(self.validCount);
 	
-	self.dataSourceFabricMock = OCMClassMock([DataSourceFabric class]);
+	self.dataSourceFabricMock = OCMClassMock([XZDataSourceFabric class]);
 	
 	self.navigationControllerMock = OCMClassMock([UINavigationController class]);
 	
-	self.viewControllerPartialMock = [[ViewController alloc] initWithDataSource:self.dataSourceMock];
+	self.viewControllerPartialMock = [[XZViewerInterface alloc] initWithDataSource:self.dataSourceMock];
 	[super tearDown]; // must be the last line in method
 }
 
@@ -126,7 +126,7 @@
 
 - (void)testCellForRowAtIndexPathShouldConfigureCellForDisclosableViewModel{
 	// given
-	ViewModel *viewModelMock = [self disclosableViewModel];
+	XZViewModel *viewModelMock = [self disclosableViewModel];
 	[self dataSourceMockShouldReturn:viewModelMock];
 	
 	// when
@@ -141,7 +141,7 @@
 
 - (void)testCellForRowAtIndexPathShouldConfigureCellForLeafViewModel{
 	// given
-	ViewModel *viewModelMock = [self leafViewModel];
+	XZViewModel *viewModelMock = [self leafViewModel];
 	[self dataSourceMockShouldReturn:viewModelMock];
 	
 	// when
@@ -199,7 +199,7 @@
 //       So we will use any DataSourceProtocol compliant object
 	id rawData = @{};
 	[self dataSourceMockShouldReturn:rawData];
-	id dataSourceMock = OCMClassMock([DictionaryDataSource class]);
+	id dataSourceMock = OCMClassMock([XZDictionaryDataSource class]);
 	OCMStub(ClassMethod([(id)self.dataSourceFabricMock dataSourceForData:OCMOCK_ANY])).andReturn(dataSourceMock);
 	OCMStub([self.navigationControllerMock pushViewController:OCMOCK_ANY animated:YES]);
 	
@@ -270,22 +270,22 @@
 }
 
 #pragma mark - Helpers
-- (ViewModel*)disclosableViewModel{
+- (XZViewModel*)disclosableViewModel{
 	NSString *key = @"testKey";
 	id value = @{};
 	BOOL shouldShowDisclosureIndicator = YES;
-	ViewModel *viewModelMock = OCMClassMock([ViewModel class]);
+	XZViewModel *viewModelMock = OCMClassMock([XZViewModel class]);
 	OCMStub([viewModelMock key]).andReturn(key);
 	OCMStub([viewModelMock value]).andReturn(value);
 	OCMStub([viewModelMock shouldShowDisclosureIndicator]).andReturn(shouldShowDisclosureIndicator);
 	return viewModelMock;
 }
 
-- (ViewModel*)leafViewModel{
+- (XZViewModel*)leafViewModel{
 	NSString *key = @"testKey";
 	id value = @"testValue";
 	BOOL shouldShowDisclosureIndicator = NO;
-	ViewModel *viewModelMock = OCMClassMock([ViewModel class]);
+	XZViewModel *viewModelMock = OCMClassMock([XZViewModel class]);
 	OCMStub([viewModelMock key]).andReturn(key);
 	OCMStub([viewModelMock value]).andReturn(value);
 	OCMStub([viewModelMock shouldShowDisclosureIndicator]).andReturn(shouldShowDisclosureIndicator);

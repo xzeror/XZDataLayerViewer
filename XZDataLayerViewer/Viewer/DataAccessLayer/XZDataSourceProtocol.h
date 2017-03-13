@@ -8,10 +8,10 @@
 
 @import Foundation;
 
-@class ViewModel;
+@class XZViewModel;
 
-@protocol DataSourceProtocol
+@protocol XZDataSourceProtocol
 - (NSInteger)count;
-- (ViewModel*)viewModelForIndexPath:(NSIndexPath*)indexPath;
+- (XZViewModel*)viewModelForIndexPath:(NSIndexPath*)indexPath;
 - (id)rawDataForIndexPath:(NSIndexPath*)indexPath;
 @end

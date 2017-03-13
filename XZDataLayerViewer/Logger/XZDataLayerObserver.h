@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XZEventGeneratorProtocol.h"
+
 @class TAGDataLayer;
 
-extern NSString * const DataLayerHasChangedNotification;
-extern NSString * const kDataLayerPayload;
-
-@interface DataLayerObserver : NSObject
+@interface XZDataLayerObserver : NSObject<XZEventGeneratorProtocol>
 @property(nonatomic,weak,readonly)TAGDataLayer *dataLayer;
 -(instancetype)init NS_UNAVAILABLE;
 -(instancetype)initWithDataLayer:(TAGDataLayer*)dataLayer NS_DESIGNATED_INITIALIZER;

@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DictionaryDataSource.h"
-#import "ViewModel.h"
+#import "XZDictionaryDataSource.h"
+#import "XZViewModel.h"
 
-@interface DictionaryDataSource ()
+@interface XZDictionaryDataSource ()
 @property(nonatomic,strong)NSDictionary *data;
 @end
 
-@implementation DictionaryDataSource
+@implementation XZDictionaryDataSource
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary{
 	self = [super init];
 	if(self != nil){
@@ -27,8 +27,8 @@
 	return self.data.count;
 }
 
-- (ViewModel*)viewModelForIndexPath:(NSIndexPath *)indexPath{
-	ViewModel *viewModel = nil;
+- (XZViewModel*)viewModelForIndexPath:(NSIndexPath *)indexPath{
+	XZViewModel *viewModel = nil;
 	NSArray *sortedDataKeys = [self sortedDataKeys];
 	
 	if (indexPath.row >= sortedDataKeys.count) {
@@ -40,10 +40,10 @@
 	BOOL shouldShowDisclosuerIndicator = ([value isKindOfClass:[NSDictionary class]] || [value isKindOfClass:[NSArray class]]) ? YES : NO;
 	
 	if (shouldShowDisclosuerIndicator) {
-		viewModel = [[ViewModel alloc] initWithKey:key value:nil shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
+		viewModel = [[XZViewModel alloc] initWithKey:key value:nil shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
 	}
 	else{
-		viewModel = [[ViewModel alloc] initWithKey:key value:[value description] shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
+		viewModel = [[XZViewModel alloc] initWithKey:key value:[value description] shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
 	}
 	return viewModel;
 }

@@ -7,9 +7,9 @@
 //
 
 @import Foundation;
-#import "DataSourceProtocol.h"
+#import "XZDataSourceProtocol.h"
 
-@interface DictionaryDataSource : NSObject <DataSourceProtocol>
+@interface XZDictionaryDataSource : NSObject <XZDataSourceProtocol>
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary NS_DESIGNATED_INITIALIZER;
 @end

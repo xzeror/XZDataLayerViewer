@@ -8,13 +8,13 @@
 
 #import "XZDataLayerViewer.h"
 #import "XZDataLayerViewer+Extension.h"
-#import "DataLayerObserver.h"
-#import "DataLayerHistoryWriter.h"
-#import "MemoryEventsHistoryStore.h"
+#import "XZDataLayerObserver.h"
+#import "XZDefaultStoreWriter.h"
+#import "XZMemoryEventsHistoryStore.h"
 #import "TAGManager.h"
-#import "DataSourceProtocol.h"
-#import "HistoryDataSource.h"
-#import "ViewController.h"
+#import "XZDataSourceProtocol.h"
+#import "XZHistoryDataSource.h"
+#import "XZViewerInterface.h"
 
 static XZDataLayerViewer *sharedInstance = nil;
 
@@ -24,35 +24,35 @@ static XZDataLayerViewer *sharedInstance = nil;
 	return sharedInstance;
 }
 
-+ (void)configureWithTagManger:(TAGManager*)tagManager applicationDelegate:(id<UIApplicationDelegate>)appDelegate maxHistoryItems:(NSUInteger)maxHistoryItems{
++ (void)configureWithTagManger:(TAGManager*)tagManager maxHistoryItems:(NSUInteger)maxHistoryItems{
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
-		NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-		id<StoreProtocol> store = [[MemoryEventsHistoryStore alloc] initWithHistoryLimit:maxHistoryItems];
-		DataLayerObserver *observer = [[DataLayerObserver alloc] initWithDataLayer:dataLayer];
-		DataLayerHistoryWriter *writer = [[DataLayerHistoryWriter alloc] initWithStore:store notificationCenter:notificationCenter];
-		sharedInstance = [[XZDataLayerViewer alloc] initWithStore:store writer:writer dataLayerObserver:observer applicationDelegate:appDelegate];
+		id<XZStoreProtocol> store = [[XZMemoryEventsHistoryStore alloc] initWithHistoryLimit:maxHistoryItems];
+		id<XZEventGeneratorProtocol> observer = [[XZDataLayerObserver alloc] initWithDataLayer:dataLayer];
+		id<XZStoreWriterProtocol> writer = [[XZDefaultStoreWriter alloc] initWithStore:store];
+		[observer addObserver:^(id<NSObject,NSCoding,NSCopying> eventData) {
+			[writer writeDataCopyToStore:eventData];
+		}];
+		sharedInstance = [[XZDataLayerViewer alloc] initWithStore:store writer:writer dataLayerObserver:observer];
 	});
 }
 
-- (instancetype)initWithStore:(id<StoreProtocol>)store
-					   writer:(DataLayerHistoryWriter*)writer
-			dataLayerObserver:(DataLayerObserver*)observer
-		  applicationDelegate:(id<UIApplicationDelegate>)appDelegate;{
+- (instancetype)initWithStore:(id<XZStoreProtocol>)store
+					   writer:(id<XZStoreWriterProtocol>)writer
+			dataLayerObserver:(id<XZEventGeneratorProtocol>)eventGenerator{
 	self = [super init];
 	if (self) {
 		_store = store;
 		_writer = writer;
-		_observer = observer;
-		_appDelegate = appDelegate;
+		_eventGenerator = eventGenerator;
 	}
 	return self;
 }
 
 - (UIViewController*)viewerInterface{
-	id<DataSourceProtocol> historyDataSource = [[HistoryDataSource alloc] initWithStore:self.store];
-	ViewController *historyViewController = [[ViewController alloc] initWithDataSource:historyDataSource];
+	id<XZDataSourceProtocol> historyDataSource = [[XZHistoryDataSource alloc] initWithStore:self.store];
+	XZViewerInterface *historyViewController = [[XZViewerInterface alloc] initWithDataSource:historyDataSource];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:historyViewController];
 	return navigationController;
 }

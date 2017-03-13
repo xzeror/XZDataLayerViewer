@@ -6,26 +6,26 @@
 //
 
 // Class under test
-#import "HistoryDataSource.h"
+#import "XZHistoryDataSource.h"
 
 // Collaborators
-#import "ViewModel.h"
-#import "StoreProtocol.h"
-#import "EventHistoryElement.h"
+#import "XZViewModel.h"
+#import "XZStoreProtocol.h"
+#import "XZEventHistoryElement.h"
 
 
-@interface HistoryDataSourceTest : XCTestCase
-@property(nonatomic,strong)HistoryDataSource *dataSource;
+@interface XZHistoryDataSourceTest : XCTestCase
+@property(nonatomic,strong)XZHistoryDataSource *dataSource;
 @property(nonatomic,strong)id dataMock;
 @end
 
 
-@implementation HistoryDataSourceTest
+@implementation XZHistoryDataSourceTest
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method
-	self.dataMock = OCMProtocolMock(@protocol(StoreProtocol));
-	self.dataSource = [[HistoryDataSource alloc] initWithStore:self.dataMock];
+	self.dataMock = OCMProtocolMock(@protocol(XZStoreProtocol));
+	self.dataSource = [[XZHistoryDataSource alloc] initWithStore:self.dataMock];
 }
 
 - (void)tearDown {
@@ -40,7 +40,7 @@
 	// data source setup
 	
 	// then
-	expect(self.dataSource).to.conformTo(@protocol(DataSourceProtocol));
+	expect(self.dataSource).to.conformTo(@protocol(XZDataSourceProtocol));
 }
 
 - (void)testDataSourceShouldReturnCountOfDataElements{
@@ -59,7 +59,7 @@
 	NSIndexPath *invalidIndexPath = [NSIndexPath indexPathForRow:validIndexPath.row + 1 inSection:validIndexPath.section];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:invalidIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:invalidIndexPath];
 	
 	// then
 	expect(viewModel).to.beNil();
@@ -71,7 +71,7 @@
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();
@@ -102,7 +102,7 @@
 	id rawValue = [self.dataSource rawDataForIndexPath:validIndexPath];
 	
 	// then
-	expect(rawValue).to.beIdenticalTo([testValue dataLayerModel]);
+	expect(rawValue).to.beIdenticalTo([testValue data]);
 }
 
 #pragma mark - Helpers
@@ -115,12 +115,12 @@
 	return validIndexPath;
 }
 
-- (EventHistoryElement *)eventHistoryElementMock{
-	EventHistoryElement *eventHistoryElement = OCMClassMock([EventHistoryElement class]);
+- (XZEventHistoryElement *)eventHistoryElementMock{
+	XZEventHistoryElement *eventHistoryElement = OCMClassMock([XZEventHistoryElement class]);
 	NSDate *timestamp = [NSDate date];
-	NSDictionary *dataLayerModel = @{};
+	NSDictionary *data = @{};
 	OCMStub([eventHistoryElement timestamp]).andReturn(timestamp);
-	OCMStub([eventHistoryElement dataLayerModel]).andReturn(dataLayerModel);
+	OCMStub([eventHistoryElement data]).andReturn(data);
 	return eventHistoryElement;
 }
 @end

@@ -6,19 +6,19 @@
 //  Copyright © 2017 XZone Software. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "DataSourceProtocol.h"
-#import "ViewModel.h"
+#import "XZViewerInterface.h"
+#import "XZDataSourceProtocol.h"
+#import "XZViewModel.h"
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
-#import "DataSourceFabric.h"
+#import "XZDataSourceFabric.h"
 
-@interface ViewController ()
-@property(nonatomic,strong)id<DataSourceProtocol> dataSource;
+@interface XZViewerInterface ()
+@property(nonatomic,strong)id<XZDataSourceProtocol> dataSource;
 @end
 
-@implementation ViewController
-- (instancetype)initWithDataSource:(id<DataSourceProtocol>)dataSource{
+@implementation XZViewerInterface
+- (instancetype)initWithDataSource:(id<XZDataSourceProtocol>)dataSource{
 	self = [super init];
 	if (self != nil) {
 		_dataSource = dataSource;
@@ -41,7 +41,7 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass(self.class)];
 	}
 	
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:indexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:indexPath];
 	if (viewModel == nil) {
 		cell.textLabel.text = @"empty";
 	} else if (viewModel.shouldShowDisclosureIndicator == YES) {
@@ -66,11 +66,11 @@
 		return;
 	}
 //	//TODO: DataSourceFabric is impilicit dependency
-	id<DataSourceProtocol> dataSource = [DataSourceFabric dataSourceForData:rawData];
+	id<XZDataSourceProtocol> dataSource = [XZDataSourceFabric dataSourceForData:rawData];
 	if (dataSource == nil) {
 		return;
 	}
-	[self.navigationController pushViewController:[[ViewController alloc] initWithDataSource:dataSource] animated:YES];
+	[self.navigationController pushViewController:[[XZViewerInterface alloc] initWithDataSource:dataSource] animated:YES];
 }
 
 - (void)refresh{

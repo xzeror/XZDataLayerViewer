@@ -7,14 +7,14 @@
 //
 
 @import UIKit;
-#import "ArrayDataSource.h"
-#import "ViewModel.h"
+#import "XZArrayDataSource.h"
+#import "XZViewModel.h"
 
-@interface ArrayDataSource ()
+@interface XZArrayDataSource ()
 @property(nonatomic,strong)NSArray *data;
 @end
 
-@implementation ArrayDataSource
+@implementation XZArrayDataSource
 - (instancetype)initWithArray:(NSArray*)array{
 	self = [super init];
 	if(self != nil){
@@ -28,21 +28,21 @@
 	return self.data.count;
 }
 
-- (ViewModel*)viewModelForIndexPath:(NSIndexPath *)indexPath{
+- (XZViewModel*)viewModelForIndexPath:(NSIndexPath *)indexPath{
 	if (indexPath.row >= self.data.count) {
 		return nil;
 	}
 	
-	ViewModel *viewModel = nil;
+	XZViewModel *viewModel = nil;
 	id value = [self.data objectAtIndex:indexPath.row];
 	BOOL shouldShowDisclosuerIndicator = ([value isKindOfClass:[NSDictionary class]] || [value isKindOfClass:[NSArray class]]) ? YES : NO;
 	
 	if (shouldShowDisclosuerIndicator) {
-		viewModel = [[ViewModel alloc] initWithKey:@(indexPath.row).stringValue value:nil shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
+		viewModel = [[XZViewModel alloc] initWithKey:@(indexPath.row).stringValue value:nil shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
 	}
 	else{
 		NSString *valueString = [value description];
-		viewModel = [[ViewModel alloc] initWithKey:@(indexPath.row).stringValue value:valueString shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
+		viewModel = [[XZViewModel alloc] initWithKey:@(indexPath.row).stringValue value:valueString shouldShowDisclosureIndicator:shouldShowDisclosuerIndicator];
 	}
 	return viewModel;
 }

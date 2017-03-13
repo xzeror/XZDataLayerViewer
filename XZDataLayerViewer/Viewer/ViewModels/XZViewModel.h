@@ -8,7 +8,7 @@
 
 @import Foundation;
 
-@interface ViewModel : NSObject
+@interface XZViewModel : NSObject
 @property(nonatomic,strong,readonly)NSString *key;
 @property(nonatomic,strong,readonly)NSString *value;
 @property(nonatomic,assign,readonly)BOOL shouldShowDisclosureIndicator;

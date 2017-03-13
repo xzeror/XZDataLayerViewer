@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "StoreProtocol.h"
+#import "XZStoreProtocol.h"
 
-@interface MemoryEventsHistoryStore : NSObject <StoreProtocol>
+@interface XZMemoryEventsHistoryStore : NSObject <XZStoreProtocol>
 @end

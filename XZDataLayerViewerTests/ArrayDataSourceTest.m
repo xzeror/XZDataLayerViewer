@@ -6,14 +6,14 @@
 //
 
 // Class under test
-#import "ArrayDataSource.h"
+#import "XZArrayDataSource.h"
 
 // Collaborators
-#import "ViewModel.h"
+#import "XZViewModel.h"
 
 
 @interface ArrayDataSourceTest : XCTestCase
-@property(nonatomic,strong)ArrayDataSource *dataSource;
+@property(nonatomic,strong)XZArrayDataSource *dataSource;
 @property(nonatomic,strong)id dataMock;
 @end
 
@@ -23,7 +23,7 @@
 - (void)setUp {
 	[super setUp]; // must be the first line in method
 	self.dataMock = OCMClassMock([NSArray class]);
-	self.dataSource = [[ArrayDataSource alloc] initWithArray:self.dataMock];
+	self.dataSource = [[XZArrayDataSource alloc] initWithArray:self.dataMock];
 }
 
 - (void)tearDown {
@@ -38,7 +38,7 @@
 	// data source setup
 
 	// then
-	expect(self.dataSource).to.conformTo(@protocol(DataSourceProtocol));
+	expect(self.dataSource).to.conformTo(@protocol(XZDataSourceProtocol));
 }
 
 - (void)testDataSourceShouldReturnCountOfDataElements{
@@ -57,7 +57,7 @@
 	NSIndexPath *invalidIndexPath = [NSIndexPath indexPathForRow:validIndexPath.row + 1 inSection:validIndexPath.section];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:invalidIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:invalidIndexPath];
 	
 	// then
 	expect(viewModel).to.beNil();
@@ -69,7 +69,7 @@
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();
@@ -84,7 +84,7 @@
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();
@@ -99,7 +99,7 @@
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();

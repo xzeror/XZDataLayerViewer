@@ -6,21 +6,21 @@
 //
 
 // Class under test
-#import "DataSourceFabric.h"
+#import "XZDataSourceFabric.h"
 
 // Collaborators
-#import "DataSourceProtocol.h"
-#import "StoreProtocol.h"
-#import "HistoryDataSource.h"
-#import "ArrayDataSource.h"
-#import "DictionaryDataSource.h"
+#import "XZDataSourceProtocol.h"
+#import "XZStoreProtocol.h"
+#import "XZHistoryDataSource.h"
+#import "XZArrayDataSource.h"
+#import "XZDictionaryDataSource.h"
 
 
-@interface DataSourceFabricTest : XCTestCase
+@interface XZDataSourceFabricTest : XCTestCase
 @end
 
 
-@implementation DataSourceFabricTest
+@implementation XZDataSourceFabricTest
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method
@@ -33,10 +33,10 @@
 #pragma mark - Tests
 - (void)testDataSourceShouldReturnHistoryDataSourceForStoreData{
 	// given
-	id storeMock = OCMProtocolMock(@protocol(StoreProtocol));
+	id storeMock = OCMProtocolMock(@protocol(XZStoreProtocol));
 	
 	// then
-	[self expectDataSourceShouldReturnObjectOfClass:[HistoryDataSource class] forData:storeMock];
+	[self expectDataSourceShouldReturnObjectOfClass:[XZHistoryDataSource class] forData:storeMock];
 }
 
 - (void)testDataSourceShouldReturnArrayDataSourceForArrayData{
@@ -44,7 +44,7 @@
 	id arrayMock = OCMClassMock([NSArray class]);
 	
 	// then
-	[self expectDataSourceShouldReturnObjectOfClass:[ArrayDataSource class] forData:arrayMock];
+	[self expectDataSourceShouldReturnObjectOfClass:[XZArrayDataSource class] forData:arrayMock];
 }
 
 - (void)testDataSourceShouldReturnDictionaryDataSourceForDictionaryData{
@@ -52,21 +52,21 @@
 	id dictionaryMock = OCMClassMock([NSDictionary class]);
 	
 	// then
-	[self expectDataSourceShouldReturnObjectOfClass:[DictionaryDataSource class] forData:dictionaryMock];
+	[self expectDataSourceShouldReturnObjectOfClass:[XZDictionaryDataSource class] forData:dictionaryMock];
 }
 
 
 #pragma mark - Helpers
 - (void)expectDataSourceShouldReturnObjectOfClass:(Class)class forData:(id)data{
 	// given
-	id<DataSourceProtocol> dataSource = nil;
+	id<XZDataSourceProtocol> dataSource = nil;
 	
 	// when
-	dataSource = [DataSourceFabric dataSourceForData:data];
+	dataSource = [XZDataSourceFabric dataSourceForData:data];
 	
 	// then
 	expect(dataSource).toNot.beNil();
-	expect(dataSource).to.conformTo(@protocol(DataSourceProtocol));
+	expect(dataSource).to.conformTo(@protocol(XZDataSourceProtocol));
 	expect(dataSource).to.beAKindOf(class);
 }
 

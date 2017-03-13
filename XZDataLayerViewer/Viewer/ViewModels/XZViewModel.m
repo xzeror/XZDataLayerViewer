@@ -6,15 +6,15 @@
 //  Copyright © 2017 XZone Software. All rights reserved.
 //
 
-#import "ViewModel.h"
+#import "XZViewModel.h"
 
-@interface ViewModel ()
+@interface XZViewModel ()
 @property(nonatomic,strong)NSString *key;
 @property(nonatomic,strong)NSString *value;
 @property(nonatomic,assign)BOOL shouldShowDisclosureIndicator;
 @end
 
-@implementation ViewModel
+@implementation XZViewModel
 - (instancetype)initWithKey:(NSString*)key value:(NSString*)value shouldShowDisclosureIndicator:(BOOL)shouldShowDisclosureIndicator{
 	self = [super init];
 	if(self != nil){

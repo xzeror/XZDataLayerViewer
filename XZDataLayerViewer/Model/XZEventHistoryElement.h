@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EventHistoryElement : NSObject
-@property(nonatomic,strong,readonly)NSDictionary *dataLayerModel;
+@interface XZEventHistoryElement : NSObject
+@property(nonatomic,strong,readonly)id<NSObject,NSCopying,NSCoding> data;
 @property(nonatomic,strong,readonly)NSDate *timestamp;
-- (instancetype)initWithDataLayerModel:(NSDictionary*)dataLayerModel;
+- (instancetype)initWithData:(id<NSObject,NSCopying,NSCoding>)data;
 @end

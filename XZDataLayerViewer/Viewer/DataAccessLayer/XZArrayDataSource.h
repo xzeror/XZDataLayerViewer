@@ -7,9 +7,9 @@
 //
 
 @import Foundation;
-#import "DataSourceProtocol.h"
+#import "XZDataSourceProtocol.h"
 
-@interface ArrayDataSource : NSObject <DataSourceProtocol>
+@interface XZArrayDataSource : NSObject <XZDataSourceProtocol>
 - (instancetype)initWithArray:(NSArray*)array NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 @end

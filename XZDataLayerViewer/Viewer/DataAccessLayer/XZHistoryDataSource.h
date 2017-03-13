@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DataSourceProtocol.h"
+#import "XZDataSourceProtocol.h"
 
-@protocol StoreProtocol;
+@protocol XZStoreProtocol;
 
-@interface HistoryDataSource : NSObject <DataSourceProtocol>
+@interface XZHistoryDataSource : NSObject <XZDataSourceProtocol>
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithStore:(id<StoreProtocol>)store NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithStore:(id<XZStoreProtocol>)store NS_DESIGNATED_INITIALIZER;
 @end

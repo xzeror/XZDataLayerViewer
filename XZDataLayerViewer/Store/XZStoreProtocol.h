@@ -6,7 +6,7 @@
 //  Copyright © 2017 XZone Software. All rights reserved.
 //
 
-@protocol StoreProtocol
+@protocol XZStoreProtocol
 @property(nonatomic,assign)NSUInteger historyLimit;
 - (instancetype)initWithHistoryLimit:(NSUInteger)historyLimit;
 - (id)addObject:(id)object;

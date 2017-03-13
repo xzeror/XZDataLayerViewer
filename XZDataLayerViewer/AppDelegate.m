@@ -93,7 +93,7 @@ static NSUInteger counter = 0;
 }
 
 - (void)setupDataLayerViewer{
-	[XZDataLayerViewer configureWithTagManger:[TAGManager instance] applicationDelegate:self maxHistoryItems:100];
+	[XZDataLayerViewer configureWithTagManger:[TAGManager instance] maxHistoryItems:100];
 }
 
 

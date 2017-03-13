@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol DataSourceProtocol;
+@protocol XZDataSourceProtocol;
 
-@interface DataSourceFabric : NSObject
-+ (id<DataSourceProtocol>)dataSourceForData:(id)data;
+@interface XZDataSourceFabric : NSObject
++ (id<XZDataSourceProtocol>)dataSourceForData:(id)data;
 @end

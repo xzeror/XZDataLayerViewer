@@ -14,7 +14,7 @@
 
 @interface XZDataLayerViewer : NSObject
 //TODO: we also need to give user store options. Later...
-+ (void)configureWithTagManger:(TAGManager*)tagManager applicationDelegate:(id<UIApplicationDelegate>)appDelegate maxHistoryItems:(NSUInteger)maxHistoryItems;
++ (void)configureWithTagManger:(TAGManager*)tagManager maxHistoryItems:(NSUInteger)maxHistoryItems;
 + (instancetype)sharedInstance;
 - (UIViewController*)viewerInterface;
 @end

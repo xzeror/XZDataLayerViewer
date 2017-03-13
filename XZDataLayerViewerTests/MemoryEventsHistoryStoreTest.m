@@ -6,13 +6,13 @@
 //
 
 // Class under test
-#import "MemoryEventsHistoryStore.h"
+#import "XZMemoryEventsHistoryStore.h"
 
 // Collaborators
 
 
 @interface MemoryEventsHistoryStoreTest : XCTestCase
-@property(nonatomic,strong)MemoryEventsHistoryStore *memoryStore;
+@property(nonatomic,strong)XZMemoryEventsHistoryStore *memoryStore;
 @end
 
 
@@ -20,7 +20,7 @@
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method
-	self.memoryStore = [[MemoryEventsHistoryStore alloc] init];
+	self.memoryStore = [[XZMemoryEventsHistoryStore alloc] init];
 }
 
 - (void)tearDown {
@@ -37,7 +37,7 @@
 	NSUInteger historyLimit = 1;
 
 	// when
-	MemoryEventsHistoryStore *memoryStore = [[MemoryEventsHistoryStore alloc] initWithHistoryLimit:historyLimit];
+	XZMemoryEventsHistoryStore *memoryStore = [[XZMemoryEventsHistoryStore alloc] initWithHistoryLimit:historyLimit];
 
 	// then
 	expect(memoryStore.historyLimit).equal(historyLimit);

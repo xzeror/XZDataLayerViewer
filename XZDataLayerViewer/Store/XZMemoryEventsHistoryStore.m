@@ -6,16 +6,16 @@
 //  Copyright © 2017 XZone Software. All rights reserved.
 //
 
-#import "MemoryEventsHistoryStore.h"
+#import "XZMemoryEventsHistoryStore.h"
 
 static const NSUInteger DefaultHistoryLimit = 100;
 
-@interface MemoryEventsHistoryStore ()
+@interface XZMemoryEventsHistoryStore ()
 @property(nonatomic,strong)NSMutableArray *store;
 - (instancetype)initWithHistoryLimit:(NSUInteger)historyLimit NS_DESIGNATED_INITIALIZER;
 @end
 
-@implementation MemoryEventsHistoryStore
+@implementation XZMemoryEventsHistoryStore
 @synthesize historyLimit = _historyLimit;
 - (instancetype)init{
 	return [self initWithHistoryLimit:DefaultHistoryLimit];

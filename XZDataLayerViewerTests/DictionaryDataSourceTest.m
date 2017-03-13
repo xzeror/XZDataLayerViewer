@@ -6,14 +6,14 @@
 //
 
 // Class under test
-#import "DictionaryDataSource.h"
+#import "XZDictionaryDataSource.h"
 
 // Collaborators
-#import "ViewModel.h"
+#import "XZViewModel.h"
 
 
 @interface DictionaryDataSourceTest : XCTestCase
-@property(nonatomic,strong)DictionaryDataSource *dataSource;
+@property(nonatomic,strong)XZDictionaryDataSource *dataSource;
 @property(nonatomic,strong)id dataMock;
 @end
 
@@ -23,7 +23,7 @@
 - (void)setUp {
 	[super setUp]; // must be the first line in method
 	self.dataMock = OCMClassMock([NSDictionary class]);
-	self.dataSource = [[DictionaryDataSource alloc] initWithDictionary:self.dataMock];
+	self.dataSource = [[XZDictionaryDataSource alloc] initWithDictionary:self.dataMock];
 }
 
 - (void)tearDown {
@@ -37,7 +37,7 @@
 	// data source setup
 	
 	// then
-	expect(self.dataSource).to.conformTo(@protocol(DataSourceProtocol));
+	expect(self.dataSource).to.conformTo(@protocol(XZDataSourceProtocol));
 }
 
 - (void)testDataSourceShouldReturnCountOfDataElements{
@@ -56,7 +56,7 @@
 	NSIndexPath *invalidIndexPath = [NSIndexPath indexPathForRow:validIndexPath.row + 1 inSection:validIndexPath.section];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:invalidIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:invalidIndexPath];
 	
 	// then
 	expect(viewModel).to.beNil();
@@ -68,7 +68,7 @@
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();
@@ -83,7 +83,7 @@
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();
@@ -98,7 +98,7 @@
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
 	
 	// when
-	ViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();

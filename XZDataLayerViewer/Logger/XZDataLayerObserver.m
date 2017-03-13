@@ -7,7 +7,7 @@
 //
 
 #import <objc/runtime.h>
-#import "DataLayerObserver.h"
+#import "XZDataLayerObserver.h"
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
 #import "TAGDataLayer+CustomProperties.h"
@@ -16,6 +16,7 @@ NSString * const DataLayerHasChangedNotification = @"com.xzonesoftware.datalayer
 NSString * const kDataLayerPayload = @"com.xzonesoftware.datalayer.haschanged.datalayer_payload";
 
 static IMP __original_Push_Implementation;
+static NSMutableDictionary *observers;
 
 static void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 {
@@ -24,26 +25,36 @@ static void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 	((void(*)(id,SEL,NSDictionary*))__original_Push_Implementation)(self, _cmd, dict);
 	NSDictionary *dataLayerModel = (NSDictionary*)[self valueForKey:@"model"];
 	NSDictionary *dataLayerModelDeepCopy = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:dataLayerModel]];
-	[[NSNotificationCenter defaultCenter] postNotificationName:DataLayerHasChangedNotification object:self userInfo:@{kDataLayerPayload:dataLayerModelDeepCopy}];
+	for (NSArray *observerObservers in [observers allValues]) {
+		for (XZEventObservingBlock block in observerObservers) {
+			block(dataLayerModelDeepCopy);
+		}
+	}
 }
 
-@interface DataLayerObserver ()
+@interface XZDataLayerObserver ()
 @property(nonatomic,weak)TAGDataLayer *dataLayer;
 @end
 
-@implementation DataLayerObserver
+@implementation XZDataLayerObserver
 - (instancetype)initWithDataLayer:(TAGDataLayer*)dataLayer{
 	NSParameterAssert(dataLayer);
-	
-	if((self = [super init])){
-		_dataLayer = dataLayer;
-		[self setupSwizzling];
+	self = [super init];
+	if(!self){
+		return nil;
 	}
+	static dispatch_once_t createObserversDictionaryOnlyOnce;
+	dispatch_once(&createObserversDictionaryOnlyOnce, ^{
+		observers = [[NSMutableDictionary alloc] initWithCapacity:1];
+	});
+	_dataLayer = dataLayer;
+	[self setupSwizzling];
 	return self;
 }
 
 - (void)dealloc{
 	[self teardownSwizzling];
+	[self removeMyObservers];
 }
 
 - (void)setupSwizzling{
@@ -63,6 +74,39 @@ static void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 		method_setImplementation(m,(IMP)__original_Push_Implementation);
 		__original_Push_Implementation = nil;
 	}
+}
+
+- (NSArray*)observers{
+	return [[self myObservers] copy];
+}
+
+- (id)addObserver:(XZEventObservingBlock)observingBlock{
+	id blockCopy = [observingBlock copy];
+	NSMutableArray *myObservers = [self myObservers];
+	[myObservers addObject:blockCopy];
+	return blockCopy;
+}
+
+- (void)removeObserver:(id)observerId{
+	NSMutableArray *myObservers = [self myObservers];
+	[myObservers removeObject:observerId];
+}
+
+- (NSMutableArray*)myObservers{
+	NSMutableArray *myObservers = [observers objectForKey:[self entityUniqueKey]];
+	if (myObservers == nil) {
+		myObservers = [NSMutableArray arrayWithCapacity:1];
+		[observers setObject:myObservers forKey:[self entityUniqueKey]];
+	}
+	return myObservers;
+}
+
+- (void)removeMyObservers{
+	[observers removeObjectForKey:[self entityUniqueKey]];
+}
+
+- (id<NSCopying>)entityUniqueKey{
+	return @([self hash]);
 }
 
 @end

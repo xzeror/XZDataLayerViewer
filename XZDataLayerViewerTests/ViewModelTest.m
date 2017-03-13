@@ -6,7 +6,7 @@
 //
 
 // Class under test
-#import "ViewModel.h"
+#import "XZViewModel.h"
 
 // Collaborators
 
@@ -25,7 +25,7 @@
 	BOOL testShouldShowDisclosureIndicator = YES;
 
 	// when
-	ViewModel *viewModel = [[ViewModel alloc] initWithKey:testKey value:testValue shouldShowDisclosureIndicator:testShouldShowDisclosureIndicator];
+	XZViewModel *viewModel = [[XZViewModel alloc] initWithKey:testKey value:testValue shouldShowDisclosureIndicator:testShouldShowDisclosureIndicator];
 
 	// then
 	expect(viewModel.key).to.equal(testKey);
