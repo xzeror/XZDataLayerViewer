@@ -20,6 +20,9 @@ static NSUInteger counter = 0;
 
 @implementation AppDelegate
 
+- (void)setupDataLayerViewer{
+	[XZDataLayerViewer configureWithTagManger:[TAGManager instance] store:XZDefaultStore eventGenerator:XZDefaultObserver maxHistoryItems:100];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
@@ -91,10 +94,4 @@ static NSUInteger counter = 0;
 	[[[TAGManager instance] logger] setLogLevel:kTAGLoggerLogLevelVerbose];
 	[[TAGManager instance] openContainerById:GTMContainerId callback:nil];
 }
-
-- (void)setupDataLayerViewer{
-	[XZDataLayerViewer configureWithTagManger:[TAGManager instance] maxHistoryItems:100];
-}
-
-
 @end

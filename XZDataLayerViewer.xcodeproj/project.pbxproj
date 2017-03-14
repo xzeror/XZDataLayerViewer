@@ -141,6 +141,9 @@
 		10FE11401E4FB06B008C2437 /* XZDefaultStoreWriterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDefaultStoreWriterTest.m; sourceTree = "<group>"; };
 		4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XZDataLayerViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7009585C1E7652DD005689AD /* XZDataLayerViewer+Public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XZDataLayerViewer+Public.h"; sourceTree = "<group>"; };
+		7009585D1E765325005689AD /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		7009585E1E765508005689AD /* Defaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defaults.h; sourceTree = "<group>"; };
 		7010CD231E667BFB00845CF2 /* MemoryEventsHistoryStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryEventsHistoryStoreTest.m; sourceTree = "<group>"; };
 		701921AE1E68AD3C00BE6DB9 /* DictionaryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryDataSourceTest.m; sourceTree = "<group>"; };
 		701921B01E69213800BE6DB9 /* HistoryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataSourceTest.m; sourceTree = "<group>"; };
@@ -321,7 +324,10 @@
 		109E51131E4F79350044305D /* Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				7009585D1E765325005689AD /* Common.h */,
+				7009585E1E765508005689AD /* Defaults.h */,
 				705382851E6D13F00058835B /* XZDataLayerViewer.h */,
+				7009585C1E7652DD005689AD /* XZDataLayerViewer+Public.h */,
 				7053828A1E6D170D0058835B /* XZDataLayerViewer+Extension.h */,
 				705382861E6D13F00058835B /* XZDataLayerViewer.m */,
 				109E51141E4F79350044305D /* DataAccessLayer */,
@@ -390,9 +396,9 @@
 		109E512C1E4F79350044305D /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				109E512F1E4F79350044305D /* XZStoreProtocol.h */,
 				109E512D1E4F79350044305D /* XZMemoryEventsHistoryStore.h */,
 				109E512E1E4F79350044305D /* XZMemoryEventsHistoryStore.m */,
-				109E512F1E4F79350044305D /* XZStoreProtocol.h */,
 			);
 			path = Store;
 			sourceTree = "<group>";

@@ -53,7 +53,6 @@
 	id<XZStoreProtocol> store = OCMClassMock([XZMemoryEventsHistoryStore class]);
 	id<XZEventGeneratorProtocol> eventGenerator= OCMClassMock([XZDataLayerObserver class]);
 	id<XZStoreWriterProtocol> writer = OCMClassMock([XZDefaultStoreWriter class]);
-	id<UIApplicationDelegate> appDelegate = OCMProtocolMock(@protocol(UIApplicationDelegate));
 	
 	// when
 	XZDataLayerViewer *instance = [[XZDataLayerViewer alloc] initWithStore:store writer:writer dataLayerObserver:eventGenerator];
@@ -63,25 +62,6 @@
 	expect(instance.store).to.beIdenticalTo(store);
 	expect(instance.eventGenerator).to.beIdenticalTo(eventGenerator);
 	expect(instance.writer).to.beIdenticalTo(writer);
-}
-
-- (void)testConfigureShouldCreateSharedInstanceAndSetupConfiguration{
-	// given
-	NSUInteger maxHistoryItems = rand();
-	TAGDataLayer *tagDataLayerMock = OCMClassMock([TAGDataLayer class]);
-	TAGManager *tagManagerMock = OCMClassMock([TAGManager class]);
-	OCMStub(ClassMethod([(id)tagManagerMock instance])).andReturn(tagManagerMock);
-	OCMStub([tagManagerMock dataLayer]).andReturn(tagDataLayerMock);
-	
-	// when
-	[XZDataLayerViewer configureWithTagManger:tagManagerMock maxHistoryItems:maxHistoryItems];
-	XZDataLayerViewer *instance = [XZDataLayerViewer sharedInstance];
-	
-	// then
-	expect(instance.eventGenerator).toNot.beNil();
-	expect(instance.eventGenerator.observers.count).to.beGreaterThan(0);
-	expect(instance.writer).toNot.beNil();
-	expect(instance.store).toNot.beNil();
 }
 
 - (void)testViewControllerShouldReturnInitalizedInterface{
@@ -110,6 +90,7 @@
 
 @interface XZDataLayerViewerSingltoneTest : XCTestCase
 @property(atomic,assign)BOOL configured;
+@property(nonatomic,assign)NSUInteger maxHistoryItems;
 @end
 
 @implementation XZDataLayerViewerSingltoneTest
@@ -118,19 +99,33 @@
 	[super setUp];
 	@synchronized (self) {
 		if (self.configured == NO) {
-			NSUInteger maxHistoryItems = 1000;
+			self.maxHistoryItems = 1000;
 			TAGDataLayer *tagDataLayerMock = OCMClassMock([TAGDataLayer class]);
 			TAGManager *tagManagerMock = OCMClassMock([TAGManager class]);
 			OCMStub(ClassMethod([(id)tagManagerMock instance])).andReturn(tagManagerMock);
 			OCMStub([tagManagerMock dataLayer]).andReturn(tagDataLayerMock);
-			id<UIApplicationDelegate> applicationDelegateMock = OCMProtocolMock(@protocol(UIApplicationDelegate));
-			[XZDataLayerViewer configureWithTagManger:tagManagerMock maxHistoryItems:maxHistoryItems];
+			[XZDataLayerViewer configureWithTagManger:tagManagerMock store:[XZMemoryEventsHistoryStore class] eventGenerator:[XZDefaultObserver class] maxHistoryItems:self.maxHistoryItems];
 			self.configured = YES;
 		}
 	}
 }
 
 #pragma mark - Singltone tests
+- (void)testConfigureShouldCreateSharedInstanceAndSetupConfiguration{
+	// given
+	// all setup
+	
+	// when
+	XZDataLayerViewer *instance = [XZDataLayerViewer sharedInstance];
+	
+	// then
+	expect(instance.eventGenerator).toNot.beNil();
+	expect(instance.eventGenerator.observers.count).to.beGreaterThan(0);
+	expect(instance.writer).toNot.beNil();
+	expect(instance.store).toNot.beNil();
+	expect(instance.store.historyLimit).to.equal(self.maxHistoryItems);
+}
+
 - (void)testSharedInstanceShouldReturnNonNilObject {
 	expect([XZDataLayerViewer sharedInstance]).toNot.beNil();
 }

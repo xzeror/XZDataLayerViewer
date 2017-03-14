@@ -6,7 +6,7 @@
 //  Copyright © 2017 XZone Software. All rights reserved.
 //
 
-#import "XZDataLayerViewer.h"
+#import "XZDataLayerViewer+Public.h"
 #import "XZDataLayerViewer+Extension.h"
 #import "XZDataLayerObserver.h"
 #import "XZDefaultStoreWriter.h"
@@ -24,12 +24,17 @@ static XZDataLayerViewer *sharedInstance = nil;
 	return sharedInstance;
 }
 
-+ (void)configureWithTagManger:(TAGManager*)tagManager maxHistoryItems:(NSUInteger)maxHistoryItems{
++ (void)configureWithTagManger:(TAGManager*)tagManager store:(Class)storeClass eventGenerator:(Class)eventGeneratorClass maxHistoryItems:(NSUInteger)maxHistoryItems{
+	NSAssert([storeClass isKindOfClass:[NSObject class]], @"Store should be descendant of NSObject");
+	NSAssert([storeClass conformsToProtocol:@protocol(XZStoreProtocol)], @"Store should conform to XZStoreProtocol");
+	NSAssert([eventGeneratorClass isKindOfClass:[NSObject class]], @"Event generator should be descendant of NSObject");
+	NSAssert([eventGeneratorClass conformsToProtocol:@protocol(XZEventGeneratorProtocol)], @"Event generator should conform to XZEventGeneratorProtocol");
+	
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		TAGDataLayer *dataLayer = [TAGManager instance].dataLayer;
-		id<XZStoreProtocol> store = [[XZMemoryEventsHistoryStore alloc] initWithHistoryLimit:maxHistoryItems];
-		id<XZEventGeneratorProtocol> observer = [[XZDataLayerObserver alloc] initWithDataLayer:dataLayer];
+		id<XZStoreProtocol> store = [[storeClass alloc] initWithHistoryLimit:maxHistoryItems];
+		id<XZEventGeneratorProtocol> observer = [[eventGeneratorClass alloc] initWithDataLayer:dataLayer];
 		id<XZStoreWriterProtocol> writer = [[XZDefaultStoreWriter alloc] initWithStore:store];
 		[observer addObserver:^(id<NSObject,NSCoding,NSCopying> eventData) {
 			[writer writeDataCopyToStore:eventData];
