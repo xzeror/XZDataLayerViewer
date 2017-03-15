@@ -36,10 +36,8 @@ static XZDataLayerViewer *sharedInstance = nil;
 		id<XZStoreProtocol> store = [[storeClass alloc] initWithHistoryLimit:maxHistoryItems];
 		id<XZEventGeneratorProtocol> observer = [[eventGeneratorClass alloc] initWithDataLayer:dataLayer];
 		id<XZStoreWriterProtocol> writer = [[XZDefaultStoreWriter alloc] initWithStore:store];
-		[observer addObserver:^(id<NSObject,NSCoding,NSCopying> eventData) {
-			[writer writeDataCopyToStore:eventData];
-		}];
 		sharedInstance = [[XZDataLayerViewer alloc] initWithStore:store writer:writer dataLayerObserver:observer];
+		[observer addObserver:sharedInstance.observerBlock];
 	});
 }
 
@@ -60,6 +58,13 @@ static XZDataLayerViewer *sharedInstance = nil;
 	XZViewerInterface *historyViewController = [[XZViewerInterface alloc] initWithDataSource:historyDataSource];
 	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:historyViewController];
 	return navigationController;
+}
+
+- (XZEventObservingBlock)observerBlock{
+	__weak typeof(self) weakSelf = self;
+	return ^(id<NSObject,NSCoding,NSCopying> eventData) {
+		[weakSelf.writer writeDataCopyToStore:eventData];
+	};
 }
 
 @end

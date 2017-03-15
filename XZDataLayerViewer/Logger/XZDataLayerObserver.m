@@ -40,15 +40,14 @@ static void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
 - (instancetype)initWithDataLayer:(TAGDataLayer*)dataLayer{
 	NSParameterAssert(dataLayer);
 	self = [super init];
-	if(!self){
-		return nil;
+	if(self){
+		static dispatch_once_t createObserversDictionaryOnlyOnce;
+		dispatch_once(&createObserversDictionaryOnlyOnce, ^{
+			observers = [[NSMutableDictionary alloc] initWithCapacity:1];
+		});
+		_dataLayer = dataLayer;
+		[self setupSwizzling];
 	}
-	static dispatch_once_t createObserversDictionaryOnlyOnce;
-	dispatch_once(&createObserversDictionaryOnlyOnce, ^{
-		observers = [[NSMutableDictionary alloc] initWithCapacity:1];
-	});
-	_dataLayer = dataLayer;
-	[self setupSwizzling];
 	return self;
 }
 

@@ -82,7 +82,16 @@
 	
 }
 
-#pragma mark - Helper methods
+- (void)testObserverBlockShouldCallWriterMethod{
+	// given
+	NSDictionary *testData = @{};
+	
+	// when
+	self.dataLayerViewer.observerBlock(testData);
+	
+	// then
+	OCMVerify([self.storeWriterMock writeDataCopyToStore:testData]);
+}
 
 @end
 

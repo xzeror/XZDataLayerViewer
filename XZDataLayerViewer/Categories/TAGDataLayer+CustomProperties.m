@@ -13,9 +13,7 @@ static NSString * const DataLayerModelPropertyName = @"model";
 @implementation TAGDataLayer (CustomProperties)
 - (NSDictionary*)dataLayerModel{
 	NSDictionary *result = (NSDictionary*)[self valueForKey:DataLayerModelPropertyName];
-	if (result == nil) {
-		NSLog(@"Error! TAGDataLayer model is not available with KVC key 'model'");
-	}
+	NSAssert(result, @"Error! TAGDataLayer model is not available with KVC key 'model'");
 	return result;
 }
 @end
