@@ -3,7 +3,7 @@
 //  XZDataLayerViewerUITests
 //
 //  Created by Andrey Ostanin on 06.02.17.
-//  Copyright © 2017 XZone Software. All rights reserved.
+//  Copyright © 2017 Andrey Ostanin. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

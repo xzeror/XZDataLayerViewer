@@ -341,10 +341,10 @@
 			isa = PBXGroup;
 			children = (
 				109E51191E4F79350044305D /* XZDataSourceProtocol.h */,
-				109E51151E4F79350044305D /* XZArrayDataSource.h */,
-				109E51161E4F79350044305D /* XZArrayDataSource.m */,
 				109E51171E4F79350044305D /* XZDataSourceFabric.h */,
 				109E51181E4F79350044305D /* XZDataSourceFabric.m */,
+				109E51151E4F79350044305D /* XZArrayDataSource.h */,
+				109E51161E4F79350044305D /* XZArrayDataSource.m */,
 				109E511A1E4F79350044305D /* XZDictionaryDataSource.h */,
 				109E511B1E4F79350044305D /* XZDictionaryDataSource.m */,
 				109E511C1E4F79350044305D /* XZHistoryDataSource.h */,

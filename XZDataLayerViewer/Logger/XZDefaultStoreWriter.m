@@ -1,10 +1,5 @@
-//
-//  XZDefaultStoreWriter.m
-//  XZDataLayerViewer
-//
 //  Created by Andrey Ostanin on 10.02.17.
-//  Copyright © 2017 XZone Software. All rights reserved.
-//
+//  Copyright © 2017 Andrey Ostanin. All rights reserved.
 
 #import "XZDefaultStoreWriter.h"
 #import "XZStoreProtocol.h"
@@ -12,7 +7,6 @@
 
 @interface XZDefaultStoreWriter ()
 @property(nonatomic,strong)id<XZStoreProtocol> store;
-@property(nonatomic,strong)id notificationObserver;
 @end
 
 @implementation XZDefaultStoreWriter

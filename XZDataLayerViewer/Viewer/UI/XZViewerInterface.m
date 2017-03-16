@@ -1,16 +1,9 @@
-//
-//  ViewController.m
-//  XZDataLayerViewer
-//
 //  Created by Andrey Ostanin on 06.02.17.
-//  Copyright © 2017 XZone Software. All rights reserved.
-//
+//  Copyright © 2017 Andrey Ostanin. All rights reserved.
 
 #import "XZViewerInterface.h"
 #import "XZDataSourceProtocol.h"
 #import "XZViewModel.h"
-#import "TAGManager.h"
-#import "TAGDataLayer.h"
 #import "XZDataSourceFabric.h"
 
 @interface XZViewerInterface ()
@@ -18,8 +11,9 @@
 @end
 
 @implementation XZViewerInterface
+
 - (instancetype)initWithDataSource:(id<XZDataSourceProtocol>)dataSource{
-	self = [super init];
+	self = [super initWithStyle:UITableViewStylePlain];
 	if (self != nil) {
 		_dataSource = dataSource;
 		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];

@@ -1,10 +1,5 @@
-//
-//  Common.h
-//  XZDataLayerViewer
-//
 //  Created by Andrey Ostanin on 13.03.17.
-//  Copyright © 2017 XZone Software. All rights reserved.
-//
+//  Copyright © 2017 Andrey Ostanin. All rights reserved.
 
 #ifndef Common_h
 #define Common_h

@@ -1,10 +1,5 @@
-//
-//  TAGDataLayer+Properties.m
-//  XZDataLayerViewer
-//
 //  Created by Andrey Ostanin on 28.02.17.
-//  Copyright © 2017 XZone Software. All rights reserved.
-//
+//  Copyright © 2017 Andrey Ostanin. All rights reserved.
 
 #import "TAGDataLayer+CustomProperties.h"
 

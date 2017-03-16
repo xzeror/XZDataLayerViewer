@@ -1,12 +1,8 @@
-//
-//  EventHistoryElement.m
-//  XZDataLayerViewer
-//
 //  Created by Andrey Ostanin on 09.02.17.
-//  Copyright © 2017 XZone Software. All rights reserved.
-//
+//  Copyright © 2017 Andrey Ostanin. All rights reserved.
 
 #import "XZEventHistoryElement.h"
+
 @interface XZEventHistoryElement ()
 @property(nonatomic,strong)id<NSObject,NSCopying,NSCoding> data;
 @property(nonatomic,strong)NSDate *timestamp;
