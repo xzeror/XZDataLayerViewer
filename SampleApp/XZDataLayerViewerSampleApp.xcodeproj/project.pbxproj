@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		703DEF591E80DCCE007D5702 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703DEF581E80DCCE007D5702 /* SystemConfiguration.framework */; };
+		703DEF841E80E306007D5702 /* XZDataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF611E80E2B5007D5702 /* XZDataLayerObserver.m */; };
+		703DEF851E80E31B007D5702 /* TAGDataLayer+CustomProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF5D1E80E2B5007D5702 /* TAGDataLayer+CustomProperties.m */; };
+		703DEF861E80E31B007D5702 /* XZDefaultStoreWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF631E80E2B5007D5702 /* XZDefaultStoreWriter.m */; };
+		703DEF871E80E31B007D5702 /* XZEventHistoryElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF681E80E2B5007D5702 /* XZEventHistoryElement.m */; };
+		703DEF881E80E31B007D5702 /* XZMemoryEventsHistoryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF6B1E80E2B5007D5702 /* XZMemoryEventsHistoryStore.m */; };
+		703DEF891E80E31B007D5702 /* XZArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF701E80E2B5007D5702 /* XZArrayDataSource.m */; };
+		703DEF8A1E80E31B007D5702 /* XZDataSourceFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF721E80E2B5007D5702 /* XZDataSourceFabric.m */; };
+		703DEF8B1E80E31B007D5702 /* XZDictionaryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF751E80E2B5007D5702 /* XZDictionaryDataSource.m */; };
+		703DEF8C1E80E31B007D5702 /* XZHistoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF771E80E2B5007D5702 /* XZHistoryDataSource.m */; };
+		703DEF8D1E80E31B007D5702 /* XZViewerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF7A1E80E2B5007D5702 /* XZViewerInterface.m */; };
+		703DEF8E1E80E31B007D5702 /* XZViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF7D1E80E2B5007D5702 /* XZViewModel.m */; };
+		703DEF8F1E80E31B007D5702 /* XZDataLayerViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 703DEF811E80E2B5007D5702 /* XZDataLayerViewer.m */; };
+		709B7CE91E801FB4001C54C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 709B7CE81E801FB4001C54C8 /* Assets.xcassets */; };
+		709B7D061E80207A001C54C8 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 709B7D001E802025001C54C8 /* libGoogleAnalyticsServices.a */; };
+		709B7D091E802080001C54C8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 709B7D081E802080001C54C8 /* libz.tbd */; };
+		709B7D0B1E802091001C54C8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 709B7D0A1E802091001C54C8 /* libsqlite3.tbd */; };
+		709B7D0D1E80209B001C54C8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709B7D0C1E80209B001C54C8 /* CoreData.framework */; };
+		709B7D171E8023C6001C54C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 709B7CDD1E801FB4001C54C8 /* main.m */; };
+		709B7D181E8023C9001C54C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 709B7CE01E801FB4001C54C8 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		709B7D491E8027A5001C54C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		703DEF581E80DCCE007D5702 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		703DEF5C1E80E2B5007D5702 /* TAGDataLayer+CustomProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TAGDataLayer+CustomProperties.h"; sourceTree = "<group>"; };
+		703DEF5D1E80E2B5007D5702 /* TAGDataLayer+CustomProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomProperties.m"; sourceTree = "<group>"; };
+		703DEF5E1E80E2B5007D5702 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		703DEF601E80E2B5007D5702 /* XZDataLayerObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDataLayerObserver.h; sourceTree = "<group>"; };
+		703DEF611E80E2B5007D5702 /* XZDataLayerObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerObserver.m; sourceTree = "<group>"; };
+		703DEF621E80E2B5007D5702 /* XZDefaultStoreWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDefaultStoreWriter.h; sourceTree = "<group>"; };
+		703DEF631E80E2B5007D5702 /* XZDefaultStoreWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDefaultStoreWriter.m; sourceTree = "<group>"; };
+		703DEF641E80E2B5007D5702 /* XZEventGeneratorProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZEventGeneratorProtocol.h; sourceTree = "<group>"; };
+		703DEF651E80E2B5007D5702 /* XZStoreWriterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZStoreWriterProtocol.h; sourceTree = "<group>"; };
+		703DEF671E80E2B5007D5702 /* XZEventHistoryElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZEventHistoryElement.h; sourceTree = "<group>"; };
+		703DEF681E80E2B5007D5702 /* XZEventHistoryElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZEventHistoryElement.m; sourceTree = "<group>"; };
+		703DEF6A1E80E2B5007D5702 /* XZMemoryEventsHistoryStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZMemoryEventsHistoryStore.h; sourceTree = "<group>"; };
+		703DEF6B1E80E2B5007D5702 /* XZMemoryEventsHistoryStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZMemoryEventsHistoryStore.m; sourceTree = "<group>"; };
+		703DEF6C1E80E2B5007D5702 /* XZStoreProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZStoreProtocol.h; sourceTree = "<group>"; };
+		703DEF6F1E80E2B5007D5702 /* XZArrayDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZArrayDataSource.h; sourceTree = "<group>"; };
+		703DEF701E80E2B5007D5702 /* XZArrayDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZArrayDataSource.m; sourceTree = "<group>"; };
+		703DEF711E80E2B5007D5702 /* XZDataSourceFabric.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDataSourceFabric.h; sourceTree = "<group>"; };
+		703DEF721E80E2B5007D5702 /* XZDataSourceFabric.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDataSourceFabric.m; sourceTree = "<group>"; };
+		703DEF731E80E2B5007D5702 /* XZDataSourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDataSourceProtocol.h; sourceTree = "<group>"; };
+		703DEF741E80E2B5007D5702 /* XZDictionaryDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDictionaryDataSource.h; sourceTree = "<group>"; };
+		703DEF751E80E2B5007D5702 /* XZDictionaryDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDictionaryDataSource.m; sourceTree = "<group>"; };
+		703DEF761E80E2B5007D5702 /* XZHistoryDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZHistoryDataSource.h; sourceTree = "<group>"; };
+		703DEF771E80E2B5007D5702 /* XZHistoryDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZHistoryDataSource.m; sourceTree = "<group>"; };
+		703DEF791E80E2B5007D5702 /* XZViewerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZViewerInterface.h; sourceTree = "<group>"; };
+		703DEF7A1E80E2B5007D5702 /* XZViewerInterface.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZViewerInterface.m; sourceTree = "<group>"; };
+		703DEF7C1E80E2B5007D5702 /* XZViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZViewModel.h; sourceTree = "<group>"; };
+		703DEF7D1E80E2B5007D5702 /* XZViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZViewModel.m; sourceTree = "<group>"; };
+		703DEF7E1E80E2B5007D5702 /* XZCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZCommon.h; sourceTree = "<group>"; };
+		703DEF7F1E80E2B5007D5702 /* XZDataLayerViewer+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XZDataLayerViewer+Extension.h"; sourceTree = "<group>"; };
+		703DEF801E80E2B5007D5702 /* XZDataLayerViewer+Public.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XZDataLayerViewer+Public.h"; sourceTree = "<group>"; };
+		703DEF811E80E2B5007D5702 /* XZDataLayerViewer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewer.m; sourceTree = "<group>"; };
+		703DEF821E80E2B5007D5702 /* XZDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDefaults.h; sourceTree = "<group>"; };
+		703DEF831E80E2B5007D5702 /* XZDataLayerViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZDataLayerViewer.h; sourceTree = "<group>"; };
+		709B7CD91E801FB4001C54C8 /* XZDataLayerViewerSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XZDataLayerViewerSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		709B7CDD1E801FB4001C54C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		709B7CDF1E801FB4001C54C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		709B7CE01E801FB4001C54C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		709B7CE81E801FB4001C54C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		709B7CED1E801FB4001C54C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709B7CF51E802025001C54C8 /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		709B7CF61E802025001C54C8 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		709B7CF71E802025001C54C8 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		709B7CF81E802025001C54C8 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		709B7CF91E802025001C54C8 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		709B7CFA1E802025001C54C8 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		709B7CFB1E802025001C54C8 /* GAIFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		709B7CFC1E802025001C54C8 /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		709B7CFD1E802025001C54C8 /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		709B7CFE1E802025001C54C8 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		709B7CFF1E802025001C54C8 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
+		709B7D001E802025001C54C8 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		709B7D011E802025001C54C8 /* TAGContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		709B7D021E802025001C54C8 /* TAGContainerOpener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		709B7D031E802025001C54C8 /* TAGDataLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		709B7D041E802025001C54C8 /* TAGLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		709B7D051E802025001C54C8 /* TAGManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		709B7D081E802080001C54C8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		709B7D0A1E802091001C54C8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		709B7D0C1E80209B001C54C8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		709B7CD61E801FB3001C54C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				703DEF591E80DCCE007D5702 /* SystemConfiguration.framework in Frameworks */,
+				709B7D0D1E80209B001C54C8 /* CoreData.framework in Frameworks */,
+				709B7D0B1E802091001C54C8 /* libsqlite3.tbd in Frameworks */,
+				709B7D091E802080001C54C8 /* libz.tbd in Frameworks */,
+				709B7D061E80207A001C54C8 /* libGoogleAnalyticsServices.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		703DEF5A1E80E2B5007D5702 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF5B1E80E2B5007D5702 /* Categories */,
+				703DEF5E1E80E2B5007D5702 /* Info.plist */,
+				703DEF5F1E80E2B5007D5702 /* Logger */,
+				703DEF661E80E2B5007D5702 /* Model */,
+				703DEF691E80E2B5007D5702 /* Store */,
+				703DEF6D1E80E2B5007D5702 /* Viewer */,
+				703DEF831E80E2B5007D5702 /* XZDataLayerViewer.h */,
+			);
+			name = Sources;
+			path = ../../Library/Sources;
+			sourceTree = "<group>";
+		};
+		703DEF5B1E80E2B5007D5702 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF5C1E80E2B5007D5702 /* TAGDataLayer+CustomProperties.h */,
+				703DEF5D1E80E2B5007D5702 /* TAGDataLayer+CustomProperties.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		703DEF5F1E80E2B5007D5702 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF601E80E2B5007D5702 /* XZDataLayerObserver.h */,
+				703DEF611E80E2B5007D5702 /* XZDataLayerObserver.m */,
+				703DEF621E80E2B5007D5702 /* XZDefaultStoreWriter.h */,
+				703DEF631E80E2B5007D5702 /* XZDefaultStoreWriter.m */,
+				703DEF641E80E2B5007D5702 /* XZEventGeneratorProtocol.h */,
+				703DEF651E80E2B5007D5702 /* XZStoreWriterProtocol.h */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		703DEF661E80E2B5007D5702 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF671E80E2B5007D5702 /* XZEventHistoryElement.h */,
+				703DEF681E80E2B5007D5702 /* XZEventHistoryElement.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		703DEF691E80E2B5007D5702 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF6A1E80E2B5007D5702 /* XZMemoryEventsHistoryStore.h */,
+				703DEF6B1E80E2B5007D5702 /* XZMemoryEventsHistoryStore.m */,
+				703DEF6C1E80E2B5007D5702 /* XZStoreProtocol.h */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		703DEF6D1E80E2B5007D5702 /* Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF6E1E80E2B5007D5702 /* DataAccessLayer */,
+				703DEF781E80E2B5007D5702 /* UI */,
+				703DEF7B1E80E2B5007D5702 /* ViewModels */,
+				703DEF7E1E80E2B5007D5702 /* XZCommon.h */,
+				703DEF7F1E80E2B5007D5702 /* XZDataLayerViewer+Extension.h */,
+				703DEF801E80E2B5007D5702 /* XZDataLayerViewer+Public.h */,
+				703DEF811E80E2B5007D5702 /* XZDataLayerViewer.m */,
+				703DEF821E80E2B5007D5702 /* XZDefaults.h */,
+			);
+			path = Viewer;
+			sourceTree = "<group>";
+		};
+		703DEF6E1E80E2B5007D5702 /* DataAccessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF6F1E80E2B5007D5702 /* XZArrayDataSource.h */,
+				703DEF701E80E2B5007D5702 /* XZArrayDataSource.m */,
+				703DEF711E80E2B5007D5702 /* XZDataSourceFabric.h */,
+				703DEF721E80E2B5007D5702 /* XZDataSourceFabric.m */,
+				703DEF731E80E2B5007D5702 /* XZDataSourceProtocol.h */,
+				703DEF741E80E2B5007D5702 /* XZDictionaryDataSource.h */,
+				703DEF751E80E2B5007D5702 /* XZDictionaryDataSource.m */,
+				703DEF761E80E2B5007D5702 /* XZHistoryDataSource.h */,
+				703DEF771E80E2B5007D5702 /* XZHistoryDataSource.m */,
+			);
+			path = DataAccessLayer;
+			sourceTree = "<group>";
+		};
+		703DEF781E80E2B5007D5702 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF791E80E2B5007D5702 /* XZViewerInterface.h */,
+				703DEF7A1E80E2B5007D5702 /* XZViewerInterface.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		703DEF7B1E80E2B5007D5702 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF7C1E80E2B5007D5702 /* XZViewModel.h */,
+				703DEF7D1E80E2B5007D5702 /* XZViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		709B7CD01E801FB3001C54C8 = {
+			isa = PBXGroup;
+			children = (
+				709B7CDB1E801FB4001C54C8 /* XZDataLayerViewerSampleApp */,
+				709B7CDA1E801FB4001C54C8 /* Products */,
+				709B7D071E802080001C54C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		709B7CDA1E801FB4001C54C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				709B7CD91E801FB4001C54C8 /* XZDataLayerViewerSampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		709B7CDB1E801FB4001C54C8 /* XZDataLayerViewerSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				709B7CF31E802025001C54C8 /* Externals */,
+				709B7CDD1E801FB4001C54C8 /* main.m */,
+				709B7CDF1E801FB4001C54C8 /* AppDelegate.h */,
+				709B7CE01E801FB4001C54C8 /* AppDelegate.m */,
+				709B7CE81E801FB4001C54C8 /* Assets.xcassets */,
+				709B7CED1E801FB4001C54C8 /* Info.plist */,
+			);
+			name = XZDataLayerViewerSampleApp;
+			sourceTree = "<group>";
+		};
+		709B7CF31E802025001C54C8 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF5A1E80E2B5007D5702 /* Sources */,
+				709B7CF41E802025001C54C8 /* GASDK */,
+			);
+			path = Externals;
+			sourceTree = SOURCE_ROOT;
+		};
+		709B7CF41E802025001C54C8 /* GASDK */ = {
+			isa = PBXGroup;
+			children = (
+				709B7CF51E802025001C54C8 /* GAI.h */,
+				709B7CF61E802025001C54C8 /* GAIDictionaryBuilder.h */,
+				709B7CF71E802025001C54C8 /* GAIEcommerceFields.h */,
+				709B7CF81E802025001C54C8 /* GAIEcommerceProduct.h */,
+				709B7CF91E802025001C54C8 /* GAIEcommerceProductAction.h */,
+				709B7CFA1E802025001C54C8 /* GAIEcommercePromotion.h */,
+				709B7CFB1E802025001C54C8 /* GAIFields.h */,
+				709B7CFC1E802025001C54C8 /* GAILogger.h */,
+				709B7CFD1E802025001C54C8 /* GAITrackedViewController.h */,
+				709B7CFE1E802025001C54C8 /* GAITracker.h */,
+				709B7CFF1E802025001C54C8 /* libAdIdAccess.a */,
+				709B7D001E802025001C54C8 /* libGoogleAnalyticsServices.a */,
+				709B7D011E802025001C54C8 /* TAGContainer.h */,
+				709B7D021E802025001C54C8 /* TAGContainerOpener.h */,
+				709B7D031E802025001C54C8 /* TAGDataLayer.h */,
+				709B7D041E802025001C54C8 /* TAGLogger.h */,
+				709B7D051E802025001C54C8 /* TAGManager.h */,
+			);
+			path = GASDK;
+			sourceTree = "<group>";
+		};
+		709B7D071E802080001C54C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				703DEF581E80DCCE007D5702 /* SystemConfiguration.framework */,
+				709B7D0C1E80209B001C54C8 /* CoreData.framework */,
+				709B7D0A1E802091001C54C8 /* libsqlite3.tbd */,
+				709B7D081E802080001C54C8 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		709B7CD81E801FB3001C54C8 /* XZDataLayerViewerSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 709B7CF01E801FB4001C54C8 /* Build configuration list for PBXNativeTarget "XZDataLayerViewerSampleApp" */;
+			buildPhases = (
+				709B7CD51E801FB3001C54C8 /* Sources */,
+				709B7CD61E801FB3001C54C8 /* Frameworks */,
+				709B7CD71E801FB3001C54C8 /* Resources */,
+				709B7D491E8027A5001C54C8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XZDataLayerViewerSampleApp;
+			productName = XZDataLayerViewerSampleApp;
+			productReference = 709B7CD91E801FB4001C54C8 /* XZDataLayerViewerSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		709B7CD11E801FB3001C54C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "XZone Software";
+				TargetAttributes = {
+					709B7CD81E801FB3001C54C8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 709B7CD41E801FB3001C54C8 /* Build configuration list for PBXProject "XZDataLayerViewerSampleApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 709B7CD01E801FB3001C54C8;
+			productRefGroup = 709B7CDA1E801FB4001C54C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				709B7CD81E801FB3001C54C8 /* XZDataLayerViewerSampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		709B7CD71E801FB3001C54C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				709B7CE91E801FB4001C54C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		709B7CD51E801FB3001C54C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				703DEF8A1E80E31B007D5702 /* XZDataSourceFabric.m in Sources */,
+				703DEF861E80E31B007D5702 /* XZDefaultStoreWriter.m in Sources */,
+				703DEF8B1E80E31B007D5702 /* XZDictionaryDataSource.m in Sources */,
+				703DEF8D1E80E31B007D5702 /* XZViewerInterface.m in Sources */,
+				703DEF881E80E31B007D5702 /* XZMemoryEventsHistoryStore.m in Sources */,
+				703DEF891E80E31B007D5702 /* XZArrayDataSource.m in Sources */,
+				703DEF851E80E31B007D5702 /* TAGDataLayer+CustomProperties.m in Sources */,
+				703DEF8C1E80E31B007D5702 /* XZHistoryDataSource.m in Sources */,
+				703DEF871E80E31B007D5702 /* XZEventHistoryElement.m in Sources */,
+				703DEF8E1E80E31B007D5702 /* XZViewModel.m in Sources */,
+				709B7D171E8023C6001C54C8 /* main.m in Sources */,
+				703DEF8F1E80E31B007D5702 /* XZDataLayerViewer.m in Sources */,
+				703DEF841E80E306007D5702 /* XZDataLayerObserver.m in Sources */,
+				709B7D181E8023C9001C54C8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		709B7CEE1E801FB4001C54C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		709B7CEF1E801FB4001C54C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		709B7CF11E801FB4001C54C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/GASDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Externals/**";
+			};
+			name = Debug;
+		};
+		709B7CF21E801FB4001C54C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Externals/GASDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Externals/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		709B7CD41E801FB3001C54C8 /* Build configuration list for PBXProject "XZDataLayerViewerSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				709B7CEE1E801FB4001C54C8 /* Debug */,
+				709B7CEF1E801FB4001C54C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		709B7CF01E801FB4001C54C8 /* Build configuration list for PBXNativeTarget "XZDataLayerViewerSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				709B7CF11E801FB4001C54C8 /* Debug */,
+				709B7CF21E801FB4001C54C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 709B7CD11E801FB3001C54C8 /* Project object */;
+}
