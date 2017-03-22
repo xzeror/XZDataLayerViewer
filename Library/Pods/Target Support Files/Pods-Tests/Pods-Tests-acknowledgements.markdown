@@ -24,6 +24,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## GoogleAnalytics
+
+Copyright 2016 Google
+
+## GoogleTagManager
+
+Copyright 2015 Google Inc.
+
 ## OCMock
 
 

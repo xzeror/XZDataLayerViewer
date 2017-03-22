@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		08D0F520B4AF95029F169E39 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF66632444D595CB53D4B3D /* libPods-Tests.a */; };
-		109E514E1E4F7AE00044305D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AE1E48F81200702265 /* SystemConfiguration.framework */; };
-		109E514F1E4F7AE70044305D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684AC1E48F7D700702265 /* CoreData.framework */; };
-		109E51501E4F7AF00044305D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A61E48F72E00702265 /* libsqlite3.tbd */; };
-		109E51511E4F7AF50044305D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A684A81E48F73600702265 /* libz.tbd */; };
-		10FE113F1E4FAB4F008C2437 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FE113E1E4FAB4F008C2437 /* AdSupport.framework */; };
-		70885A601E7B957400D0A7C7 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70885A5F1E7B957400D0A7C7 /* libGoogleAnalyticsServices.a */; };
 		70FAEF931E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF5E1E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m */; };
 		70FAEF941E7A499800DE0AFD /* XZDataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF611E7A499800DE0AFD /* XZDataLayerObserver.m */; };
 		70FAEF951E7A499800DE0AFD /* XZDefaultStoreWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF631E7A499800DE0AFD /* XZDefaultStoreWriter.m */; };
@@ -43,20 +37,10 @@
 
 /* Begin PBXFileReference section */
 		10133A851E48F30100A33207 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10A684A61E48F72E00702265 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		10A684A81E48F73600702265 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		10A684AC1E48F7D700702265 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		10A684AE1E48F81200702265 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		10FE113E1E4FAB4F008C2437 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		20646EB108844F5F6D6DDFA8 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2EF66632444D595CB53D4B3D /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XZDataLayerViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		70885A5B1E7B952B00D0A7C7 /* TAGContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
-		70885A5C1E7B952B00D0A7C7 /* TAGDataLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
-		70885A5D1E7B952B00D0A7C7 /* TAGLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
-		70885A5E1E7B952B00D0A7C7 /* TAGManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
-		70885A5F1E7B957400D0A7C7 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = Externals/GASDK/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		70B3F0011E7B9C7E007E2571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FAEF5D1E7A499800DE0AFD /* TAGDataLayer+CustomProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TAGDataLayer+CustomProperties.h"; sourceTree = "<group>"; };
 		70FAEF5E1E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomProperties.m"; sourceTree = "<group>"; };
@@ -113,12 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70885A601E7B957400D0A7C7 /* libGoogleAnalyticsServices.a in Frameworks */,
-				10FE113F1E4FAB4F008C2437 /* AdSupport.framework in Frameworks */,
-				109E51511E4F7AF50044305D /* libz.tbd in Frameworks */,
-				109E51501E4F7AF00044305D /* libsqlite3.tbd in Frameworks */,
-				109E514F1E4F7AE70044305D /* CoreData.framework in Frameworks */,
-				109E514E1E4F7AE00044305D /* SystemConfiguration.framework in Frameworks */,
 				08D0F520B4AF95029F169E39 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,28 +126,10 @@
 		10A684A51E48F72D00702265 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				70885A5F1E7B957400D0A7C7 /* libGoogleAnalyticsServices.a */,
-				10FE113E1E4FAB4F008C2437 /* AdSupport.framework */,
-				10A684AE1E48F81200702265 /* SystemConfiguration.framework */,
-				10A684AC1E48F7D700702265 /* CoreData.framework */,
-				10A684A81E48F73600702265 /* libz.tbd */,
-				10A684A61E48F72E00702265 /* libsqlite3.tbd */,
 				4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */,
 				2EF66632444D595CB53D4B3D /* libPods-Tests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		70885A5A1E7B952100D0A7C7 /* GASDK */ = {
-			isa = PBXGroup;
-			children = (
-				70885A5B1E7B952B00D0A7C7 /* TAGContainer.h */,
-				70885A5C1E7B952B00D0A7C7 /* TAGDataLayer.h */,
-				70885A5D1E7B952B00D0A7C7 /* TAGLogger.h */,
-				70885A5E1E7B952B00D0A7C7 /* TAGManager.h */,
-			);
-			name = GASDK;
-			path = Externals/GASDK;
 			sourceTree = "<group>";
 		};
 		70FAEF5B1E7A499800DE0AFD /* Sources */ = {
@@ -177,7 +137,6 @@
 			children = (
 				70B3F0011E7B9C7E007E2571 /* Info.plist */,
 				70FAEF821E7A499800DE0AFD /* XZDataLayerViewer.h */,
-				70FAEFAC1E7A4B7000DE0AFD /* Externals */,
 				70FAEF5C1E7A499800DE0AFD /* Categories */,
 				70FAEF5F1E7A499800DE0AFD /* Logger */,
 				70FAEF661E7A499800DE0AFD /* Model */,
@@ -296,14 +255,6 @@
 				70FAEF921E7A499800DE0AFD /* XZEventHistoryElementTest.m */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		70FAEFAC1E7A4B7000DE0AFD /* Externals */ = {
-			isa = PBXGroup;
-			children = (
-				70885A5A1E7B952100D0A7C7 /* GASDK */,
-			);
-			path = Externals;
 			sourceTree = "<group>";
 		};
 		FB575A48F118CCAA6B53EC5E /* Pods */ = {
