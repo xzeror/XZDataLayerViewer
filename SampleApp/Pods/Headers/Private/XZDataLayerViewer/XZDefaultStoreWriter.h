@@ -1,0 +1,1 @@
+../../../../../Library/Sources/Logger/XZDefaultStoreWriter.h
