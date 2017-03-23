@@ -215,14 +215,7 @@
 
 - (BOOL)conformsToProtocol:(Protocol *)aProtocol
 {
-    Class clazz = mockedClass;
-    while (clazz != nil) {
-        if (class_conformsToProtocol(clazz, aProtocol)) {
-            return YES;
-        }
-        clazz = class_getSuperclass(clazz);
-    }
-    return NO;
+    return class_conformsToProtocol(mockedClass, aProtocol);
 }
 
 @end
