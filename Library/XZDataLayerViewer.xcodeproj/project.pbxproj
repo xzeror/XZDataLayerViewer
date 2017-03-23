@@ -24,7 +24,6 @@
 		70FAEFA01E7A499800DE0AFD /* DataSourceFabricTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF861E7A499800DE0AFD /* DataSourceFabricTest.m */; };
 		70FAEFA11E7A499800DE0AFD /* DictionaryDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF871E7A499800DE0AFD /* DictionaryDataSourceTest.m */; };
 		70FAEFA21E7A499800DE0AFD /* HistoryDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF881E7A499800DE0AFD /* HistoryDataSourceTest.m */; };
-		70FAEFA31E7A499800DE0AFD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70FAEF891E7A499800DE0AFD /* Info.plist */; };
 		70FAEFA41E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8A1E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m */; };
 		70FAEFA51E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8B1E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m */; };
 		70FAEFA61E7A499800DE0AFD /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8D1E7A499800DE0AFD /* ViewControllerTest.m */; };
@@ -81,7 +80,7 @@
 		70FAEF891E7A499800DE0AFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FAEF8A1E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryEventsHistoryStoreTest.m; sourceTree = "<group>"; };
 		70FAEF8B1E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomPropertiesTest.m"; sourceTree = "<group>"; };
-		70FAEF8C1E7A499800DE0AFD /* Tests.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests.pch; sourceTree = "<group>"; };
+		70FAEF8C1E7A499800DE0AFD /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests.h; sourceTree = "<group>"; };
 		70FAEF8D1E7A499800DE0AFD /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 		70FAEF8E1E7A499800DE0AFD /* ViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelTest.m; sourceTree = "<group>"; };
 		70FAEF8F1E7A499800DE0AFD /* XZDataLayerObserverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerObserverTest.m; sourceTree = "<group>"; };
@@ -240,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				70FAEF891E7A499800DE0AFD /* Info.plist */,
-				70FAEF8C1E7A499800DE0AFD /* Tests.pch */,
+				70FAEF8C1E7A499800DE0AFD /* Tests.h */,
 				70FAEF851E7A499800DE0AFD /* ArrayDataSourceTest.m */,
 				70FAEF861E7A499800DE0AFD /* DataSourceFabricTest.m */,
 				70FAEF871E7A499800DE0AFD /* DictionaryDataSourceTest.m */,
@@ -302,6 +301,7 @@
 				TargetAttributes = {
 					10133A841E48F30100A33207 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3SEP2WV2LC;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -329,7 +329,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70FAEFA31E7A499800DE0AFD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,16 +511,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8267A133E5248B87A830EF6D /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3SEP2WV2LC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Tests/Tests.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Tests/Tests.h";
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/GASDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Externals/**";
@@ -532,16 +528,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20646EB108844F5F6D6DDFA8 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3SEP2WV2LC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Tests/Tests.pch";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Tests/Tests.h";
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/GASDK",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzonesoftware.XZDataLayerViewerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Externals/**";

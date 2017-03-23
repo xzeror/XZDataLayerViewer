@@ -184,7 +184,7 @@
 
 - (void)testObjectsCountShouldReturnCorrectNumberOfItemsForFilledStore{
 	// given
-	NSUInteger testCount = arc4random_uniform(self.memoryStore.historyLimit);
+	NSUInteger testCount = 42;
 	
 	// when
 	[self fillMemoryStoreWithObjectsCount:testCount];

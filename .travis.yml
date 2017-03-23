@@ -1,14 +1,12 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
-osx_image: xcode7.3
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
-script:
-- set -o pipefail && xcodebuild test -workspace Library/${POD_NAME}.xcworkspace -scheme ${POD_NAME} -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+osx_image: xcode8.2
+xcode_workspace: Library/XZDataLayerViewer.xcworkspace # path to your xcodeproj folder
+xcode_scheme: XZDataLayerViewer
+podfile: Library/Podfile
+script:   
+  - xcodebuild  -workspace Library/XZDataLayerViewer.xcworkspace -scheme XZDataLayerViewer -configuration Release -sdk iphonesimulator 
+    -destination 'platform=iOS Simulator,name=iPhone 5,OS=8.1' 
+    -destination 'platform=iOS Simulator,name=iPhone 5,OS=9.0'
+    -destination 'platform=iOS Simulator,name=iPhone 5,OS=10.0'
+    -destination 'platform=iOS Simulator,name=iPhone 5,OS=10.1'
+    test ENABLE_NS_ASSERTIONS=YES ONLY_ACTIVE_ARCH=NO | xcpretty
