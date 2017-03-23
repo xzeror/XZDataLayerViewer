@@ -58,7 +58,8 @@ static XZDataLayerViewer *sharedInstance = nil;
 - (XZEventObservingBlock)observerBlock{
 	__weak typeof(self) weakSelf = self;
 	return ^(id<NSObject,NSCoding,NSCopying> eventData) {
-		[weakSelf.writer writeDataCopyToStore:eventData];
+		__strong typeof(weakSelf) strongSelf = weakSelf;
+		[strongSelf.writer writeDataCopyToStore:eventData];
 	};
 }
 
