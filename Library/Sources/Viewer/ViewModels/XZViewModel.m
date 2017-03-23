@@ -13,8 +13,8 @@
 - (instancetype)initWithKey:(NSString*)key value:(NSString*)value shouldShowDisclosureIndicator:(BOOL)shouldShowDisclosureIndicator{
 	self = [super init];
 	if(self != nil){
-		_key = key;
-		_value = value;
+		_key = [key copy];
+		_value = [value copy];
 		_shouldShowDisclosureIndicator = shouldShowDisclosureIndicator;
 	}
 	return self;

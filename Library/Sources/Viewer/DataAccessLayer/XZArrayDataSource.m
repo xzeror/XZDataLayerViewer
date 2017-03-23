@@ -42,6 +42,9 @@
 }
 
 - (id)rawDataForIndexPath:(NSIndexPath*)indexPath{
+	if (indexPath.row >= self.data.count) {
+		return nil;
+	}
 	id value = [self.data objectAtIndex:indexPath.row];
 	return value;
 }

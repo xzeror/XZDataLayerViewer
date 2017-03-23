@@ -53,7 +53,7 @@
 - (void)testDataSourceShouldReturnNilViewModelForInvalidIndexPath{
 	// given
 	id testValue = @1;
-	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
+	NSIndexPath *validIndexPath = [self validIndexPathOfDataMockForValue:testValue];
 	NSIndexPath *invalidIndexPath = [NSIndexPath indexPathForRow:validIndexPath.row + 1 inSection:validIndexPath.section];
 	
 	// when
@@ -66,7 +66,7 @@
 - (void)testDataSourceShouldReturnViewModelForValidIndexPath{
 	// given
 	id testValue = @"test";
-	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
+	NSIndexPath *validIndexPath = [self validIndexPathOfDataMockForValue:testValue];
 	
 	// when
 	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
@@ -81,7 +81,7 @@
 - (void)testDataSourceShouldReturnViewModelWithDisclosureIndicatorForArrayValue{
 	// given
 	id testValue = @[];
-	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
+	NSIndexPath *validIndexPath = [self validIndexPathOfDataMockForValue:testValue];
 	
 	// when
 	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
@@ -96,7 +96,7 @@
 - (void)testDataSourceShouldReturnViewModelWithDisclosureIndicatorForDictionaryValue{
 	// given
 	id testValue = @{};
-	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
+	NSIndexPath *validIndexPath = [self validIndexPathOfDataMockForValue:testValue];
 	
 	// when
 	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
@@ -111,7 +111,7 @@
 - (void)testDataSourceShouldReturnNilRawValueForInvalidIndexPath{
 	// given
 	id testValue = @1;
-	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
+	NSIndexPath *validIndexPath = [self validIndexPathOfDataMockForValue:testValue];
 	NSIndexPath *invalidIndexPath = [NSIndexPath indexPathForRow:validIndexPath.row + 1 inSection:validIndexPath.section];
 	
 	// when
@@ -124,7 +124,7 @@
 - (void)testDataSourceShouldReturnRawValueForValidIndexPath{
 	// given
 	id testValue = @1;
-	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
+	NSIndexPath *validIndexPath = [self validIndexPathOfDataMockForValue:testValue];
 	
 	// when
 	id rawValue = [self.dataSource rawDataForIndexPath:validIndexPath];
@@ -134,7 +134,7 @@
 }
 
 #pragma mark - Helpers
-- (NSIndexPath*)setupDataMockToReturnValueAtIndexPath:(id)value{
+- (NSIndexPath*)validIndexPathOfDataMockForValue:(id)value{
 	NSIndexPath *validIndexPath = [NSIndexPath indexPathForRow:1 inSection:0];
 	NSUInteger testCount = validIndexPath.row + 1;
 	
