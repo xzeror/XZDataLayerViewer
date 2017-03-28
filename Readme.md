@@ -1,5 +1,7 @@
 # XZDataLayerViewer
 
+[![Build Status](https://travis-ci.org/xzeror/XZDataLayerViewer.svg?branch=master)](https://travis-ci.org/xzeror/XZDataLayerViewer)
+
 Debugging mobile application analytics could be hard. XZDataLayerViewer is a library that could help your analytic to see what data sent to Google Analytics from your app, if you are using Google Tag Manager.
 
 # Installation
