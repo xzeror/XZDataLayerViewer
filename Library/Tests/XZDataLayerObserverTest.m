@@ -10,6 +10,7 @@
 
 // Collaborators
 #import "TAGDataLayer.h"
+
 @interface XZDataLayerObserverTest : XCTestCase
 @property(nonatomic,strong)id dataLayerMock;
 @property(nonatomic,strong)XZDataLayerObserver *observer;

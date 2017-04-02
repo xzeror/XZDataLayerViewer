@@ -6,20 +6,18 @@
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
 #import "TAGDataLayer+CustomProperties.h"
-
-NSString * const DataLayerHasChangedNotification = @"com.xzonesoftware.datalayer.haschanged";
-NSString * const kDataLayerPayload = @"com.xzonesoftware.datalayer.haschanged.datalayer_payload";
+#import "XZDataLayerArchiverDelegate.h"
 
 static IMP __original_Push_Implementation;
 static NSMutableDictionary *observers;
 
-static void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict)
-{
-	NSLog(@"%@, %@", self, NSStringFromSelector(_cmd));
+/**
+ *  Used to replace original data layer push operation and create data layer copy
+ */
+static void __swizzle_Push(id self, SEL _cmd, NSDictionary *dict){
 	assert([NSStringFromSelector(_cmd) isEqualToString:@"push:"]);
 	((void(*)(id,SEL,NSDictionary*))__original_Push_Implementation)(self, _cmd, dict);
-	NSDictionary *dataLayerModel = (NSDictionary*)[self valueForKey:@"model"];
-	NSDictionary *dataLayerModelDeepCopy = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:dataLayerModel]];
+	NSDictionary *dataLayerModelDeepCopy = [self dataLayerModelDeepCopy];
 	for (NSArray *observerObservers in [observers allValues]) {
 		for (XZEventObservingBlock block in observerObservers) {
 			block(dataLayerModelDeepCopy);

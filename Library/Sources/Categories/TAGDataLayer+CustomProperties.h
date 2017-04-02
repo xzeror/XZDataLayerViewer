@@ -9,10 +9,11 @@
 @interface TAGDataLayer (CustomProperties)
 
 /**
- *  Returns data layer model dictionary object
+ *  Returns customised deep copy of data layer model
+ *	Replaces kDataLayerObjectNotPresent during operation
  *
- *  @return data layer model
+ *  @return deep copy of data layer model
  */
-- (NSDictionary*)dataLayerModel;
+- (NSDictionary*)dataLayerModelDeepCopy;
 @end
 

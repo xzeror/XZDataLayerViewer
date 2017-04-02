@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08D0F520B4AF95029F169E39 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF66632444D595CB53D4B3D /* libPods-Tests.a */; };
+		704827EE1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 704827ED1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m */; };
+		704827F01E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 704827EF1E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m */; };
 		70FAEF931E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF5E1E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m */; };
 		70FAEF941E7A499800DE0AFD /* XZDataLayerObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF611E7A499800DE0AFD /* XZDataLayerObserver.m */; };
 		70FAEF951E7A499800DE0AFD /* XZDefaultStoreWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF631E7A499800DE0AFD /* XZDefaultStoreWriter.m */; };
@@ -40,6 +42,9 @@
 		2EF66632444D595CB53D4B3D /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB0507C30EF3DF8823A535C /* libPods-XZDataLayerViewerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XZDataLayerViewerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A81FE06223BE4DE47AF516F /* Pods-XZDataLayerViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZDataLayerViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZDataLayerViewerTests/Pods-XZDataLayerViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		704827EC1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZDataLayerArchiverDelegate.h; sourceTree = "<group>"; };
+		704827ED1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerArchiverDelegate.m; sourceTree = "<group>"; };
+		704827EF1E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerArchiverDelegateTest.m; sourceTree = "<group>"; };
 		70B3F0011E7B9C7E007E2571 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70FAEF5D1E7A499800DE0AFD /* TAGDataLayer+CustomProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TAGDataLayer+CustomProperties.h"; sourceTree = "<group>"; };
 		70FAEF5E1E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomProperties.m"; sourceTree = "<group>"; };
@@ -157,12 +162,14 @@
 		70FAEF5F1E7A499800DE0AFD /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				70FAEF641E7A499800DE0AFD /* XZEventGeneratorProtocol.h */,
+				70FAEF651E7A499800DE0AFD /* XZStoreWriterProtocol.h */,
 				70FAEF601E7A499800DE0AFD /* XZDataLayerObserver.h */,
 				70FAEF611E7A499800DE0AFD /* XZDataLayerObserver.m */,
 				70FAEF621E7A499800DE0AFD /* XZDefaultStoreWriter.h */,
 				70FAEF631E7A499800DE0AFD /* XZDefaultStoreWriter.m */,
-				70FAEF641E7A499800DE0AFD /* XZEventGeneratorProtocol.h */,
-				70FAEF651E7A499800DE0AFD /* XZStoreWriterProtocol.h */,
+				704827EC1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.h */,
+				704827ED1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -252,6 +259,7 @@
 				70FAEF901E7A499800DE0AFD /* XZDataLayerViewerTest.m */,
 				70FAEF911E7A499800DE0AFD /* XZDefaultStoreWriterTest.m */,
 				70FAEF921E7A499800DE0AFD /* XZEventHistoryElementTest.m */,
+				704827EF1E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 				70FAEF9C1E7A499800DE0AFD /* XZViewerInterface.m in Sources */,
 				70FAEFA81E7A499800DE0AFD /* XZDataLayerObserverTest.m in Sources */,
 				70FAEFA11E7A499800DE0AFD /* DictionaryDataSourceTest.m in Sources */,
+				704827EE1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m in Sources */,
 				70FAEFA91E7A499800DE0AFD /* XZDataLayerViewerTest.m in Sources */,
 				70FAEF971E7A499800DE0AFD /* XZMemoryEventsHistoryStore.m in Sources */,
 				70FAEF981E7A499800DE0AFD /* XZArrayDataSource.m in Sources */,
@@ -404,6 +413,7 @@
 				70FAEF991E7A499800DE0AFD /* XZDataSourceFabric.m in Sources */,
 				70FAEF9A1E7A499800DE0AFD /* XZDictionaryDataSource.m in Sources */,
 				70FAEFA61E7A499800DE0AFD /* ViewControllerTest.m in Sources */,
+				704827F01E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m in Sources */,
 				70FAEFA71E7A499800DE0AFD /* ViewModelTest.m in Sources */,
 				70FAEFA41E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m in Sources */,
 				70FAEF9B1E7A499800DE0AFD /* XZHistoryDataSource.m in Sources */,
