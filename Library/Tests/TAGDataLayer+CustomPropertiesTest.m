@@ -36,17 +36,31 @@
 
 
 #pragma mark - Tests
-- (void)testShouldGetDataLayerModelWithKVC{
+- (void)testDataLayerModelDeepCopyShouldGetDataLayerModelWithKVC{
 	// given
 	NSDictionary *modelMock = OCMClassMock([NSDictionary class]);
 	OCMStub([self.dataLayerMock valueForKey:@"model"]).andReturn(modelMock);
-	OCMStub([self.dataLayerMock dataLayerModel]).andForwardToRealObject();
+	OCMStub([self.dataLayerMock dataLayerModelDeepCopy]).andForwardToRealObject();
 
 	// when
-	NSDictionary *dataLayerModel = [self.dataLayerMock dataLayerModel];
+	NSDictionary *dataLayerModelDeepCopy = [self.dataLayerMock dataLayerModelDeepCopy];
 
 	// then
-	expect(dataLayerModel).to.beIdenticalTo(modelMock);
+	expect(dataLayerModelDeepCopy).notTo.beIdenticalTo(modelMock);
 	OCMVerifyAll(self.dataLayerMock);
+}
+
+- (void)testDataLayerModelDeepCopyShouldReturnDeepCopyOfModelObject{
+	// given
+	NSDictionary *testModel = @{@"testKey":@"testValue"};
+	OCMStub([self.dataLayerMock valueForKey:@"model"]).andReturn(testModel);
+	OCMStub([self.dataLayerMock dataLayerModelDeepCopy]).andForwardToRealObject();
+	
+	// when
+	NSDictionary *dataLayerModelDeepCopy = [self.dataLayerMock dataLayerModelDeepCopy];
+	
+	// then
+	expect(dataLayerModelDeepCopy).to.equal(testModel);
+	expect(dataLayerModelDeepCopy).notTo.beIdenticalTo(testModel);
 }
 @end
