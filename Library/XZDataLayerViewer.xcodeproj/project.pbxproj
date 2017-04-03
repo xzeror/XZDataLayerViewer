@@ -22,14 +22,14 @@
 		70FAEF9C1E7A499800DE0AFD /* XZViewerInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF7C1E7A499800DE0AFD /* XZViewerInterface.m */; };
 		70FAEF9D1E7A499800DE0AFD /* XZViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF7F1E7A499800DE0AFD /* XZViewModel.m */; };
 		70FAEF9E1E7A499800DE0AFD /* XZDataLayerViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF831E7A499800DE0AFD /* XZDataLayerViewer.m */; };
-		70FAEF9F1E7A499800DE0AFD /* ArrayDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF851E7A499800DE0AFD /* ArrayDataSourceTest.m */; };
-		70FAEFA01E7A499800DE0AFD /* DataSourceFabricTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF861E7A499800DE0AFD /* DataSourceFabricTest.m */; };
-		70FAEFA11E7A499800DE0AFD /* DictionaryDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF871E7A499800DE0AFD /* DictionaryDataSourceTest.m */; };
-		70FAEFA21E7A499800DE0AFD /* HistoryDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF881E7A499800DE0AFD /* HistoryDataSourceTest.m */; };
-		70FAEFA41E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8A1E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m */; };
+		70FAEF9F1E7A499800DE0AFD /* XZArrayDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF851E7A499800DE0AFD /* XZArrayDataSourceTest.m */; };
+		70FAEFA01E7A499800DE0AFD /* XZDataSourceFabricTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF861E7A499800DE0AFD /* XZDataSourceFabricTest.m */; };
+		70FAEFA11E7A499800DE0AFD /* XZDictionaryDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF871E7A499800DE0AFD /* XZDictionaryDataSourceTest.m */; };
+		70FAEFA21E7A499800DE0AFD /* XZHistoryDataSourceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF881E7A499800DE0AFD /* XZHistoryDataSourceTest.m */; };
+		70FAEFA41E7A499800DE0AFD /* XZMemoryEventsHistoryStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8A1E7A499800DE0AFD /* XZMemoryEventsHistoryStoreTest.m */; };
 		70FAEFA51E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8B1E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m */; };
-		70FAEFA61E7A499800DE0AFD /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8D1E7A499800DE0AFD /* ViewControllerTest.m */; };
-		70FAEFA71E7A499800DE0AFD /* ViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8E1E7A499800DE0AFD /* ViewModelTest.m */; };
+		70FAEFA61E7A499800DE0AFD /* XZViewerInterfaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8D1E7A499800DE0AFD /* XZViewerInterfaceTest.m */; };
+		70FAEFA71E7A499800DE0AFD /* XZViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8E1E7A499800DE0AFD /* XZViewModelTest.m */; };
 		70FAEFA81E7A499800DE0AFD /* XZDataLayerObserverTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF8F1E7A499800DE0AFD /* XZDataLayerObserverTest.m */; };
 		70FAEFA91E7A499800DE0AFD /* XZDataLayerViewerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF901E7A499800DE0AFD /* XZDataLayerViewerTest.m */; };
 		70FAEFAA1E7A499800DE0AFD /* XZDefaultStoreWriterTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FAEF911E7A499800DE0AFD /* XZDefaultStoreWriterTest.m */; };
@@ -78,16 +78,16 @@
 		70FAEF811E7A499800DE0AFD /* XZDataLayerViewer+Public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XZDataLayerViewer+Public.h"; sourceTree = "<group>"; };
 		70FAEF821E7A499800DE0AFD /* XZDataLayerViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZDataLayerViewer.h; sourceTree = "<group>"; };
 		70FAEF831E7A499800DE0AFD /* XZDataLayerViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewer.m; sourceTree = "<group>"; };
-		70FAEF851E7A499800DE0AFD /* ArrayDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSourceTest.m; sourceTree = "<group>"; };
-		70FAEF861E7A499800DE0AFD /* DataSourceFabricTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSourceFabricTest.m; sourceTree = "<group>"; };
-		70FAEF871E7A499800DE0AFD /* DictionaryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryDataSourceTest.m; sourceTree = "<group>"; };
-		70FAEF881E7A499800DE0AFD /* HistoryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDataSourceTest.m; sourceTree = "<group>"; };
+		70FAEF851E7A499800DE0AFD /* XZArrayDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZArrayDataSourceTest.m; sourceTree = "<group>"; };
+		70FAEF861E7A499800DE0AFD /* XZDataSourceFabricTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataSourceFabricTest.m; sourceTree = "<group>"; };
+		70FAEF871E7A499800DE0AFD /* XZDictionaryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDictionaryDataSourceTest.m; sourceTree = "<group>"; };
+		70FAEF881E7A499800DE0AFD /* XZHistoryDataSourceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZHistoryDataSourceTest.m; sourceTree = "<group>"; };
 		70FAEF891E7A499800DE0AFD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		70FAEF8A1E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryEventsHistoryStoreTest.m; sourceTree = "<group>"; };
+		70FAEF8A1E7A499800DE0AFD /* XZMemoryEventsHistoryStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZMemoryEventsHistoryStoreTest.m; sourceTree = "<group>"; };
 		70FAEF8B1E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAGDataLayer+CustomPropertiesTest.m"; sourceTree = "<group>"; };
 		70FAEF8C1E7A499800DE0AFD /* Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tests.h; sourceTree = "<group>"; };
-		70FAEF8D1E7A499800DE0AFD /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
-		70FAEF8E1E7A499800DE0AFD /* ViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelTest.m; sourceTree = "<group>"; };
+		70FAEF8D1E7A499800DE0AFD /* XZViewerInterfaceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZViewerInterfaceTest.m; sourceTree = "<group>"; };
+		70FAEF8E1E7A499800DE0AFD /* XZViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZViewModelTest.m; sourceTree = "<group>"; };
 		70FAEF8F1E7A499800DE0AFD /* XZDataLayerObserverTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerObserverTest.m; sourceTree = "<group>"; };
 		70FAEF901E7A499800DE0AFD /* XZDataLayerViewerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDataLayerViewerTest.m; sourceTree = "<group>"; };
 		70FAEF911E7A499800DE0AFD /* XZDefaultStoreWriterTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZDefaultStoreWriterTest.m; sourceTree = "<group>"; };
@@ -247,14 +247,14 @@
 			children = (
 				70FAEF891E7A499800DE0AFD /* Info.plist */,
 				70FAEF8C1E7A499800DE0AFD /* Tests.h */,
-				70FAEF851E7A499800DE0AFD /* ArrayDataSourceTest.m */,
-				70FAEF861E7A499800DE0AFD /* DataSourceFabricTest.m */,
-				70FAEF871E7A499800DE0AFD /* DictionaryDataSourceTest.m */,
-				70FAEF881E7A499800DE0AFD /* HistoryDataSourceTest.m */,
-				70FAEF8A1E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m */,
+				70FAEF851E7A499800DE0AFD /* XZArrayDataSourceTest.m */,
+				70FAEF861E7A499800DE0AFD /* XZDataSourceFabricTest.m */,
+				70FAEF871E7A499800DE0AFD /* XZDictionaryDataSourceTest.m */,
+				70FAEF881E7A499800DE0AFD /* XZHistoryDataSourceTest.m */,
+				70FAEF8A1E7A499800DE0AFD /* XZMemoryEventsHistoryStoreTest.m */,
 				70FAEF8B1E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m */,
-				70FAEF8D1E7A499800DE0AFD /* ViewControllerTest.m */,
-				70FAEF8E1E7A499800DE0AFD /* ViewModelTest.m */,
+				70FAEF8D1E7A499800DE0AFD /* XZViewerInterfaceTest.m */,
+				70FAEF8E1E7A499800DE0AFD /* XZViewModelTest.m */,
 				70FAEF8F1E7A499800DE0AFD /* XZDataLayerObserverTest.m */,
 				70FAEF901E7A499800DE0AFD /* XZDataLayerViewerTest.m */,
 				70FAEF911E7A499800DE0AFD /* XZDefaultStoreWriterTest.m */,
@@ -399,10 +399,10 @@
 				70FAEF931E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m in Sources */,
 				70FAEFAA1E7A499800DE0AFD /* XZDefaultStoreWriterTest.m in Sources */,
 				70FAEF9E1E7A499800DE0AFD /* XZDataLayerViewer.m in Sources */,
-				70FAEF9F1E7A499800DE0AFD /* ArrayDataSourceTest.m in Sources */,
+				70FAEF9F1E7A499800DE0AFD /* XZArrayDataSourceTest.m in Sources */,
 				70FAEF9C1E7A499800DE0AFD /* XZViewerInterface.m in Sources */,
 				70FAEFA81E7A499800DE0AFD /* XZDataLayerObserverTest.m in Sources */,
-				70FAEFA11E7A499800DE0AFD /* DictionaryDataSourceTest.m in Sources */,
+				70FAEFA11E7A499800DE0AFD /* XZDictionaryDataSourceTest.m in Sources */,
 				704827EE1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m in Sources */,
 				70FAEFA91E7A499800DE0AFD /* XZDataLayerViewerTest.m in Sources */,
 				70FAEF971E7A499800DE0AFD /* XZMemoryEventsHistoryStore.m in Sources */,
@@ -412,15 +412,15 @@
 				70FAEF961E7A499800DE0AFD /* XZEventHistoryElement.m in Sources */,
 				70FAEF991E7A499800DE0AFD /* XZDataSourceFabric.m in Sources */,
 				70FAEF9A1E7A499800DE0AFD /* XZDictionaryDataSource.m in Sources */,
-				70FAEFA61E7A499800DE0AFD /* ViewControllerTest.m in Sources */,
+				70FAEFA61E7A499800DE0AFD /* XZViewerInterfaceTest.m in Sources */,
 				704827F01E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m in Sources */,
-				70FAEFA71E7A499800DE0AFD /* ViewModelTest.m in Sources */,
-				70FAEFA41E7A499800DE0AFD /* MemoryEventsHistoryStoreTest.m in Sources */,
+				70FAEFA71E7A499800DE0AFD /* XZViewModelTest.m in Sources */,
+				70FAEFA41E7A499800DE0AFD /* XZMemoryEventsHistoryStoreTest.m in Sources */,
 				70FAEF9B1E7A499800DE0AFD /* XZHistoryDataSource.m in Sources */,
 				70FAEF941E7A499800DE0AFD /* XZDataLayerObserver.m in Sources */,
-				70FAEFA01E7A499800DE0AFD /* DataSourceFabricTest.m in Sources */,
+				70FAEFA01E7A499800DE0AFD /* XZDataSourceFabricTest.m in Sources */,
 				70FAEFAB1E7A499800DE0AFD /* XZEventHistoryElementTest.m in Sources */,
-				70FAEFA21E7A499800DE0AFD /* HistoryDataSourceTest.m in Sources */,
+				70FAEFA21E7A499800DE0AFD /* XZHistoryDataSourceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
