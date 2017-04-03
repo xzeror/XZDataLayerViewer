@@ -27,7 +27,8 @@
 		return nil;
 	}
 	XZEventHistoryElement *eventHistoryElement = [self.store objectWithId:@(indexPath.row)];
-	XZViewModel *viewModel = [[XZViewModel alloc] initWithKey:[eventHistoryElement.timestamp description]  value:nil shouldShowDisclosureIndicator:YES];
+	NSString *eventTimestamp = [NSDateFormatter localizedStringFromDate:eventHistoryElement.timestamp dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterLongStyle];
+	XZViewModel *viewModel = [[XZViewModel alloc] initWithKey:eventTimestamp  value:nil shouldShowDisclosureIndicator:YES];
 	return viewModel;
 }
 
