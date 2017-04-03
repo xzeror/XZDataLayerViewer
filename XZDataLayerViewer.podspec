@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XZDataLayerViewer"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "XZDataLayerViewer allows you to see data sent to Google Analytics from your app through Google Tag Manager."
   s.description  = <<-DESC
   XZDataLayerViewer is a library that could help your analytic to see what data sent to Google Analytics from your app, if you are using Google Tag Manager.
