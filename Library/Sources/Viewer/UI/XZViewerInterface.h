@@ -31,5 +31,10 @@
  *  Reload data from data source and refresh diplayed data on screen
  */
 - (void)refresh;
+
+/**
+ *  Dismiss viewer interface
+ */
+- (void)dismiss;
 @end
 

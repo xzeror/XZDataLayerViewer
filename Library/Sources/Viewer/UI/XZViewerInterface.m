@@ -11,14 +11,19 @@
 @end
 
 @implementation XZViewerInterface
-
 - (instancetype)initWithDataSource:(id<XZDataSourceProtocol>)dataSource{
 	self = [super initWithStyle:UITableViewStylePlain];
 	if (self != nil) {
 		_dataSource = dataSource;
-		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refresh)];
+		self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismiss)];
 	}
 	return self;
+}
+
+- (void)viewDidLoad{
+	[super viewDidLoad];
+	self.refreshControl = [[UIRefreshControl alloc] init];
+	[self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -69,6 +74,11 @@
 
 - (void)refresh{
 	[self.tableView reloadData];
+	[self.refreshControl endRefreshing];
+}
+
+- (void)dismiss{
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

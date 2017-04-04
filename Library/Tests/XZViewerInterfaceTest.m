@@ -53,15 +53,12 @@
 - (void)tearDown {
 	self.validIndexPath = nil;
 	self.validCount = 0;
-	
-	self.dataSourceMock = OCMProtocolMock(@protocol(XZDataSourceProtocol));
-	OCMStub([self.dataSourceMock count]).andReturn(self.validCount);
-	
-	self.dataSourceFabricMock = OCMClassMock([XZDataSourceFabric class]);
-	
-	self.navigationControllerMock = OCMClassMock([UINavigationController class]);
-	
-	self.viewControllerPartialMock = [[XZViewerInterface alloc] initWithDataSource:self.dataSourceMock];
+	self.dataSourceMock = nil;
+	self.dataSourceFabricMock = nil;
+	self.navigationControllerMock = nil;
+	self.tableViewMock = nil;
+	self.viewController = nil;
+	self.viewControllerPartialMock = nil;
 	[super tearDown]; // must be the last line in method
 }
 
@@ -80,8 +77,23 @@
 - (void)testInitShouldSetupRightNavigationItem{
 	expect(self.viewControllerPartialMock.navigationItem.rightBarButtonItem).toNot.beNil();
 	expect(self.viewControllerPartialMock.navigationItem.rightBarButtonItem.target).to.equal(self.viewController);
-	expect(self.viewControllerPartialMock.navigationItem.rightBarButtonItem.action).to.equal(@selector(refresh));
+	expect(self.viewControllerPartialMock.navigationItem.rightBarButtonItem.action).to.equal(@selector(dismiss));
+}
+
+- (void)testViewDidLoadShouldSetupRefreshControll{
+	// given
+	UIRefreshControl *refreshControlMock = OCMClassMock([UIRefreshControl class]);
+	OCMStub([self.viewControllerPartialMock setRefreshControl:OCMOCK_ANY]);
+	OCMStub([self.viewControllerPartialMock refreshControl]).andReturn(refreshControlMock);
 	
+	// when
+	[self.viewControllerPartialMock viewDidLoad];
+	
+	// then
+	
+	OCMVerify([self.viewControllerPartialMock setRefreshControl:OCMOCK_ANY]);
+	OCMVerify([self.viewControllerPartialMock refreshControl]);
+	OCMVerify([refreshControlMock addTarget:self.viewController action:@selector(refresh) forControlEvents:UIControlEventValueChanged]);
 }
 
 - (void)testNumberOfSectionsShouldReturnOne{
@@ -267,6 +279,17 @@
 	
 	// then
 	OCMVerify([self.tableViewMock reloadData]);
+}
+
+- (void)testDoneShouldDismissSelf{
+	// given
+	OCMStub([self.viewControllerPartialMock dismissViewControllerAnimated:YES completion:nil]);
+	
+	// when
+	[self.viewControllerPartialMock dismiss];
+	
+	// then
+	OCMVerifyAll((id)self.viewControllerPartialMock);
 }
 
 #pragma mark - Helpers
