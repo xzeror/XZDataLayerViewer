@@ -26,7 +26,8 @@
 	if (indexPath.row >= [self.store objectsCount]) {
 		return nil;
 	}
-	XZEventHistoryElement *eventHistoryElement = [self.store objectWithId:@(indexPath.row)];
+	NSUInteger reversedIndex = [self.store objectsCount] - (indexPath.row + 1);
+	XZEventHistoryElement *eventHistoryElement = [self.store objectWithId:@(reversedIndex)];
 	NSString *eventTimestamp = [NSDateFormatter localizedStringFromDate:eventHistoryElement.timestamp dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterLongStyle];
 	XZViewModel *viewModel = [[XZViewModel alloc] initWithKey:eventTimestamp  value:nil shouldShowDisclosureIndicator:YES];
 	return viewModel;

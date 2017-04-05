@@ -65,13 +65,14 @@
 	expect(viewModel).to.beNil();
 }
 
-- (void)testDataSourceShouldReturnViewModelForValidIndexPath{
+- (void)testDataSourceShouldReturnLatestViewModelObjectForZeroRow{
 	// given
 	id testValue = [self eventHistoryElementMock];
-	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
+	[self setupDataMockToReturnValueAtIndexPath:testValue];
+	NSIndexPath *zeroRowIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 	
 	// when
-	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:validIndexPath];
+	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:zeroRowIndexPath];
 	
 	// then
 	expect(viewModel).toNot.beNil();
@@ -93,7 +94,7 @@
 	expect(rawValue).to.beNil();
 }
 
-- (void)testDataSourceShouldReturnRawValueForValidIndexPath{
+- (void)testDataSourceShouldReturnLatestRawValueForZeroRow{
 	// given
 	id testValue = [self eventHistoryElementMock];
 	NSIndexPath *validIndexPath = [self setupDataMockToReturnValueAtIndexPath:testValue];
@@ -107,7 +108,7 @@
 
 #pragma mark - Helpers
 - (NSIndexPath*)setupDataMockToReturnValueAtIndexPath:(id)value{
-	NSIndexPath *validIndexPath = [NSIndexPath indexPathForRow:1 inSection:0];
+	NSIndexPath *validIndexPath = [NSIndexPath indexPathForRow:9 inSection:0];
 	NSUInteger testCount = validIndexPath.row + 1;
 	
 	OCMStub([self.dataMock objectWithId:[OCMArg isEqual:@(validIndexPath.row)]]).andReturn(value);

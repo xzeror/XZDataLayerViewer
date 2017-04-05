@@ -12,13 +12,13 @@
 #import "XZViewModel.h"
 
 
-@interface DictionaryDataSourceTest : XCTestCase
+@interface XZDictionaryDataSourceTest : XCTestCase
 @property(nonatomic,strong)XZDictionaryDataSource *dataSource;
 @property(nonatomic,strong)id dataMock;
 @end
 
 
-@implementation DictionaryDataSourceTest
+@implementation XZDictionaryDataSourceTest
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method

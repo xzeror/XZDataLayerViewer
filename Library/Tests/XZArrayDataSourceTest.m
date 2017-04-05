@@ -12,13 +12,13 @@
 #import "XZViewModel.h"
 
 
-@interface ArrayDataSourceTest : XCTestCase
+@interface XZArrayDataSourceTest : XCTestCase
 @property(nonatomic,strong)XZArrayDataSource *dataSource;
 @property(nonatomic,strong)id dataMock;
 @end
 
 
-@implementation ArrayDataSourceTest
+@implementation XZArrayDataSourceTest
 
 - (void)setUp {
 	[super setUp]; // must be the first line in method
