@@ -5,6 +5,9 @@
 #import "XZDataSourceProtocol.h"
 #import "XZViewModel.h"
 #import "XZDataSourceFabric.h"
+#import "XZViewerTableViewCell.h"
+
+static NSString *const kAnalyticsItemCellReuseID = @"kAnalyticsItemCellReuseID";
 
 @interface XZViewerInterface ()
 @property(nonatomic,strong)id<XZDataSourceProtocol> dataSource;
@@ -22,9 +25,16 @@
 
 - (void)viewDidLoad{
 	[super viewDidLoad];
+    
 	self.refreshControl = [[UIRefreshControl alloc] init];
 	[self.refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    
+    [self.tableView registerClass:XZViewerTableViewCell.class forCellReuseIdentifier:kAnalyticsItemCellReuseID];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.f;
 }
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 	return 1;
@@ -35,26 +45,25 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self.class)];
-	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass(self.class)];
-	}
-	
-	XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:indexPath];
-	if (viewModel == nil) {
-		cell.textLabel.text = @"empty";
-	} else if (viewModel.shouldShowDisclosureIndicator == YES) {
-		[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-		cell.textLabel.text = viewModel.key;
-		cell.detailTextLabel.text = nil;
-	} else if(viewModel.shouldShowDisclosureIndicator == NO){
-		[cell setAccessoryType:UITableViewCellAccessoryNone];
-		cell.textLabel.text = viewModel.key;
-		cell.detailTextLabel.text = viewModel.value;
-	}
-	
-	return cell;
+    XZViewerTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:kAnalyticsItemCellReuseID];
+    if (!cell) {
+        cell = [[XZViewerTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kAnalyticsItemCellReuseID];
+    }
+    
+    XZViewModel *viewModel = [self.dataSource viewModelForIndexPath:indexPath];
+    if (viewModel == nil) {
+        cell.textLabel.text = @"empty";
+        return cell;
+    }
+    
+    cell.title = viewModel.key;
+    cell.subtitle = viewModel.shouldShowDisclosureIndicator ? nil : viewModel.value;
+    [cell setAccessoryType:viewModel.shouldShowDisclosureIndicator ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone];
+    
+    return cell;
 }
+
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	if (indexPath.row >= [self.dataSource count]) {
@@ -71,6 +80,8 @@
 	}
 	[self.navigationController pushViewController:[[XZViewerInterface alloc] initWithDataSource:dataSource] animated:YES];
 }
+
+#pragma mark - Auxiliary methods
 
 - (void)refresh{
 	[self.tableView reloadData];
