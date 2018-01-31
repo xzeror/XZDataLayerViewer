@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06A322F71FF4E74A00518501 /* XZViewerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A322F61FF4E74A00518501 /* XZViewerTableViewCell.m */; };
+		06A322F91FF503C600518501 /* XZViewerTableViewCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A322F81FF503C600518501 /* XZViewerTableViewCellTest.m */; };
 		08D0F520B4AF95029F169E39 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF66632444D595CB53D4B3D /* libPods-Tests.a */; };
 		704827EE1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 704827ED1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m */; };
 		704827F01E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 704827EF1E90D70600304CA7 /* XZDataLayerArchiverDelegateTest.m */; };
@@ -37,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06A322F51FF4E74A00518501 /* XZViewerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZViewerTableViewCell.h; sourceTree = "<group>"; };
+		06A322F61FF4E74A00518501 /* XZViewerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZViewerTableViewCell.m; sourceTree = "<group>"; };
+		06A322F81FF503C600518501 /* XZViewerTableViewCellTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZViewerTableViewCellTest.m; sourceTree = "<group>"; };
 		10133A851E48F30100A33207 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20646EB108844F5F6D6DDFA8 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2EF66632444D595CB53D4B3D /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +234,8 @@
 			children = (
 				70FAEF7B1E7A499800DE0AFD /* XZViewerInterface.h */,
 				70FAEF7C1E7A499800DE0AFD /* XZViewerInterface.m */,
+				06A322F51FF4E74A00518501 /* XZViewerTableViewCell.h */,
+				06A322F61FF4E74A00518501 /* XZViewerTableViewCell.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 				70FAEF8A1E7A499800DE0AFD /* XZMemoryEventsHistoryStoreTest.m */,
 				70FAEF8B1E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m */,
 				70FAEF8D1E7A499800DE0AFD /* XZViewerInterfaceTest.m */,
+				06A322F81FF503C600518501 /* XZViewerTableViewCellTest.m */,
 				70FAEF8E1E7A499800DE0AFD /* XZViewModelTest.m */,
 				70FAEF8F1E7A499800DE0AFD /* XZDataLayerObserverTest.m */,
 				70FAEF901E7A499800DE0AFD /* XZDataLayerViewerTest.m */,
@@ -396,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70FAEFA51E7A499800DE0AFD /* TAGDataLayer+CustomPropertiesTest.m in Sources */,
+				06A322F91FF503C600518501 /* XZViewerTableViewCellTest.m in Sources */,
 				70FAEF931E7A499800DE0AFD /* TAGDataLayer+CustomProperties.m in Sources */,
 				70FAEFAA1E7A499800DE0AFD /* XZDefaultStoreWriterTest.m in Sources */,
 				70FAEF9E1E7A499800DE0AFD /* XZDataLayerViewer.m in Sources */,
@@ -406,6 +415,7 @@
 				704827EE1E90D3A000304CA7 /* XZDataLayerArchiverDelegate.m in Sources */,
 				70FAEFA91E7A499800DE0AFD /* XZDataLayerViewerTest.m in Sources */,
 				70FAEF971E7A499800DE0AFD /* XZMemoryEventsHistoryStore.m in Sources */,
+				06A322F71FF4E74A00518501 /* XZViewerTableViewCell.m in Sources */,
 				70FAEF981E7A499800DE0AFD /* XZArrayDataSource.m in Sources */,
 				70FAEF951E7A499800DE0AFD /* XZDefaultStoreWriter.m in Sources */,
 				70FAEF9D1E7A499800DE0AFD /* XZViewModel.m in Sources */,
